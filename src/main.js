@@ -3,3 +3,6 @@
 import { myFunction } from './lib/index.js';
 
 myFunction();
+
+
+let uno = alert('hola mundo');
