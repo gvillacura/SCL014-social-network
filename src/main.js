@@ -1,8 +1,14 @@
 // Este es el punto de entrada de tu aplicacion
 
-import { myFunction } from './lib/index.js';
+/* import {
+    myFunction
+} from './lib/index.js';
+myFunction(); */
+const start = document.querySelector('#start_btn');
 
-myFunction();
+function secondPage() {
+    document.querySelector('#root').innerHTML = ` 
+    <h1>Art Space</h1> `;
+}
 
-
-let uno = alert('hola mundo');
+start.addEventListener('click', secondPage);
