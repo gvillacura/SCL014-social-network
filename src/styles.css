@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    text-align: center;
+    margin-top: -18px;
+}
+
+@media (max-width : 425px) {
+    header img {
+        width: 100%;
+    }
+
+    h1 {
+        background: #F4F683;
+        margin-top: -4px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .btn {
+        margin: 0em;
+        width: 7em;
+        margin-top: 2em;
+        background: #f4f683;
+        border-radius: 6px;
+        border: solid 2px #f7e22d;
+        height: 2em;
+        font-family: 'Dancing Script', cursive;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        filter: opacity(.5)
+    }
+
+    section {
+        margin-top: 3em;
+    }
+
+    .icono {
+        width: 1.3em;
+    }
+
+    input {
+        border: none;
+        border-bottom: solid 1px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .input_password {
+        margin-top: 3em;
+    }
+
+    .logo {
+        width: 3em;
+        margin: 0 1em;
+    }
+
+    p,
+    h3 {
+        font-family: 'Dancing Script', cursive;
+    }
+
+    footer {
+        margin-top: 3em;
+        font-family: 'Dancing Script', cursive;
+    }
+}
