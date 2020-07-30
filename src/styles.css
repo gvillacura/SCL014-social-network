@@ -24,10 +24,6 @@ h1 {
     font-family: 'Dancing Script', cursive;
 }
 
-.input_section {
-    margin-top: 2em;
-}
-
 .input {
     border: none;
     border-bottom: solid 1px;
@@ -82,6 +78,7 @@ p {
 .icono {
     width: 1.3em;
 }
+<<<<<<< HEAD
 .errorMensaje:hover{
     color: salmon;
     /* border-bottom: solid 1px; */
@@ -90,6 +87,32 @@ h4 {
     font-family: 'Open Sans', sans-serif;
     color:tomato;
 }
+=======
+
+.icons-General {
+    float: right;
+}
+
+.logo-second-page {
+    display: inline-block;
+    margin: 0;
+    font-size: 22px;
+}
+
+#input_search {
+    background: rgba(255, 154, 2, 0.81);
+    border-radius: 10px;
+    border: none;
+    height: 24px;
+    width: 101px;
+    margin-left: 7px;
+}
+
+.container_left {
+    float: left;
+}
+
+>>>>>>> 9fa6cb9a850c5354ada95da34a28a3a7c6c7e7da
 @media(max-width : 425px) {
 
     body {
@@ -126,10 +149,6 @@ h4 {
         filter: opacity(.5)
     }
 
-    section {
-        margin-top: 3em;
-    }
-
     .icono {
         width: 1.3em;
     }
@@ -137,6 +156,7 @@ h4 {
     .input {
         width: 57vw;
         border: none;
+        padding-top: 2.5em;
         border-bottom: solid 1px;
         font-family: 'Open Sans', sans-serif;
     }
