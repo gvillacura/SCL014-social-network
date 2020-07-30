@@ -78,7 +78,6 @@ p {
 .icono {
     width: 1.3em;
 }
-<<<<<<< HEAD
 .errorMensaje:hover{
     color: salmon;
     /* border-bottom: solid 1px; */
@@ -87,7 +86,6 @@ h4 {
     font-family: 'Open Sans', sans-serif;
     color:tomato;
 }
-=======
 
 .icons-General {
     float: right;
@@ -112,7 +110,6 @@ h4 {
     float: left;
 }
 
->>>>>>> 9fa6cb9a850c5354ada95da34a28a3a7c6c7e7da
 @media(max-width : 425px) {
 
     body {

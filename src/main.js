@@ -63,8 +63,6 @@ function secondPage() {
 }
 
 start.addEventListener('click', secondPage);
-<<<<<<< HEAD
-=======
 login.addEventListener('click', loginPage);
 
 function loginPage() {
@@ -108,4 +106,3 @@ function loginPage() {
     <script type="module" src="main.js"></script>
   </div>`;
 }
->>>>>>> 9fa6cb9a850c5354ada95da34a28a3a7c6c7e7da
