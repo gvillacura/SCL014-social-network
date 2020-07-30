@@ -13,9 +13,8 @@ function secondPage() {
   <header>
       <img class="header-image" src="img/img-cel.png" alt="">
       <div class = "container-second-page">
-        <h1 class = "logo-second-page" >Art Space</h1>
-        <div class = "container_line">
-          <img src="img/buscar_icono.png" alt="">
+        <div class = "container_left">
+          <h1 class = "logo-second-page" >Art Space</h1>
           <input type="search" id="input_search">
         </div>
         <div class = "icons-General">
