@@ -66,20 +66,19 @@ body {
 
     .container-second-page {
         background-color: #f4f683;
-
+        margin-top: -4px;
+        padding: 7px;
+        height: 2em;
     }
 
     .icons-General {
-        margin-inline-start: 19em;
-        margin-top: -5.5em;
-        padding-block-end: 5px;
+        float: right;
     }
 
     .logo-second-page {
-        text-align: left;
+        display: inline-block;
+        margin: 0;
         font-size: 22px;
-        padding-block-start: 13px;
-        padding-bottom: 7px;
     }
 
     #input_search {
@@ -88,11 +87,10 @@ body {
         border: none;
         height: 24px;
         width: 101px;
+        margin-left: 7px;
     }
 
-    .container_line {
-        display: inline;
+    .container_left {
+        float: left;
     }
-
-}
 }
