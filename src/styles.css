@@ -2,11 +2,83 @@ body {
     margin: 0;
     text-align: center;
     margin-top: -18px;
+    margin-left: 21em;
+}
+
+.header-image {
+   
+    visibility: hidden;
+    
+}
+.header-image-desktop{
+position: absolute;
+height: 100%;
+left: 1px;
+top: 0px;
+visibility: visible;
+
+}
+
+h1{
+margin-top: -2em;
+font-family:'Dancing Script', cursive ;
+}
+
+.input_section{
+margin-top:2em;
+}
+
+.input {
+    border: none;
+    border-bottom: solid 1px;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 3em;
+}
+
+.btn {
+    margin: 0em;
+    width: 8em;
+    margin-top: 2em;
+    background:#ff9a02ad;
+    border-radius: 17px;
+    border: 2px #f7e22d;
+    height: 2em;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn:hover {
+    filter: opacity(.5)
+}
+
+.logo {
+    width: 3em;
+    margin: 0 1em;
+}
+
+footer {
+    margin-top: 1em;
+    font-family:'Dancing Script', cursive ;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.icono {
+    width: 1.3em;
 }
 
 @media (max-width : 425px) {
+
+    body {
+        margin-left: 0;
+    }
+    
     .header-image {
         width: 100%;
+        visibility: visible;
+
     }
 
     h1 {
@@ -17,15 +89,15 @@ body {
 
     .btn {
         margin: 0em;
-        width: 7em;
+        width: 8em;
         margin-top: 2em;
-        background: #f4f683;
-        border-radius: 6px;
-        border: solid 2px #f7e22d;
+        background:#ff9a02ad;
+        border-radius: 17px;
+        border: 2px #f7e22d;
         height: 2em;
-        font-family: 'Dancing Script', cursive;
-        font-size: 18px;
-        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        
     }
 
     .btn:hover {
@@ -43,7 +115,7 @@ body {
     input {
         border: none;
         border-bottom: solid 1px;
-        font-family: 'Dancing Script', cursive;
+        font-family: 'Open Sans', sans-serif;
     }
 
     .input_password {
@@ -56,12 +128,12 @@ body {
     }
 
     p {
-        font-family: 'Dancing Script', cursive;
+      font-family: 'Open Sans', sans-serif;
     }
 
     footer {
         margin-top: 3em;
-        font-family: 'Dancing Script', cursive;
+        font-family: 'Dancing Script'cursive;
     }
 
     .container-second-page {
@@ -93,4 +165,10 @@ body {
     .container_left {
         float: left;
     }
+    .header-image-desktop{
+        visibility: hidden;
+        
+        }
+
 }
+
