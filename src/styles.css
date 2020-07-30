@@ -5,7 +5,7 @@ body {
 }
 
 @media (max-width : 425px) {
-    header img {
+    .header-image {
         width: 100%;
     }
 
@@ -55,8 +55,7 @@ body {
         margin: 0 1em;
     }
 
-    p,
-    h3 {
+    p {
         font-family: 'Dancing Script', cursive;
     }
 
@@ -64,4 +63,36 @@ body {
         margin-top: 3em;
         font-family: 'Dancing Script', cursive;
     }
+
+    .container-second-page {
+        background-color: #f4f683;
+
+    }
+
+    .icons-General {
+        margin-inline-start: 19em;
+        margin-top: -5.5em;
+        padding-block-end: 5px;
+    }
+
+    .logo-second-page {
+        text-align: left;
+        font-size: 22px;
+        padding-block-start: 13px;
+        padding-bottom: 7px;
+    }
+
+    #input_search {
+        background: rgba(255, 154, 2, 0.81);
+        border-radius: 10px;
+        border: none;
+        height: 24px;
+        width: 101px;
+    }
+
+    .container_line {
+        display: inline;
+    }
+
+}
 }
