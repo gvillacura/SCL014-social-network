@@ -14,6 +14,7 @@ function secondPage() {
       <img class="header-image" src="img/img-cel.png" alt="">
       <div class = "container-second-page">
         <div class = "container_left">
+          <img class="header-image-desktop" src="img/img-desk.png" alt="">
           <h1 class = "logo-second-page" >Art Space</h1>
           <input type="search" id="input_search">
         </div>
