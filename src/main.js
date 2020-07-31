@@ -4,7 +4,10 @@
     myFunction
 } from './lib/index.js';
 myFunction(); */
-
+const move = (close, open) => {
+  document.getElementById(close).style.display = 'none';
+  document.getElementById(open).style.display = 'block';
+};
 
 const mensaje = document.getElementById('errorMensaje');
 mensaje.addEventListener('click', () => {
@@ -37,9 +40,7 @@ mensaje.addEventListener('click', () => {
   `;
 });
 
-
 const start = document.querySelector('#start_btn');
-const login = document.querySelector('#login-btn');
 
 function secondPage() {
   document.querySelector('#root').innerHTML = ` 
@@ -53,21 +54,21 @@ function secondPage() {
           <input type="search" id="input_search">
         </div>
         <div class = "icons-General">
-          <img src="img/articulo_icono.png" alt="">
-          <img src="img/calendario_icono.png" alt="">
-          <img src="img/usuario_icono.png" alt="">
+          <img class = "icoArt" src="img/articulo_icono.png" alt="">
+          <img class = "icoCalen" src="img/calendario_icono.png" alt="">
+          <img class = "icoUsu" src="img/usuario_icono.png" alt="">
         </div> 
       </div>
   </header>
   </div> `;
 }
-
 start.addEventListener('click', secondPage);
-login.addEventListener('click', loginPage);
+
+const login = document.querySelector('#login-btn');
 
 function loginPage() {
   document.querySelector('#root').innerHTML = ` 
-  <div >
+  <div id='login' class='login'>
     <header>
       <img class="header-image" src="img/img-cel.png">
       <img class="header-image-desktop" src="img/img-desk.png">
@@ -99,10 +100,48 @@ function loginPage() {
 
     <div>
       <button class="btn" id="login-btn">Registrar</button> <br>
-      <button class="btn" id="login-btn">Inicio</button>
+      <button class="btn" id="inicioBtn">Inicio</button>
     </div>
     <footer> &copy;2020 by Fabiane Geraldine & Lady</footer>
 
     <script type="module" src="main.js"></script>
   </div>`;
+
+  const btnInicio = document.getElementById('inicioBtn');
+  btnInicio.addEventListener('click', () => {
+    move('login', 'inicio');
+  });
+
+  // const btnInicio = document.getElementById('inicioBtn');
+  // btnInicio.addEventListener('click', () => {
+  //   document.querySelector('#root').innerHTML = `
+  //   <header>
+  //   <img class="header-image" src="img/img-cel.png">
+  //   <img class="header-image-desktop" src="img/img-desk.png">
+  //   <h1>Art Space</h1>
+  // </header>
+
+  // <section class="input_section">
+  //   <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
+  //   <input class="input" type="email" placeholder="Correo electrónico" id="input_email"> <br>
+  //   <img class="icono" src="img/contraseña_icono.png" alt="">
+  //   <input class="input" type="password" placeholder="Contraseña" id="input_password" class="input_password">
+  //   <p id="errorMensaje" class="errorMensaje">¿Olvidó su contraseña?</p>
+  //   <button class="btn" id="start_btn">Comenzar</button>
+  // </section>
+
+  // <section>
+  //   <p>Ingresar con</p>
+  //   <div>
+  //     <img src="img/google_logo.png" class="logo" alt="Logo google">
+  //     <img src="img/facebook_logo.png" class="logo" alt="Logo facebook">
+  //   </div>
+  //   <button class="btn" id="login-btn">Regístrarse</button>
+  // </section>
+  // <footer> &copy;2020 by Fabiane Geraldine & Lady</footer>
+  // <script type="module" src="main.js"></script>
+  // </div>
+  //   `;
+  // });
 }
+login.addEventListener('click', loginPage);
