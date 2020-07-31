@@ -53,9 +53,9 @@ function secondPage() {
           <input type="search" id="input_search">
         </div>
         <div class = "icons-General">
-          <img src="img/articulo_icono.png" alt="">
-          <img src="img/calendario_icono.png" alt="">
-          <img src="img/usuario_icono.png" alt="">
+          <img class = "icoArt" src="img/articulo_icono.png" alt="">
+          <img class = "icoCalen" src="img/calendario_icono.png" alt="">
+          <img class = "icoUsu" src="img/usuario_icono.png" alt="">
         </div> 
       </div>
   </header>
