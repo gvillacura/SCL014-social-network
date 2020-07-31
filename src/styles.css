@@ -78,13 +78,15 @@ p {
 .icono {
     width: 1.3em;
 }
-.errorMensaje:hover{
+
+.errorMensaje:hover {
     color: salmon;
     /* border-bottom: solid 1px; */
 }
+
 h4 {
     font-family: 'Open Sans', sans-serif;
-    color:tomato;
+    color: tomato;
 }
 
 .icons-General {
@@ -127,7 +129,6 @@ h4 {
         background: #F4F683;
         margin-top: -4px;
         font-family: 'Dancing Script', cursive;
-        font-family: 'Open Sans', sans-serif;
     }
 
     .btn {
