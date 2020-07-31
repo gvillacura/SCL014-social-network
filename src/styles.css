@@ -70,15 +70,18 @@ footer {
 
 p {
   font-family: "Open Sans", sans-serif;
+  cursor: default;
 }
 
 .icono {
   width: 1.3em;
 }
+
 .errorMensaje:hover {
   color: salmon;
   /* border-bottom: solid 1px; */
 }
+
 h4 {
   font-family: "Open Sans", sans-serif;
   color: tomato;
@@ -142,7 +145,6 @@ h4 {
     background: #f4f683;
     margin-top: -4px;
     font-family: "Dancing Script", cursive;
-    font-family: "Open Sans", sans-serif;
   }
 
   .btn {
@@ -188,7 +190,7 @@ h4 {
 
   footer {
     margin-top: 3em;
-    font-family: "Dancing Script" cursive;
+    font-family: "Dancing Script"cursive;
   }
 
   .container-second-page {
@@ -219,6 +221,11 @@ h4 {
 
   .container_left {
     float: left;
+  }
+
+  .errorMensaje:hover {
+    color: salmon;
+    /* border-bottom: solid 1px; */
   }
 
   .header-image-desktop {
