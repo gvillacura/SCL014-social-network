@@ -156,3 +156,6 @@ btnHome.addEventListener('click', homePage);
 btnInicio.addEventListener('click', () => {
   move('login', 'inicio');
 }); */
+
+
+    
