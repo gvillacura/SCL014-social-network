@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Art Space</title>
+
 </head>
+
 <body>
-  <script type="module" src="main.js"></script>
+  <div id='root'>
+
+      <header>
+        <img class="header-image" src="img/img-cel.png">
+        <img class="header-image-desktop" src="img/img-desk.png">
+        <h1>Art Space</h1>
+      </header>
+
+      <section class="input_section">
+        <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
+        <input class="input" type="email" placeholder="Correo electrónico" id="input_email"> <br>
+        <img class="icono" src="img/contraseña_icono.png" alt="">
+        <input class="input" type="password" placeholder="Contraseña" id="input_password" class="input_password">
+        <p id="errorMensaje" class="errorMensaje">¿Olvidó su contraseña?</p>
+        <button class="btn" id="home_btn">Comenzar</button>
+      </section>
+
+      <section>
+        <p>Ingresar con</p>
+        <div>
+          <img src="img/google_logo.png" class="logo" alt="Logo google">
+          <img src="img/facebook_logo.png" class="logo" alt="Logo facebook">
+        </div>
+        <button class="btn" id="registration-btn">Registrarse</button>
+      </section>
+
+      <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
+
+      <script type="module" src="main.js"></script>
+  </div>
 </body>
 </html>
