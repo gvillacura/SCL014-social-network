@@ -79,7 +79,6 @@ p {
 
 .errorMensaje:hover {
   color: salmon;
-  /* border-bottom: solid 1px; */
 }
 
 h4 {
@@ -124,10 +123,6 @@ h4 {
 .container_left {
   float: left;
 }
-
-/* .login {
-  display: block;
-} */
 
 @media (max-width: 425px) {
   body {
