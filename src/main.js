@@ -4,11 +4,17 @@
     myFunction
 } from './lib/index.js';
 myFunction(); */
+// Firebase App (the core Firebase SDK) is always required and must be listed first
 
 let btnLogin;
 let btnHome = document.querySelector('#home_btn');
 let btnRegistration = document.querySelector('#registration-btn');
 let mensaje = document.getElementById('errorMensaje');
+
+/* const move = (close, open) => {
+  document.getElementById(close).style.display = 'none';
+  document.getElementById(open).style.display = 'block';
+}; */
 let artSpace;
 
 const loginPage = () => {
@@ -41,10 +47,13 @@ const loginPage = () => {
  </div>
    `;
   btnHome = document.querySelector('#home_btn');
+  // eslint-disable-next-line no-use-before-define
   btnHome.addEventListener('click', homePage);
   btnRegistration = document.querySelector('#registration-btn');
+  // eslint-disable-next-line no-use-before-define
   btnRegistration.addEventListener('click', registrationPage);
   mensaje = document.getElementById('errorMensaje');
+  // eslint-disable-next-line no-use-before-define
   mensaje.addEventListener('click', errorPage);
 };
 
@@ -100,11 +109,11 @@ const registrationPage = () => {
       </div>
       <div>
         <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
-        <input class="input" type="email" placeholder="Correo electrónico" id="input_email"> <br>
+        <input class="input" type="email" placeholder="Correo electrónico" id="input_email2"> <br>
       </div>
       <div>
         <img class="icono" src="img/contraseña_icono.png" alt="">
-        <input class="input" type="password" placeholder="Contraseña" id="input_password" class="input_password"><br>
+        <input class="input" type="password" placeholder="Contraseña" id="input_password2" class="input_password"><br>
       </div>
       <div>
         <img src="img/confirmar_icono.png" class="icono" alt="Icono confirmar"></img>
@@ -113,7 +122,7 @@ const registrationPage = () => {
     </div>
 
     <div>
-      <button class="btn" id="login-btn">Registrar</button> <br>
+      <button class="btn" id="save-registration-btn">Registrar</button> <br>
       <button class="btn" id="loginBtn">Inicio</button>
     </div>
     <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
@@ -122,6 +131,22 @@ const registrationPage = () => {
   </div>`;
   btnLogin = document.getElementById('loginBtn');
   btnLogin.addEventListener('click', loginPage);
+
+  const saveRegistration = document.getElementById('save-registration-btn');
+
+  function registrar() {
+    const email = document.getElementById('input_email2').value;
+    const password = document.getElementById('input_password2').value;
+
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
+      // Handle Errors here.
+      // eslint-disable-next-line no-unused-vars
+      const errorCode = error.code;
+      // eslint-disable-next-line no-unused-vars
+      const errorMessage = error.message;
+    });
+  }
+  saveRegistration.addEventListener('click', registrar);
 };
 btnRegistration.addEventListener('click', registrationPage);
 
@@ -151,5 +176,15 @@ const homePage = () => {
 };
 btnHome.addEventListener('click', homePage);
 
+<<<<<<< HEAD
 
  const provider = firebase.auth.GoogleAuthProvider();
+=======
+/* const btnInicio = document.getElementById('inicioBtn');
+btnInicio.addEventListener('click', () => {
+  move('login', 'inicio');
+}); */
+// const saveRegistration = document.getElementById('home_btn');
+// eslint-disable-next-line eol-last
+// saveRegistration.addEventListener('click', registrar);
+>>>>>>> fd7047a40f15b0b97af8532fbd373d462be6efc6
