@@ -15,6 +15,7 @@ let mensaje = document.getElementById('errorMensaje');
   document.getElementById(close).style.display = 'none';
   document.getElementById(open).style.display = 'block';
 }; */
+let artSpace;
 
 const loginPage = () => {
   document.querySelector('#root').innerHTML = `
@@ -41,7 +42,7 @@ const loginPage = () => {
    </div>
    <button class="btn" id="registration-btn">Regístrarse</button>
  </section>
- <footer> &copy;2020 by Fabiane Geraldine & Lady</footer>
+ <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
  <script type="module" src="main.js"></script>
  </div>
    `;
@@ -57,8 +58,7 @@ const loginPage = () => {
 };
 
 const errorPage = () => {
-  const errorMensaje = document.querySelector('#root');
-  errorMensaje.innerHTML = `
+  document.querySelector('#root').innerHTML = `
   <header>
       <img class="header-image" src="img/img-cel.png">
       <img class="header-image-desktop" src="img/img-desk.png">
@@ -81,7 +81,7 @@ const errorPage = () => {
       <img src="img/facebook_logo.png" class="logo" alt="Logo facebook">
     </div>
   </section>
-  <footer> &copy;2020 by Fabiane Geraldine & Lady</footer>
+  <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
 
   `;
   btnLogin = document.getElementById('loginBtn');
@@ -125,7 +125,7 @@ const registrationPage = () => {
       <button class="btn" id="save-registration-btn">Registrar</button> <br>
       <button class="btn" id="loginBtn">Inicio</button>
     </div>
-    <footer> &copy;2020 by Fabiane Geraldine & Lady</footer>
+    <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
 
     <script type="module" src="main.js"></script>
   </div>`;
@@ -158,7 +158,7 @@ const homePage = () => {
       <div class = "container-second-page">
         <div class = "container_left">
           <img class="header-image-desktop" src="img/img-desk.png" alt="">
-          <h1 class = "logo-second-page" >Art Space</h1>
+          <h1 class = "logo-second-page" id="artSpace" >Art Space</h1>
           <input type="search" id="input_search">
         </div>
         <div class = "icons-General">
@@ -168,7 +168,11 @@ const homePage = () => {
         </div> 
       </div>
   </header>
+  <footer > &copy;2020 by Fabiane, Geraldine & Lady</footer>
+
   </div> `;
+  artSpace = document.getElementById('artSpace');
+  artSpace.addEventListener('click', loginPage);
 };
 btnHome.addEventListener('click', homePage);
 
