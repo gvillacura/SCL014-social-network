@@ -176,10 +176,6 @@ const homePage = () => {
 };
 btnHome.addEventListener('click', homePage);
 
-<<<<<<< HEAD
-
- const provider = firebase.auth.GoogleAuthProvider();
-=======
 /* const btnInicio = document.getElementById('inicioBtn');
 btnInicio.addEventListener('click', () => {
   move('login', 'inicio');
@@ -187,4 +183,3 @@ btnInicio.addEventListener('click', () => {
 // const saveRegistration = document.getElementById('home_btn');
 // eslint-disable-next-line eol-last
 // saveRegistration.addEventListener('click', registrar);
->>>>>>> fd7047a40f15b0b97af8532fbd373d462be6efc6
