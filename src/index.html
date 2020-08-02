@@ -23,13 +23,17 @@
     </header>
 
     <section class="input_section">
-      <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
-      <input class="input" type="email" placeholder="Correo electrónico" id="input_email"> <br>
-      <img class="icono" src="img/contraseña_icono.png" alt="">
-      <input class="input" type="password" placeholder="Contraseña" id="input_password" class="input_password">
-      <p id="errorMensaje" class="errorMensaje">¿Olvidó su contraseña?</p>
-      <button class="btn" id="home_btn">Comenzar</button>
+      <form>
+        <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
+        <input class="input" type="email" autocomplete="email" placeholder="Correo electrónico" id="input_email"> <br>
+        <img class="icono" src="img/contraseña_icono.png" alt="">
+        <input class="input" type="password" autocomplete="current-password" placeholder="Contraseña"
+          id="input_password" class="input_password">
+        <p id="errorMensaje" class="errorMensaje">¿Olvidó su contraseña?</p>
+        <button class="btn" id="home_btn" type='button'>Comenzar</button>
+      </form>
     </section>
+
 
     <section>
       <p>Ingresar con</p>
