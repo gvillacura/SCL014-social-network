@@ -150,3 +150,6 @@ const homePage = () => {
   artSpace.addEventListener('click', loginPage);
 };
 btnHome.addEventListener('click', homePage);
+
+
+ const provider = firebase.auth.GoogleAuthProvider();
