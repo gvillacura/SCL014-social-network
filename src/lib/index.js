@@ -21,20 +21,6 @@ export const registrar = () => {
   const email = document.getElementById('input_email2').value;
   const password = document.getElementById('input_password2').value;
 
-<<<<<<< HEAD
- export const registrar = () => {
-   const email = document.getElementById('input_email2').value;
-   const password = document.getElementById('input_password2').value;
-
-   firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
-//     // Handle Errors here.
-//     // eslint-disable-next-line no-unused-vars
-     const errorCode = error.code;
-    // eslint-disable-next-line no-unused-vars
-     const errorMessage = error.message;
-  });
- }
-=======
   firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
     // Handle Errors here.
     // eslint-disable-next-line no-unused-vars
@@ -43,4 +29,3 @@ export const registrar = () => {
     const errorMessage = error.message;
   });
 }
->>>>>>> 822a64015e77f7c313dae1c4bf47494a452b6445

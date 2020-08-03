@@ -4,10 +4,6 @@
 import {
   ingreso,
   registrar,
-<<<<<<< HEAD
-=======
-
->>>>>>> 822a64015e77f7c313dae1c4bf47494a452b6445
 } from './lib/index.js';
 
 // Firebase App (the core Firebase SDK) is always required and must be listed first
