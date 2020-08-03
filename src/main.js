@@ -3,7 +3,7 @@
 // const { ingreso } = require("./lib");
 import {
   ingreso,
-
+  registrar,
 } from './lib/index.js';
 
 // Firebase App (the core Firebase SDK) is always required and must be listed first
