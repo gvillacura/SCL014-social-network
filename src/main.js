@@ -1,15 +1,21 @@
 // Este es el punto de entrada de tu aplicacion
 
-/* import {
-    myFunction
+// const { ingreso } = require("./lib");
+import {
+  ingreso,
+  registrar,
+ loginG,
+
 } from './lib/index.js';
-myFunction(); */
+
+// Firebase App (the core Firebase SDK) is always required and must be listed first
 
 let btnLogin;
 let btnHome = document.querySelector('#home_btn');
 let btnRegistration = document.querySelector('#registration-btn');
 let mensaje = document.getElementById('errorMensaje');
 let artSpace;
+let googlee = document.querySelector('#google');
 
 const loginPage = () => {
   document.querySelector('#root').innerHTML = `
@@ -31,8 +37,8 @@ const loginPage = () => {
  <section>
    <p>Ingresar con</p>
    <div>
-     <img src="img/google_logo.png" class="logo" alt="Logo google">
-     <img src="img/facebook_logo.png" class="logo" alt="Logo facebook">
+     <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
+    
    </div>
    <button class="btn" id="registration-btn">Regístrarse</button>
  </section>
@@ -41,10 +47,13 @@ const loginPage = () => {
  </div>
    `;
   btnHome = document.querySelector('#home_btn');
+  // eslint-disable-next-line no-use-before-define
   btnHome.addEventListener('click', homePage);
   btnRegistration = document.querySelector('#registration-btn');
+  // eslint-disable-next-line no-use-before-define
   btnRegistration.addEventListener('click', registrationPage);
   mensaje = document.getElementById('errorMensaje');
+  // eslint-disable-next-line no-use-before-define
   mensaje.addEventListener('click', errorPage);
 };
 
@@ -69,7 +78,7 @@ const errorPage = () => {
     <p>Ingresar con</p>
     <div>
       <img src="img/google_logo.png" class="logo" alt="Logo google">
-      <img src="img/facebook_logo.png" class="logo" alt="Logo facebook">
+     
     </div>
   </section>
   <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
@@ -100,11 +109,11 @@ const registrationPage = () => {
       </div>
       <div>
         <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
-        <input class="input" type="email" placeholder="Correo electrónico" id="input_email"> <br>
+        <input class="input" type="email" placeholder="Correo electrónico" id="input_email2"> <br>
       </div>
       <div>
         <img class="icono" src="img/contraseña_icono.png" alt="">
-        <input class="input" type="password" placeholder="Contraseña" id="input_password" class="input_password"><br>
+        <input class="input" type="password" placeholder="Contraseña" id="input_password2" class="input_password"><br>
       </div>
       <div>
         <img src="img/confirmar_icono.png" class="icono" alt="Icono confirmar"></img>
@@ -113,7 +122,7 @@ const registrationPage = () => {
     </div>
 
     <div>
-      <button class="btn" id="login-btn">Registrar</button> <br>
+      <button class="btn" id="save-registration-btn">Registrar</button> <br>
       <button class="btn" id="loginBtn">Inicio</button>
     </div>
     <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
@@ -122,10 +131,15 @@ const registrationPage = () => {
   </div>`;
   btnLogin = document.getElementById('loginBtn');
   btnLogin.addEventListener('click', loginPage);
+
+  const saveRegistration = document.getElementById('save-registration-btn');
+
+  saveRegistration.addEventListener('click', registrar);
 };
 btnRegistration.addEventListener('click', registrationPage);
 
-const homePage = () => {
+
+export const homePage = () => {
   document.querySelector('#root').innerHTML = ` 
   <div>
   <header>
@@ -149,4 +163,11 @@ const homePage = () => {
   artSpace = document.getElementById('artSpace');
   artSpace.addEventListener('click', loginPage);
 };
-btnHome.addEventListener('click', homePage);
+
+btnHome.addEventListener('click', () => {
+  ingreso(homePage);
+}); 
+
+googlee.addEventListener('click', () =>{
+  loginG(homePage);
+});
