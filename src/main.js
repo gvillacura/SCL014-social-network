@@ -1,20 +1,17 @@
 // Este es el punto de entrada de tu aplicacion
 
-/* import {
-    myFunction
+// const { ingreso } = require("./lib");
+
+ import {
+   ingreso
 } from './lib/index.js';
-myFunction(); */
+
 // Firebase App (the core Firebase SDK) is always required and must be listed first
 
 let btnLogin;
 let btnHome = document.querySelector('#home_btn');
 let btnRegistration = document.querySelector('#registration-btn');
 let mensaje = document.getElementById('errorMensaje');
-
-/* const move = (close, open) => {
-  document.getElementById(close).style.display = 'none';
-  document.getElementById(open).style.display = 'block';
-}; */
 let artSpace;
 
 const loginPage = () => {
@@ -174,31 +171,7 @@ const homePage = () => {
   artSpace = document.getElementById('artSpace');
   artSpace.addEventListener('click', loginPage);
 };
-// btnHome.addEventListener('click', homePage);
 
-function ingreso() {
-  const email = document.getElementById('input_email').value;
-  const password = document.getElementById('input_password').value;
-  firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((firebaseUser) => {
-      homePage();
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      if (errorCode === 'auth/wrong-password') {
-        alert('Contraseña erronea.');
-      } else {
-        alert(errorMessage);
-      }
-      console.log(error);
-    });
-}
+
 btnHome.addEventListener('click', ingreso);
-/* const btnInicio = document.getElementById('inicioBtn');
-btnInicio.addEventListener('click', () => {
-  move('login', 'inicio');
-}); */
-// const saveRegistration = document.getElementById('home_btn');
-// eslint-disable-next-line eol-last
-// saveRegistration.addEventListener('click', registrar);
+ingreso();
