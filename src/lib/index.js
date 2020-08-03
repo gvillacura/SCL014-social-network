@@ -12,9 +12,7 @@ export const ingreso = (callback) => {
       const errorMessage = error.message;
       if (errorCode === 'auth/wrong-password') {
         alert('Contraseña erronea.');
-      } else {
-        alert(errorMessage);
-      }
+      } else
       console.log(error);
     });
 }
