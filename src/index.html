@@ -38,8 +38,8 @@
     <section>
       <p>Ingresar con</p>
       <div>
-        <img src="img/google_logo.png" class="logo" alt="Logo google">
-        <img src="img/facebook_logo.png" class="logo" alt="Logo facebook">
+        <img src="img/google_logo.png" class="logo" alt="Logo google" id="google">
+        <!-- <img src="img/facebook_logo.png" class="logo" alt="Logo facebook"> -->
       </div>
       <button class="btn" id="registration-btn">Registrarse</button>
     </section>
@@ -72,8 +72,8 @@
     firebase.initializeApp(firebaseConfig);
   </script>
 
-  <script type="module" src="main.js"></script>
-  <script type="module" src="index.js"></script>
+  <script src="main.js" type="module"></script>
+  <script type="module" src="./lib/index.js"></script>
 </body>
 
 </html>

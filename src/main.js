@@ -1,9 +1,11 @@
 // Este es el punto de entrada de tu aplicacion
 
 // const { ingreso } = require("./lib");
+import {
+  ingreso,
+  registrar,
+ loginG,
 
- import {
-   ingreso
 } from './lib/index.js';
 
 // Firebase App (the core Firebase SDK) is always required and must be listed first
@@ -13,6 +15,7 @@ let btnHome = document.querySelector('#home_btn');
 let btnRegistration = document.querySelector('#registration-btn');
 let mensaje = document.getElementById('errorMensaje');
 let artSpace;
+let googlee = document.querySelector('#google');
 
 const loginPage = () => {
   document.querySelector('#root').innerHTML = `
@@ -34,8 +37,8 @@ const loginPage = () => {
  <section>
    <p>Ingresar con</p>
    <div>
-     <img src="img/google_logo.png" class="logo" alt="Logo google">
-     <img src="img/facebook_logo.png" class="logo" alt="Logo facebook">
+     <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
+    
    </div>
    <button class="btn" id="registration-btn">Regístrarse</button>
  </section>
@@ -75,7 +78,7 @@ const errorPage = () => {
     <p>Ingresar con</p>
     <div>
       <img src="img/google_logo.png" class="logo" alt="Logo google">
-      <img src="img/facebook_logo.png" class="logo" alt="Logo facebook">
+     
     </div>
   </section>
   <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
@@ -134,9 +137,9 @@ const registrationPage = () => {
   saveRegistration.addEventListener('click', registrar);
 };
 btnRegistration.addEventListener('click', registrationPage);
-// registrar();
 
-const homePage = () => {
+
+export const homePage = () => {
   document.querySelector('#root').innerHTML = ` 
   <div>
   <header>
@@ -161,5 +164,10 @@ const homePage = () => {
   artSpace.addEventListener('click', loginPage);
 };
 
-btnHome.addEventListener('click', ingreso);
-ingreso();
+btnHome.addEventListener('click', () => {
+  ingreso(homePage);
+}); 
+
+googlee.addEventListener('click', () =>{
+  loginG(homePage);
+});
