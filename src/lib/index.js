@@ -9,10 +9,12 @@ export const ingreso = (callback) => {
     })
     .catch((error) => {
       const errorCode = error.code;
-      const errorMessage = error.message;
+
       if (errorCode === 'auth/wrong-password') {
         alert('Contraseña erronea.');
-      } else
+      } else {
+        alert('¡Ingrese un correo valido!');
+      }
       console.log(error);
     });
 }
@@ -28,4 +30,26 @@ export const registrar = () => {
     // eslint-disable-next-line no-unused-vars
     const errorMessage = error.message;
   });
+}
+
+
+export const loginG = (callback) => {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+
+    .then((result) => {
+      console.log(result.user)
+      callback();
+  
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+
+      if (errorCode === 'auth/wrong-password') {
+        alert('Contraseña erronea.');
+      } else {
+        alert('¡Ingrese un correo valido!');
+      }
+      console.log(error);
+    });
 }
