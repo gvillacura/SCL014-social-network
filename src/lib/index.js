@@ -1,11 +1,11 @@
 // aqui exportaras las funciones que necesites
 
-export const ingreso = () => {
+export const ingreso = (callback) => {
   const email = document.getElementById('input_email').value;
   const password = document.getElementById('input_password').value;
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((firebaseUser) => {
-      homePage();
+      callback();
     })
     .catch((error) => {
       const errorCode = error.code;
