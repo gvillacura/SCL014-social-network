@@ -131,21 +131,10 @@ const registrationPage = () => {
 
   const saveRegistration = document.getElementById('save-registration-btn');
 
-  function registrar() {
-    const email = document.getElementById('input_email2').value;
-    const password = document.getElementById('input_password2').value;
-
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
-      // Handle Errors here.
-      // eslint-disable-next-line no-unused-vars
-      const errorCode = error.code;
-      // eslint-disable-next-line no-unused-vars
-      const errorMessage = error.message;
-    });
-  }
   saveRegistration.addEventListener('click', registrar);
 };
 btnRegistration.addEventListener('click', registrationPage);
+// registrar();
 
 const homePage = () => {
   document.querySelector('#root').innerHTML = ` 
@@ -171,7 +160,6 @@ const homePage = () => {
   artSpace = document.getElementById('artSpace');
   artSpace.addEventListener('click', loginPage);
 };
-
 
 btnHome.addEventListener('click', ingreso);
 ingreso();
