@@ -3,6 +3,7 @@
 // const { ingreso } = require("./lib");
 import {
   ingreso,
+  registrar,
 
 } from './lib/index.js';
 
