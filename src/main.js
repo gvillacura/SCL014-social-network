@@ -1,9 +1,9 @@
 // Este es el punto de entrada de tu aplicacion
 
 // const { ingreso } = require("./lib");
+import {
+  ingreso,
 
- import {
-   ingreso,registrar
 } from './lib/index.js';
 
 // Firebase App (the core Firebase SDK) is always required and must be listed first
@@ -136,7 +136,7 @@ const registrationPage = () => {
 btnRegistration.addEventListener('click', registrationPage);
 // registrar();
 
-const homePage = () => {
+export const homePage = () => {
   document.querySelector('#root').innerHTML = ` 
   <div>
   <header>
@@ -161,5 +161,6 @@ const homePage = () => {
   artSpace.addEventListener('click', loginPage);
 };
 
-btnHome.addEventListener('click', ingreso);
-ingreso();
+btnHome.addEventListener('click', () => {
+  ingreso(homePage);
+});
