@@ -1,22 +1,22 @@
-// Este es el punto de entrada de tu aplicacion
-
-// const { ingreso } = require("./lib");
+/* eslint-disable no-use-before-define */
+// Funciones importadas funcionalidad firebase
 import {
   ingreso,
   registrar,
- loginG,
+  loginG,
+  pass,
 
 } from './lib/index.js';
-
-// Firebase App (the core Firebase SDK) is always required and must be listed first
-
+//enlaces
 let btnLogin;
 let btnHome = document.querySelector('#home_btn');
 let btnRegistration = document.querySelector('#registration-btn');
-let mensaje = document.getElementById('errorMensaje');
+let mensaje = document.querySelector('#errorMensaje');
 let artSpace;
 let googlee = document.querySelector('#google');
+let enviar = document.querySelector('#start_btn');
 
+// pagina de inicio
 const loginPage = () => {
   document.querySelector('#root').innerHTML = `
    <header>
@@ -35,7 +35,7 @@ const loginPage = () => {
  </section>
 
  <section>
-   <p>Ingresar con</p>
+   <p>Ingresa con </p>
    <div>
      <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
     
@@ -46,17 +46,29 @@ const loginPage = () => {
  <script type="module" src="main.js"></script>
  </div>
    `;
+   //funcion que lleva desde la pagina de inicio a la segunda
   btnHome = document.querySelector('#home_btn');
   // eslint-disable-next-line no-use-before-define
-  btnHome.addEventListener('click', homePage);
+  btnHome.addEventListener('click', () => {
+    ingreso(homePage);
+  });
+  //Funcion que lleva desde la de inicio a la de registro
   btnRegistration = document.querySelector('#registration-btn');
   // eslint-disable-next-line no-use-before-define
   btnRegistration.addEventListener('click', registrationPage);
-  mensaje = document.getElementById('errorMensaje');
+  //Funcion que lleva a recuperar tu contraseña
+  mensaje = document.querySelector('#errorMensaje');
   // eslint-disable-next-line no-use-before-define
   mensaje.addEventListener('click', errorPage);
+  //funcion que lleva desde el login google a la segunda pantalla
+  googlee = document.querySelector('#google');
+  googlee.addEventListener('click', () => {
+    loginG(homePage);
+  });
 };
 
+
+//pagina olvido  su contraseña
 const errorPage = () => {
   document.querySelector('#root').innerHTML = `
   <header>
@@ -69,7 +81,7 @@ const errorPage = () => {
 
   <section class="input_section">
   <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
-  <input class="input" type="email" placeholder="Correo electrónico" id="input_email"> <br>
+  <input class="input" type="email" placeholder="Correo electrónico" id="input_email_Pass"> <br>
   <button class="btn" id="start_btn">Enviar</button> <br>
   <button class="btn" id="loginBtn">Inicio</button>
   </section>
@@ -84,11 +96,18 @@ const errorPage = () => {
   <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
 
   `;
+  // funcion que lleva desde recuperar contraseña a primera pagina
   btnLogin = document.getElementById('loginBtn');
   btnLogin.addEventListener('click', loginPage);
-};
+  enviar = document.querySelector('#start_btn');
+  enviar.addEventListener('click', () => {
+    pass(loginPage );
+});
+}
 mensaje.addEventListener('click', errorPage);
 
+
+// pagina para registrarse
 const registrationPage = () => {
   document.querySelector('#root').innerHTML = ` 
   <div id='login' class='login'>
@@ -129,17 +148,18 @@ const registrationPage = () => {
 
     <script type="module" src="main.js"></script>
   </div>`;
-  btnLogin = document.getElementById('loginBtn');
+  // funcion que lleva desde pagina de registrarse a primera pagina
+  btnLogin = document.querySelector('#loginBtn');
   btnLogin.addEventListener('click', loginPage);
 
-  const saveRegistration = document.getElementById('save-registration-btn');
+  const saveRegistration = document.querySelector('#save-registration-btn');
 
   saveRegistration.addEventListener('click', registrar);
 };
 btnRegistration.addEventListener('click', registrationPage);
 
-
-export const homePage = () => {
+//Segunda Pagina
+ const homePage = () => {
   document.querySelector('#root').innerHTML = ` 
   <div>
   <header>
@@ -160,14 +180,16 @@ export const homePage = () => {
   <footer > &copy;2020 by Fabiane, Geraldine & Lady</footer>
 
   </div> `;
+  //funcion que lleva desde logo segunda pagina a primera pagina
   artSpace = document.getElementById('artSpace');
   artSpace.addEventListener('click', loginPage);
 };
-
+//Conexion a firebase index.js
 btnHome.addEventListener('click', () => {
   ingreso(homePage);
-}); 
+});
 
-googlee.addEventListener('click', () =>{
+googlee.addEventListener('click', () => {
   loginG(homePage);
+  // eslint-disable-next-line eol-last
 });
