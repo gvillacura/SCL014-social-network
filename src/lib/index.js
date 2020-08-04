@@ -51,9 +51,5 @@ export const loginG = (callback) => {
       }
       console.log(error);
     });
-<<<<<<< HEAD
-}
-=======
   // eslint-disable-next-line eol-last
 };
->>>>>>> aade880500490401fa9fdacb6d3021fd6dcf98ef
