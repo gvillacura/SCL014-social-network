@@ -1,5 +1,5 @@
 // aqui exportaras las funciones que necesites
-// funcion firebase que captura mail y contraseña a usuarios ya registrados
+// Función firebase que captura mail y contraseña a usuarios ya registrados
 export const ingreso = (callback) => {
   const email = document.getElementById('input_email').value;
   const password = document.getElementById('input_password').value;
@@ -18,7 +18,7 @@ export const ingreso = (callback) => {
       console.log(error);
     });
 };
-// funcion firebase para registrarse en la pagina
+// Función firebase para registrarse en la página
 export const registrar = () => {
   const email = document.getElementById('input_email2').value;
   const password = document.getElementById('input_password2').value;
@@ -32,7 +32,7 @@ export const registrar = () => {
   });
 };
 
-//funcion firebase para registrarse mediante google
+// Función firebase para registrarse mediante google
 export const loginG = (callback) => {
   const provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider)

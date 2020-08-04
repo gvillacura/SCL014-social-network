@@ -6,7 +6,7 @@ import {
   loginG,
 
 } from './lib/index.js';
-//enlaces
+// Enlaces
 let btnLogin;
 let btnHome = document.querySelector('#home_btn');
 let btnRegistration = document.querySelector('#registration-btn');
@@ -14,7 +14,7 @@ let mensaje = document.querySelector('#errorMensaje');
 let artSpace;
 let googlee = document.querySelector('#google');
 
-// pagina de inicio
+// Página de inicio
 const loginPage = () => {
   document.querySelector('#root').innerHTML = `
    <header>
@@ -44,27 +44,27 @@ const loginPage = () => {
  <script type="module" src="main.js"></script>
  </div>
    `;
-   //funcion que lleva desde la pagina de inicio a la segunda
+  // Función que lleva desde la pagina de inicio a la segunda
   btnHome = document.querySelector('#home_btn');
   // eslint-disable-next-line no-use-before-define
   btnHome.addEventListener('click', () => {
     ingreso(homePage);
   });
-  //Funcion que lleva desde la de inicio a la de registro
+  // Función que lleva desde la de inicio a la de registro
   btnRegistration = document.querySelector('#registration-btn');
   // eslint-disable-next-line no-use-before-define
   btnRegistration.addEventListener('click', registrationPage);
-  //Funcion que lleva a recuperar tu contraseña
+  // Función que lleva a recuperar tu contraseña
   mensaje = document.querySelector('#errorMensaje');
   // eslint-disable-next-line no-use-before-define
   mensaje.addEventListener('click', errorPage);
-  //funcion que lleva desde el login google a la segunda pantalla
+  // Función que lleva desde el login google a la segunda pantalla
   googlee = document.querySelector('#google');
   googlee.addEventListener('click', () => {
     loginG(homePage);
   });
 };
-//pagina olvido  su contraseña
+// Página olvidó su contraseña
 const errorPage = () => {
   document.querySelector('#root').innerHTML = `
   <header>
@@ -92,12 +92,12 @@ const errorPage = () => {
   <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
 
   `;
-  // funcion que lleva desde recuperar contraseña a primera pagina
+  // Función que lleva desde recuperar contraseña a primera pagina
   btnLogin = document.getElementById('loginBtn');
   btnLogin.addEventListener('click', loginPage);
 };
 mensaje.addEventListener('click', errorPage);
-// pagina para registrarse
+// Página para registrarse
 const registrationPage = () => {
   document.querySelector('#root').innerHTML = ` 
   <div id='login' class='login'>
@@ -138,7 +138,7 @@ const registrationPage = () => {
 
     <script type="module" src="main.js"></script>
   </div>`;
-  // funcion que lleva desde pagina de registrarse a primera pagina
+  // Función que lleva desde pagina de registrarse a primera pagina
   btnLogin = document.querySelector('#loginBtn');
   btnLogin.addEventListener('click', loginPage);
 
@@ -148,7 +148,7 @@ const registrationPage = () => {
 };
 btnRegistration.addEventListener('click', registrationPage);
 
-//Segunda Pagina
+// Segunda Página
 export const homePage = () => {
   document.querySelector('#root').innerHTML = ` 
   <div>
@@ -170,11 +170,11 @@ export const homePage = () => {
   <footer > &copy;2020 by Fabiane, Geraldine & Lady</footer>
 
   </div> `;
-  //funcion que lleva desde logo segunda pagina a primera pagina
+  // Función que lleva desde logo segunda pagina a primera página
   artSpace = document.getElementById('artSpace');
   artSpace.addEventListener('click', loginPage);
 };
-//Conexion a firebase index.js
+// Conexion a firebase index.js
 btnHome.addEventListener('click', () => {
   ingreso(homePage);
 });
