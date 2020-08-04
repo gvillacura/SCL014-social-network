@@ -4,6 +4,7 @@ import {
   ingreso,
   registrar,
   loginG,
+  pass,
 
 } from './lib/index.js';
 // Enlaces
@@ -13,6 +14,7 @@ let btnRegistration = document.querySelector('#registration-btn');
 let mensaje = document.querySelector('#errorMensaje');
 let artSpace;
 let googlee = document.querySelector('#google');
+let enviar = document.querySelector('#start_btn');
 
 // Página de inicio
 const loginPage = () => {
@@ -33,7 +35,7 @@ const loginPage = () => {
  </section>
 
  <section>
-   <p>Ingresar con</p>
+   <p>Ingresa con </p>
    <div>
      <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
     
@@ -77,7 +79,7 @@ const errorPage = () => {
 
   <section class="input_section">
   <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
-  <input class="input" type="email" placeholder="Correo electrónico" id="input_email"> <br>
+  <input class="input" type="email" placeholder="Correo electrónico" id="input_email_Pass"> <br>
   <button class="btn" id="start_btn">Enviar</button> <br>
   <button class="btn" id="loginBtn">Inicio</button>
   </section>
@@ -95,7 +97,11 @@ const errorPage = () => {
   // Función que lleva desde recuperar contraseña a primera pagina
   btnLogin = document.getElementById('loginBtn');
   btnLogin.addEventListener('click', loginPage);
-};
+  enviar = document.querySelector('#start_btn');
+  enviar.addEventListener('click', () => {
+    pass(loginPage);
+  });
+}
 mensaje.addEventListener('click', errorPage);
 // Página para registrarse
 const registrationPage = () => {

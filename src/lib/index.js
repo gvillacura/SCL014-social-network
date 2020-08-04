@@ -53,3 +53,20 @@ export const loginG = (callback) => {
     });
   // eslint-disable-next-line eol-last
 };
+
+//función firebase para cambiar contraseña
+export const pass = (callback) => {
+  let auth = firebase.auth();
+  let emailAddress = document.getElementById('input_email_Pass').value;
+
+  auth.sendPasswordResetEmail(emailAddress)
+    .then(() => {
+      alert('¡Correo enviado! Ingrese con su nueva contraseña en la pagina de inicio.');
+      callback();
+    })
+    .catch(function (error) {
+      alert('¡Ingrese una dirección de correo!')
+      const errorMessage = error.message;
+    });
+
+}
