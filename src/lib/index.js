@@ -46,8 +46,6 @@ export const loginG = (callback) => {
 
       if (errorCode === 'auth/wrong-password') {
         alert('Contraseña erronea.');
-      } else {
-        alert('¡Ingrese un correo valido!');
       }
       console.log(error);
     });

@@ -40,7 +40,7 @@ const loginPage = () => {
      <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
     
    </div>
-   <button class="btn" id="registration-btn">Regístrarse</button>
+   <button class="btn" id="registration-btn">Registrarse</button>
  </section>
  <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
  <script type="module" src="main.js"></script>
@@ -87,7 +87,7 @@ const errorPage = () => {
   <section>
     <p>Ingresar con</p>
     <div>
-      <img src="img/google_logo.png" class="logo" alt="Logo google">
+      <img src="img/google_logo.png" id = "google" class="logo" alt="Logo google">
      
     </div>
   </section>
@@ -101,9 +101,15 @@ const errorPage = () => {
   enviar.addEventListener('click', () => {
     pass(loginPage);
   });
-}
+  googlee = document.querySelector('#google');
+  googlee.addEventListener('click', () => {
+    loginG(homePage);
+    // eslint-disable-next-line eol-last
+  });
+};
 mensaje.addEventListener('click', errorPage);
 // Página para registrarse
+
 const registrationPage = () => {
   document.querySelector('#root').innerHTML = ` 
   <div id='login' class='login'>
@@ -120,7 +126,7 @@ const registrationPage = () => {
       </div>
       <div>
         <img src="img/direccion_icono.png" class="icono" alt="Icono dirección">
-        <input class="input" type="text" placeholder="Dirección" id="input_address"> <br>
+        <input class="input" type="text" placeholder="Región" id="input_address"> <br>
       </div>
       <div>
         <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
