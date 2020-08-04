@@ -1,10 +1,11 @@
+/* eslint-disable no-use-before-define */
 // Este es el punto de entrada de tu aplicacion
 
 // const { ingreso } = require("./lib");
 import {
   ingreso,
   registrar,
- loginG,
+  loginG,
 
 } from './lib/index.js';
 
@@ -48,13 +49,19 @@ const loginPage = () => {
    `;
   btnHome = document.querySelector('#home_btn');
   // eslint-disable-next-line no-use-before-define
-  btnHome.addEventListener('click', homePage);
+  btnHome.addEventListener('click', () => {
+    ingreso(homePage);
+  });
   btnRegistration = document.querySelector('#registration-btn');
   // eslint-disable-next-line no-use-before-define
   btnRegistration.addEventListener('click', registrationPage);
   mensaje = document.getElementById('errorMensaje');
   // eslint-disable-next-line no-use-before-define
   mensaje.addEventListener('click', errorPage);
+  googlee = document.querySelector('#google');
+  googlee.addEventListener('click', () => {
+    loginG(homePage);
+  });
 };
 
 const errorPage = () => {
@@ -166,8 +173,9 @@ export const homePage = () => {
 
 btnHome.addEventListener('click', () => {
   ingreso(homePage);
-}); 
+});
 
-googlee.addEventListener('click', () =>{
+googlee.addEventListener('click', () => {
   loginG(homePage);
+  // eslint-disable-next-line eol-last
 });
