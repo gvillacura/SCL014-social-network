@@ -4,7 +4,7 @@ export const ingreso = (callback) => {
   const email = document.getElementById('input_email').value;
   const password = document.getElementById('input_password').value;
   firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((firebaseUser) => {
+    .then(() => {
       callback();
     })
     .catch((error) => {
@@ -17,7 +17,7 @@ export const ingreso = (callback) => {
       }
       console.log(error);
     });
-}
+};
 
 export const registrar = () => {
   const email = document.getElementById('input_email2').value;
@@ -30,17 +30,16 @@ export const registrar = () => {
     // eslint-disable-next-line no-unused-vars
     const errorMessage = error.message;
   });
-}
+};
 
 
 export const loginG = (callback) => {
-  var provider = new firebase.auth.GoogleAuthProvider();
+  const provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider)
 
     .then((result) => {
-      console.log(result.user)
+      console.log(result.user);
       callback();
-  
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -52,4 +51,9 @@ export const loginG = (callback) => {
       }
       console.log(error);
     });
+<<<<<<< HEAD
 }
+=======
+  // eslint-disable-next-line eol-last
+};
+>>>>>>> aade880500490401fa9fdacb6d3021fd6dcf98ef
