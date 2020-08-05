@@ -176,11 +176,10 @@ export const homePage = () => {
           <img class = "icoArt" src="img/articulo_icono.png" alt="">
           <img class = "icoCalen" src="img/calendario_icono.png" alt="">
           <img class = "icoUsu" src="img/usuario_icono.png" alt="">
-        </div> 
+        </div>
       </div>
   </header>
   <footer > &copy;2020 by Fabiane, Geraldine & Lady</footer>
-
   </div> `;
   // Función que lleva desde logo segunda pagina a primera página
   artSpace = document.getElementById('artSpace');

@@ -34,7 +34,7 @@ h1 {
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px white inset;
-}
+} 
 
 .btn {
   margin: 0em;
@@ -99,6 +99,10 @@ h4 {
 }
 
 .icoUsu {
+  padding-inline-end: 2em;
+}
+
+.icoLupa{
   padding-inline-end: 2em;
 }
 
