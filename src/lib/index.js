@@ -19,7 +19,7 @@ export const ingreso = (callback) => {
     });
 };
 // Función firebase para registrarse en la página
-export const registrar = () => {
+/* export const registrar = () => {
   const email = document.getElementById('input_email2').value;
   const password = document.getElementById('input_password2').value;
 
@@ -30,7 +30,7 @@ export const registrar = () => {
     // eslint-disable-next-line no-unused-vars
     const errorMessage = error.message;
   });
-};
+}; */
 
 // Función firebase para registrarse mediante google
 export const loginG = (callback) => {
@@ -52,19 +52,45 @@ export const loginG = (callback) => {
   // eslint-disable-next-line eol-last
 };
 
-//función firebase para cambiar contraseña
+// función firebase para cambiar contraseña
 export const pass = (callback) => {
-  let auth = firebase.auth();
-  let emailAddress = document.getElementById('input_email_Pass').value;
+  const auth = firebase.auth();
+  const emailAddress = document.getElementById('input_email_Pass').value;
 
   auth.sendPasswordResetEmail(emailAddress)
     .then(() => {
       alert('¡Correo enviado! Ingrese con su nueva contraseña en la pagina de inicio.');
       callback();
     })
-    .catch(function (error) {
+    .catch((error) => {
       alert('¡Ingrese una dirección de correo!')
       const errorMessage = error.message;
     });
+};
 
+export const inscription = (callback) => {
+  const name = document.getElementById('input_name').value;
+  const region2 = document.getElementById('input_address').value;
+  const email2 = document.getElementById('input_email2').value;
+  const password2 = document.getElementById('input_password2').value;
+  const passwordConfirm = document.getElementById('password_confirm').value;
+  // const manuality = document.getElementById('input_email2').value;
+
+  const db = firebase.firestore();
+  db.collection('users').add({
+      nombre: name,
+      region: region2,
+      correo: email2,
+      contraseña: password2,
+      confirmación: passwordConfirm,
+    })
+    .then(() => {
+      // console.log('Document written with ID: ', docRef.id);
+      alert('Su cuenta ha sido registrada');
+      callback();
+    })
+    .catch(function (error) {
+      console.error('Error adding document: ', error);
+      // alert('Debe completar la totalidad de los campos');
+    });
 }
