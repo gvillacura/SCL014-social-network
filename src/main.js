@@ -2,9 +2,10 @@
 // Funciones importadas funcionalidad firebase
 import {
   ingreso,
-  registrar,
+  // registrar,
   loginG,
   pass,
+  inscription,
 
 } from './lib/index.js';
 // Enlaces
@@ -15,6 +16,7 @@ let mensaje = document.querySelector('#errorMensaje');
 let artSpace;
 let googlee = document.querySelector('#google');
 let enviar = document.querySelector('#start_btn');
+let saveRegistration;
 
 // Página de inicio
 const loginPage = () => {
@@ -75,7 +77,7 @@ const errorPage = () => {
       <h1>Art Space</h1>
     </header>
 
-  <h4> ¡Ingrese un correo válido para enviar su nueva contraseña! </h4>
+  <h4> Ingrese su correo para enviar su nueva contraseña </h4>
 
   <section class="input_section">
   <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
@@ -154,9 +156,10 @@ const registrationPage = () => {
   btnLogin = document.querySelector('#loginBtn');
   btnLogin.addEventListener('click', loginPage);
 
-  const saveRegistration = document.querySelector('#save-registration-btn');
-
-  saveRegistration.addEventListener('click', registrar);
+  saveRegistration = document.querySelector('#save-registration-btn');
+  saveRegistration.addEventListener('click', () => {
+    inscription(homePage);
+  });
 };
 btnRegistration.addEventListener('click', registrationPage);
 

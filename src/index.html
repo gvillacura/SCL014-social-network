@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <title>Art Space</title>
 
-
 </head>
 
 <body>
@@ -69,7 +68,13 @@
       appId: "1:314586407373:web:bc09d6d389f84bf9422484"
     };
     // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+    // firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp({
+      firebaseConfig,
+      apiKey: "AIzaSyB_Rz1-a1WxTNJKMmcTC7GFrId9cohERmI",
+      authDomain: "art-space-9b451.firebaseapp.com",
+      projectId: "art-space-9b451"
+    });
   </script>
 
   <script src="main.js" type="module"></script>
