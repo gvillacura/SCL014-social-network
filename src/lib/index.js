@@ -49,7 +49,6 @@ export const loginG = (callback) => {
             }
             console.log(error);
         });
-    // eslint-disable-next-line eol-last
 };
 
 // función firebase para cambiar contraseña
@@ -63,7 +62,8 @@ export const pass = (callback) => {
             callback();
         })
         .catch((error) => {
-            alert('¡Ingrese una dirección de correo!')
+            alert('¡Ingrese una dirección de correo!');
+            // eslint-disable-next-line no-unused-vars
             const errorMessage = error.message;
         });
 };

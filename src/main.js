@@ -5,8 +5,8 @@ import {
     loginG,
     pass,
     inscription,
-
 } from './lib/index.js';
+
 // Enlaces
 let btnLogin;
 let btnHome = document.querySelector('#home_btn');
@@ -173,9 +173,12 @@ const registrationPage = () => {
             passwordConfirm,
         };
 
-        if (user.name === '' || user.region === "" || user.email === "" || user.password === ""
-            || user.passwordConfirm === "") {
+        if (user.name === '' || user.region === '' || user.email === '' || user.password === ''
+            || user.passwordConfirm === '') {
             alert('Debe rellenar todos los campos');
+        }
+        if (user.password !== user.passwordConfirm) {
+            alert('No coinciden las contraseñas');
         } else {
             inscription(homePage, user);
         }
@@ -216,7 +219,6 @@ btnHome.addEventListener('click', () => {
 
 googlee.addEventListener('click', () => {
     loginG(homePage);
-    // eslint-disable-next-line eol-last
 });
 
 /**
