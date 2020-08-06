@@ -47,7 +47,6 @@ input:-webkit-autofill {
   font-size: 3vh;
   height: 6vh;
   outline: none;
-  border: none;
 }
 
 .btn:hover {
