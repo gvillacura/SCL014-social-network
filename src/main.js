@@ -1,24 +1,25 @@
-// Este es el punto de entrada de tu aplicacion
-
-// const { ingreso } = require("./lib");
+/* eslint-disable no-use-before-define */
+// Funciones importadas funcionalidad firebase
 import {
-  ingreso,
-  registrar,
- loginG,
-
+    ingreso,
+    loginG,
+    pass,
+    inscription,
 } from './lib/index.js';
 
-// Firebase App (the core Firebase SDK) is always required and must be listed first
-
+// Enlaces
 let btnLogin;
 let btnHome = document.querySelector('#home_btn');
 let btnRegistration = document.querySelector('#registration-btn');
-let mensaje = document.getElementById('errorMensaje');
+let mensaje = document.querySelector('#errorMensaje');
 let artSpace;
 let googlee = document.querySelector('#google');
+let enviar = document.querySelector('#start_btn');
+let saveRegistration;
 
+// Página de inicio
 const loginPage = () => {
-  document.querySelector('#root').innerHTML = `
+    document.querySelector('#root').innerHTML = `
    <header>
    <img class="header-image" src="img/img-cel.png">
    <img class="header-image-desktop" src="img/img-desk.png">
@@ -35,41 +36,51 @@ const loginPage = () => {
  </section>
 
  <section>
-   <p>Ingresar con</p>
+   <p>Ingresa con </p>
    <div>
      <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
     
    </div>
-   <button class="btn" id="registration-btn">Regístrarse</button>
+   <button class="btn" id="registration-btn">Registrarse</button>
  </section>
  <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
  <script type="module" src="main.js"></script>
  </div>
    `;
-  btnHome = document.querySelector('#home_btn');
-  // eslint-disable-next-line no-use-before-define
-  btnHome.addEventListener('click', homePage);
-  btnRegistration = document.querySelector('#registration-btn');
-  // eslint-disable-next-line no-use-before-define
-  btnRegistration.addEventListener('click', registrationPage);
-  mensaje = document.getElementById('errorMensaje');
-  // eslint-disable-next-line no-use-before-define
-  mensaje.addEventListener('click', errorPage);
+    // Función que lleva desde la pagina de inicio a la segunda
+    btnHome = document.querySelector('#home_btn');
+    // eslint-disable-next-line no-use-before-define
+    btnHome.addEventListener('click', () => {
+        ingreso(homePage);
+    });
+    // Función que lleva desde la de inicio a la de registro
+    btnRegistration = document.querySelector('#registration-btn');
+    // eslint-disable-next-line no-use-before-define
+    btnRegistration.addEventListener('click', registrationPage);
+    // Función que lleva a recuperar tu contraseña
+    mensaje = document.querySelector('#errorMensaje');
+    // eslint-disable-next-line no-use-before-define
+    mensaje.addEventListener('click', errorPage);
+    // Función que lleva desde el login google a la segunda pantalla
+    googlee = document.querySelector('#google');
+    googlee.addEventListener('click', () => {
+        loginG(homePage);
+    });
 };
-
+// Página olvidó su contraseña
 const errorPage = () => {
-  document.querySelector('#root').innerHTML = `
+    document.querySelector('#root').innerHTML = `
   <header>
       <img class="header-image" src="img/img-cel.png">
       <img class="header-image-desktop" src="img/img-desk.png">
       <h1>Art Space</h1>
     </header>
 
-  <h4> ¡Ingrese un correo válido para enviar su nueva contraseña! </h4>
+  <h4> Ingrese su correo para enviar su nueva contraseña </h4>
 
   <section class="input_section">
   <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
-  <input class="input" type="email" placeholder="Correo electrónico" id="input_email"> <br>
+  <input class="input" type="email" placeholder="Correo electrónico" id="input_email_Pass"> <br>
   <button class="btn" id="start_btn">Enviar</button> <br>
   <button class="btn" id="loginBtn">Inicio</button>
   </section>
@@ -77,20 +88,30 @@ const errorPage = () => {
   <section>
     <p>Ingresar con</p>
     <div>
-      <img src="img/google_logo.png" class="logo" alt="Logo google">
+      <img src="img/google_logo.png" id = "google" class="logo" alt="Logo google">
      
     </div>
   </section>
   <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
 
   `;
-  btnLogin = document.getElementById('loginBtn');
-  btnLogin.addEventListener('click', loginPage);
+    // Función que lleva desde recuperar contraseña a primera pagina
+    btnLogin = document.getElementById('loginBtn');
+    btnLogin.addEventListener('click', loginPage);
+    enviar = document.querySelector('#start_btn');
+    enviar.addEventListener('click', () => {
+        pass(loginPage);
+    });
+    googlee = document.querySelector('#google');
+    googlee.addEventListener('click', () => {
+        loginG(homePage);
+        // eslint-disable-next-line eol-last
+    });
 };
-mensaje.addEventListener('click', errorPage);
+// Página para registrarse
 
 const registrationPage = () => {
-  document.querySelector('#root').innerHTML = ` 
+    document.querySelector('#root').innerHTML = ` 
   <div id='login' class='login'>
     <header>
       <img class="header-image" src="img/img-cel.png">
@@ -105,7 +126,7 @@ const registrationPage = () => {
       </div>
       <div>
         <img src="img/direccion_icono.png" class="icono" alt="Icono dirección">
-        <input class="input" type="text" placeholder="Dirección" id="input_address"> <br>
+        <input class="input" type="text" placeholder="Región" id="input_address"> <br>
       </div>
       <div>
         <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
@@ -129,18 +150,45 @@ const registrationPage = () => {
 
     <script type="module" src="main.js"></script>
   </div>`;
-  btnLogin = document.getElementById('loginBtn');
-  btnLogin.addEventListener('click', loginPage);
+    // Función que lleva desde pagina de registrarse a primera pagina
+    btnLogin = document.querySelector('#loginBtn');
+    btnLogin.addEventListener('click', loginPage);
 
-  const saveRegistration = document.getElementById('save-registration-btn');
 
-  saveRegistration.addEventListener('click', registrar);
+    saveRegistration = document.querySelector('#save-registration-btn');
+    saveRegistration.addEventListener('click', preinscription);
+
+    function preinscription() {
+        const name = document.getElementById('input_name').value;
+        const region = document.getElementById('input_address').value;
+        const email = document.getElementById('input_email2').value;
+        const password = document.getElementById('input_password2').value;
+        const passwordConfirm = document.getElementById('password_confirm').value;
+
+        const user = {
+            name,
+            region,
+            email,
+            password,
+            passwordConfirm,
+        };
+
+        if (user.name === '' || user.region === '' || user.email === '' || user.password === ''
+            || user.passwordConfirm === '') {
+            alert('Debe rellenar todos los campos');
+        }
+        if (user.password !== user.passwordConfirm) {
+            alert('No coinciden las contraseñas');
+        } else {
+            inscription(homePage, user);
+        }
+    }
 };
 btnRegistration.addEventListener('click', registrationPage);
 
-
-export const homePage = () => {
-  document.querySelector('#root').innerHTML = ` 
+// Segunda Página
+const homePage = () => {
+    document.querySelector('#root').innerHTML = ` 
   <div>
   <header>
       <img class="header-image" src="img/img-cel.png" alt="">
@@ -160,14 +208,20 @@ export const homePage = () => {
   <footer > &copy;2020 by Fabiane, Geraldine & Lady</footer>
 
   </div> `;
-  artSpace = document.getElementById('artSpace');
-  artSpace.addEventListener('click', loginPage);
+    // Función que lleva desde logo segunda pagina a primera página
+    artSpace = document.getElementById('artSpace');
+    artSpace.addEventListener('click', loginPage);
 };
-
+// Conexion a firebase index.js
 btnHome.addEventListener('click', () => {
-  ingreso(homePage);
-}); 
-
-googlee.addEventListener('click', () =>{
-  loginG(homePage);
+    ingreso(homePage);
 });
+
+googlee.addEventListener('click', () => {
+    loginG(homePage);
+});
+
+/**
+ * Listener para recuperacion de contrasena
+ */
+mensaje.addEventListener('click', errorPage);
