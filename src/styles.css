@@ -15,6 +15,7 @@ body {
   visibility: visible;
   min-height: 100%;
   position: fixed;
+  max-width: 40%;
 }
 
 h1 {
@@ -204,6 +205,15 @@ input#input_email.imput {
 
   .icons-General {
     float: right;
+  }
+
+  .icoUsu {
+    padding-inline-end: 0;
+  }
+
+  .icoCalen,
+  .icoArt {
+    padding-inline-end: 0.5em;
   }
 
   .logo-second-page {
