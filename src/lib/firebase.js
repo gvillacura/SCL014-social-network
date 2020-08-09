@@ -1,4 +1,3 @@
-// aqui exportaras las funciones que necesites
 // Función firebase que captura mail y contraseña a usuarios ya registrados
 export const ingreso = (callback) => {
     const email = document.getElementById('input_email').value;
@@ -14,7 +13,7 @@ export const ingreso = (callback) => {
                 alert('Contraseña erronea.');
             } else {
                 alert('¡Ingrese un correo valido!');
-            }
+            };
             console.log(error);
         });
 };
