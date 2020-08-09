@@ -1,4 +1,3 @@
-// aqui exportaras las funciones que necesites
 // Función firebase que captura mail y contraseña a usuarios ya registrados
 export const ingreso = (callback) => {
     const email = document.getElementById('input_email').value;
@@ -14,7 +13,7 @@ export const ingreso = (callback) => {
                 alert('Contraseña erronea.');
             } else {
                 alert('¡Ingrese un correo valido!');
-            }
+            };
             console.log(error);
         });
 };
@@ -49,7 +48,6 @@ export const loginG = (callback) => {
             }
             console.log(error);
         });
-    // eslint-disable-next-line eol-last
 };
 
 // función firebase para cambiar contraseña
@@ -63,7 +61,8 @@ export const pass = (callback) => {
             callback();
         })
         .catch((error) => {
-            alert('¡Ingrese una dirección de correo!')
+            alert('¡Ingrese una dirección de correo!');
+            // eslint-disable-next-line no-unused-vars
             const errorMessage = error.message;
         });
 };

@@ -15,40 +15,8 @@
 <body>
   <div id='root'>
 
-    <header>
-      <img class="header-image" src="img/img-cel.png">
-      <img class="header-image-desktop" src="img/img-desk.png">
-      <h1>Art Space</h1>
-    </header>
-
-    <section class="input_section">
-      <form>
-        <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
-        <input class="input" type="email" autocomplete="email" placeholder="Correo electrónico" id="input_email"> <br>
-        <img class="icono" src="img/contraseña_icono.png" alt="">
-        <input class="input" type="password" autocomplete="current-password" placeholder="Contraseña"
-          id="input_password" class="input_password">
-        <p id="errorMensaje" class="errorMensaje">¿Olvidó su contraseña?</p>
-        <button class="btn" id="home_btn" type='button'>Comenzar</button>
-      </form>
-    </section>
-
-
-    <section>
-      <p>Ingresar con</p>
-      <div>
-        <img src="img/google_logo.png" class="logo" alt="Logo google" id="google">
-        <!-- <img src="img/facebook_logo.png" class="logo" alt="Logo facebook"> -->
-      </div>
-      <button class="btn" id="registration-btn">Registrarse</button>
-    </section>
-
-    <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
-
   </div>
-  </div>
-
-
+  
   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
 
@@ -77,8 +45,7 @@
     });
   </script>
 
-  <script src="main.js" type="module"></script>
-  <script type="module" src="./lib/index.js"></script>
+<script src="routerInit.js" type="module"></script>
 </body>
 
 </html>
