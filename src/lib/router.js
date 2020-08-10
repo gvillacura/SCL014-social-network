@@ -7,7 +7,6 @@ export const changeRoute = (hash) => {
     switch (hash) {
     case '#/':
         routeLogin();
-        // containerRoot.appendChild(routeLogin());
         break;
     case '#/registro':
         routeRegistry();

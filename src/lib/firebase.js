@@ -69,7 +69,7 @@ export const pass = (callback) => {
 
 const db = firebase.firestore();
 
-export const inscription = (callback, user) => {
+export const inscription = (user) => {
     // Función para autenticar
     firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
         .then((response) => {
@@ -85,7 +85,7 @@ export const inscription = (callback, user) => {
                 .then((userDataCreated) => {
                     console.log(userDataCreated);
                     console.log('Usuario y data adicional creada');
-                    callback();
+                    window.location.hash = '#/home';
                 })
                 .catch(() => {
                     console.log('Error al crear usuario y data adicional');
@@ -99,26 +99,3 @@ export const inscription = (callback, user) => {
             const errorMessage = error.message;
         });
 };
-
-// export const inscription = (callback, user) => {
-//     db.collection('users')
-//         .add({
-//             nombre: user.name,
-//             region: user.region,
-//             correo: user.email,
-//             contraseña: user.password,
-//             confirmación: user.passwordConfirm,
-//         })
-//         .then(
-//             () => {
-//                 alert('Su cuenta ha sido registrada');
-//                 callback();
-//             },
-//         )
-//         .catch(
-//             (error) => {
-//                 console.error('Error adding document: ', error);
-//                 // alert('Debe completar la totalidad de los campos');
-//             },
-//         );
-// };
