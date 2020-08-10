@@ -1,13 +1,35 @@
 import {
-  loginG,
-  ingreso,
-} from '../firebase.js'
-import { routeRegistry } from './templateRegistration.js'
-import { routeError } from './templateRecuperationPassword.js'
-import { routeHome } from './templateWall.js'
+    loginG,
+    ingreso,
+} from '../firebase.js';
+import { routeRegistry } from './templateRegistration.js';
+import { routeError } from './templateRecuperationPassword.js';
+import { routeHome } from './templateWall.js';
+
+const LoadLoginFunctions = () => {
+    // Función que lleva desde la pagina de inicio a la segunda
+    const btnHome = document.querySelector('#home_btn');
+    btnHome.addEventListener('click', () => {
+        ingreso(routeHome);
+    });
+
+    // Función que lleva desde la de inicio a la de registro
+    const btnRegistration = document.querySelector('#registration-btn');
+    btnRegistration.addEventListener('click', routeRegistry);
+
+    // Función que lleva desde el texto olvido su contraseña  a  pantalla recuperar tu contraseña
+    const mensaje = document.querySelector('#errorMensaje');
+    mensaje.addEventListener('click', routeError);
+
+    // Función que lleva desde el login google a la segunda pantalla
+    const googlee = document.querySelector('#google');
+    googlee.addEventListener('click', () => {
+        loginG(routeHome);
+    });
+};
 
 export const routeLogin = () => {
-  const viewLogin = `
+    const viewLogin = `
 <header>
  <img class="header-image" src="img/img-cel.png">
  <img class="header-image-desktop" src="img/img-desk.png">
@@ -37,29 +59,7 @@ export const routeLogin = () => {
 </div>
  `;
 
-  window.location.hash = "#/";
-  document.getElementById('root').innerHTML = viewLogin;
-  LoadLoginFunctions();
-};
-
-const LoadLoginFunctions = () => {
-  // Función que lleva desde la pagina de inicio a la segunda
-  const btnHome = document.querySelector('#home_btn');
-  btnHome.addEventListener('click', () => {
-      ingreso(routeHome);
-  });
-
-  // Función que lleva desde la de inicio a la de registro
-  const btnRegistration = document.querySelector('#registration-btn');
-  btnRegistration.addEventListener('click', routeRegistry);
-
-  // Función que lleva desde el texto olvido su contraseña  a  pantalla recuperar tu contraseña
-  const mensaje = document.querySelector('#errorMensaje');
-  mensaje.addEventListener('click', routeError);
-
-  // Función que lleva desde el login google a la segunda pantalla
-  const googlee = document.querySelector('#google');
-  googlee.addEventListener('click', () => {
-      loginG(routeHome);
-  });
+    window.location.hash = '#/';
+    document.getElementById('root').innerHTML = viewLogin;
+    LoadLoginFunctions();
 };

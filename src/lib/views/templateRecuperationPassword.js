@@ -1,11 +1,28 @@
 import {
     pass,
-  } from '../firebase.js'
-  
-  import { routeLogin } from './templateLogin.js'
-  import { routeHome } from './templateWall.js'
-  
-  export const routeError = () => {
+    loginG,
+} from '../firebase.js';
+
+import { routeLogin } from './templateLogin.js';
+import { routeHome } from './templateWall.js';
+
+const LoadErrorFunctions = () => {
+    // Función que lleva desde recuperar contraseña a primera pagina
+    const btnLogin = document.getElementById('loginBtn');
+    btnLogin.addEventListener('click', routeLogin);
+
+    const enviar = document.querySelector('#start_btn');
+    enviar.addEventListener('click', () => {
+        pass(routeLogin);
+    });
+
+    const googlee = document.querySelector('#google');
+    googlee.addEventListener('click', () => {
+        loginG(routeHome);
+    });
+};
+
+export const routeError = () => {
     const viewErrorPage = `
       <header>
           <img class="header-image" src="img/img-cel.png">
@@ -32,23 +49,7 @@ import {
       <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
     
       `;
-    window.location.hash = "#/recuperar_contrasena";
+    window.location.hash = '#/recuperar_contrasena';
     document.getElementById('root').innerHTML = viewErrorPage;
     LoadErrorFunctions();
-  };
-  
-  const LoadErrorFunctions = () => {
-    // Función que lleva desde recuperar contraseña a primera pagina
-    const btnLogin = document.getElementById('loginBtn');
-    btnLogin.addEventListener('click', routeLogin);
-  
-    const enviar = document.querySelector('#start_btn');
-    enviar.addEventListener('click', () => {
-      pass(routeLogin);
-    });
-  
-    const googlee = document.querySelector('#google');
-    googlee.addEventListener('click', () => {
-      loginG(routeHome);
-    });
-  };
+};

@@ -1,10 +1,10 @@
+import { routeLogin } from './templateLogin.js';
+import { routeHome } from './templateWall.js';
 import {
     inscription,
-  } from '../firebase.js'
-  import { routeLogin } from './templateLogin.js'
-  import { routeHome } from './templateWall.js'
-  
-  export const routeRegistry = () => {
+} from '../firebase.js';
+
+export const routeRegistry = () => {
     const viewRegistration = ` 
       <div id='login' class='login'>
         <header>
@@ -44,43 +44,43 @@ import {
     
         <script type="module" src="main.js"></script>
       </div>`;
-  
+
     // Función que lleva desde pagina de registrarse a primera pagina
-    window.location.hash = "#/registro";
+    window.location.hash = '#/registro';
     document.getElementById('root').innerHTML = viewRegistration;
     loadRegistryFunctions();
-  };
-  
-  const loadRegistryFunctions = () => {
+};
+
+const loadRegistryFunctions = () => {
     const btnLogin = document.querySelector('#loginBtn');
     btnLogin.addEventListener('click', routeLogin);
-  
+
     const saveRegistration = document.querySelector('#save-registration-btn');
     saveRegistration.addEventListener('click', preinscription);
-  
+
     function preinscription() {
-      const name = document.getElementById('input_name').value;
-      const region = document.getElementById('input_address').value;
-      const email = document.getElementById('input_email2').value;
-      const password = document.getElementById('input_password2').value;
-      const passwordConfirm = document.getElementById('password_confirm').value;
-  
-      const user = {
-        name,
-        region,
-        email,
-        password,
-        passwordConfirm,
-      };
-  
-      if (user.name === '' || user.region === '' || user.email === '' || user.password === ''
+        const name = document.getElementById('input_name').value;
+        const region = document.getElementById('input_address').value;
+        const email = document.getElementById('input_email2').value;
+        const password = document.getElementById('input_password2').value;
+        const passwordConfirm = document.getElementById('password_confirm').value;
+
+        const user = {
+            name,
+            region,
+            email,
+            password,
+            passwordConfirm,
+        };
+
+        if (user.name === '' || user.region === '' || user.email === '' || user.password === ''
         || user.passwordConfirm === '') {
-        alert('Debe rellenar todos los campos');
-      }
-      if (user.password !== user.passwordConfirm) {
-        alert('No coinciden las contraseñas');
-      } else {
-        inscription(routeHome, user);
-      }
-    };
-  }
+            alert('Debe rellenar todos los campos');
+        }
+        if (user.password !== user.passwordConfirm) {
+            alert('No coinciden las contraseñas');
+        } else {
+            inscription(routeHome, user);
+        }
+    }
+};
