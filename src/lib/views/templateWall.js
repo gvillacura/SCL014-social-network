@@ -1,7 +1,13 @@
-import { routeLogin } from './templateLogin.js'
+import { routeLogin } from './templateLogin.js';
+
+const LoadHomeFunctions = () => {
+    // Función que lleva desde logo segunda pagina a primera página
+    const artSpace = document.getElementById('artSpace');
+    artSpace.addEventListener('click', routeLogin);
+};
 
 export const routeHome = () => {
-  const viewHomePage = ` 
+    const viewHomePage = ` 
     <div>
     <header>
         <img class="header-image" src="img/img-cel.png" alt="">
@@ -21,13 +27,7 @@ export const routeHome = () => {
     <footer > &copy;2020 by Fabiane, Geraldine & Lady</footer>
   
     </div> `;
-  window.location.hash = "#/home";
-  document.getElementById('root').innerHTML = viewHomePage;
-  LoadHomeFunctions();
-};
-
-const LoadHomeFunctions = () => {
-  // Función que lleva desde logo segunda pagina a primera página
-  const artSpace = document.getElementById('artSpace');
-  artSpace.addEventListener('click', routeLogin);
+    window.location.hash = '#/home';
+    document.getElementById('root').innerHTML = viewHomePage;
+    LoadHomeFunctions();
 };
