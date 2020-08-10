@@ -13,7 +13,7 @@ export const ingreso = (callback) => {
                 alert('Contraseña erronea.');
             } else {
                 alert('¡Ingrese un correo valido!');
-            };
+            }
             console.log(error);
         });
 };
