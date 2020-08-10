@@ -1,4 +1,7 @@
 import { routeLogin } from './templateLogin.js';
+import {
+  perfil,
+} from '../firebase.js';
 
 const LoadHomeFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
@@ -24,10 +27,12 @@ export const routeHome = () => {
           </div> 
         </div>
     </header>
-    <footer > &copy;2020 by Fabiane, Geraldine & Lady</footer>
+
+    <button class= 'btn' id='perfil'>Perfil</button><br>
   
     </div> `;
     window.location.hash = '#/home';
     document.getElementById('root').innerHTML = viewHomePage;
     LoadHomeFunctions();
+    document.getElementById('perfil').addEventListener('click', perfil);
 };
