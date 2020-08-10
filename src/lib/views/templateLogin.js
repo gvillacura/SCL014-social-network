@@ -25,6 +25,7 @@ const LoadLoginFunctions = () => {
     const googlee = document.querySelector('#google');
     googlee.addEventListener('click', () => {
         loginG(routeHome);
+        
     });
 };
 

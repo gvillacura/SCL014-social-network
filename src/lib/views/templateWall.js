@@ -23,7 +23,7 @@ export const routeHome = () => {
           <div class = "icons-General">
             <img class = "icoArt" src="img/articulo_icono.png" alt="">
             <img class = "icoCalen" src="img/calendario_icono.png" alt="">
-            <img class = "icoUsu" src="img/usuario_icono.png" alt="">
+            <img class = "icoUsu" src="img/usuario_icono.png" alt="" >
           </div> 
         </div>
     </header>

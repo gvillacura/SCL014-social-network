@@ -37,6 +37,7 @@ export const loginG = (callback) => {
     firebase.auth().signInWithPopup(provider)
 
         .then((result) => {
+            
             console.log(result.user);
             callback();
         })
@@ -56,6 +57,7 @@ export const pass = (callback) => {
     const emailAddress = document.getElementById('input_email_Pass').value;
 
     auth.sendPasswordResetEmail(emailAddress)
+    
         .then(() => {
             alert('¡Correo enviado! Ingrese con su nueva contraseña en la pagina de inicio.');
             callback();
@@ -101,20 +103,48 @@ export const inscription = (callback, user) => {
 };
 
 
-//funcion para pintar datos en pantalla
+
 export const perfil = () => {
-   let showData = document.getElementById('perfil');
-    db.collection("users").onSnapshot((querySnapshot) => {
-        showData.innerHTML = '';
-        querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data().nombre}`)
-      showData.innerHTML +=  `
-       <p>${doc.id}</p>
-       <p>${doc.data().nombre}</p>
-       <p>${doc.data().region}</p>
-       <p>${doc.data().correo}</p>
-       ` 
-        });
-    });
-};
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      console.log(user);
+      let showData = document.getElementById('perfil');
+      showData.innerHTML = '';
+     showData.innerHTML+= `
+     <div>
+     <br>
+     <br>
+     <p> <img src='${user.photoURL}'></p>
+     <p>${ user.displayName}</p>
+      <p>${user.email}</p>
+      </div>
+      
+      `
+      // ...
+    } else {
+      // User is signed out.
+      // ...
+    }
+  });
+}
+
+
+
+//funcion para pintar datos en pantalla
+// export const perfil = () => {
+//    let showData = document.getElementById('perfil');
+//     db.collection("users").onSnapshot((querySnapshot) => {
+//         showData.innerHTML = '';
+//         querySnapshot.forEach((doc) => {
+//             console.log(`${doc.id} => ${doc.data().nombre}`)
+//       showData.innerHTML +=  `
+//        <p>${doc.id}</p>
+//        <p>${doc.data().displayName}</p>
+//        <p>${doc.data().email}</p>
+//        <p>${doc.data().correo}</p>
+//        ` 
+//         });
+//     });
+// };
 
