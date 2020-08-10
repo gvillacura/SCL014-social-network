@@ -51,13 +51,6 @@ export const routeRegistry = () => {
     loadRegistryFunctions();
 };
 
-<<<<<<< HEAD
-
-    
-
-
- 
-=======
 const loadRegistryFunctions = () => {
     const btnLogin = document.querySelector('#loginBtn');
     btnLogin.addEventListener('click', routeLogin);
@@ -91,4 +84,3 @@ const loadRegistryFunctions = () => {
         }
     }
 };
->>>>>>> 74f450527e24e46335dee0dea52ca64d3d8dc506
