@@ -4,6 +4,41 @@ import {
     inscription,
 } from '../firebase.js';
 
+const loadRegistryFunctions = () => {
+  const btnLogin = document.querySelector('#loginBtn');
+  btnLogin.addEventListener('click', routeLogin);
+
+  const saveRegistration = document.querySelector('#save-registration-btn');
+  saveRegistration.addEventListener('click', preinscription);
+
+  function preinscription() {
+      const name = document.getElementById('input_name').value;
+      const region = document.getElementById('input_address').value;
+      const email = document.getElementById('input_email2').value;
+      const password = document.getElementById('input_password2').value;
+      const passwordConfirm = document.getElementById('password_confirm').value;
+
+      const user = {
+          name,
+          region,
+          email,
+          password,
+          passwordConfirm,
+      };
+
+      if (user.name === '' || user.region === '' || user.email === '' || user.password === ''
+      || user.passwordConfirm === '') {
+          alert('Debe rellenar todos los campos');
+      }
+      if (user.password !== user.passwordConfirm) {
+          alert('No coinciden las contraseñas');
+      } else {
+          inscription(routeHome, user);
+      }
+  }
+};
+
+
 export const routeRegistry = () => {
     const viewRegistration = ` 
       <div id='login' class='login'>
@@ -51,36 +86,3 @@ export const routeRegistry = () => {
     loadRegistryFunctions();
 };
 
-const loadRegistryFunctions = () => {
-    const btnLogin = document.querySelector('#loginBtn');
-    btnLogin.addEventListener('click', routeLogin);
-
-    const saveRegistration = document.querySelector('#save-registration-btn');
-    saveRegistration.addEventListener('click', preinscription);
-
-    function preinscription() {
-        const name = document.getElementById('input_name').value;
-        const region = document.getElementById('input_address').value;
-        const email = document.getElementById('input_email2').value;
-        const password = document.getElementById('input_password2').value;
-        const passwordConfirm = document.getElementById('password_confirm').value;
-
-        const user = {
-            name,
-            region,
-            email,
-            password,
-            passwordConfirm,
-        };
-
-        if (user.name === '' || user.region === '' || user.email === '' || user.password === ''
-        || user.passwordConfirm === '') {
-            alert('Debe rellenar todos los campos');
-        }
-        if (user.password !== user.passwordConfirm) {
-            alert('No coinciden las contraseñas');
-        } else {
-            inscription(routeHome, user);
-        }
-    }
-};
