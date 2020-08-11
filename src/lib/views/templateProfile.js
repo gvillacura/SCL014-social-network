@@ -26,11 +26,11 @@ export const routeProfile = () => {
           </div> 
         </div>
     </header>
+    <main id = "contenedor-perfil" ></main>
   
     </div> `;
     window.location.hash = '#/Profile';
     document.getElementById('root').innerHTML = viewProfilePage;
     perfil();
     loadProfileFunctions();
-   
-}
+};
