@@ -111,7 +111,8 @@ firebase.auth().onAuthStateChanged
     // User is signed in.
       console.log(user);
       let showData = document.getElementById('profile');
-      showData.innerHTML += `
+      showData.innerHTML = '';
+     showData.innerHTML += `
      <div>
      <br>
      <br>
