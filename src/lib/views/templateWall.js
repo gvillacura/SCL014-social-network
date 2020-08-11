@@ -1,4 +1,5 @@
 import { routeLogin } from './templateLogin.js';
+import { routeProfile } from './templateProfile.js';
 import {
   perfil, 
 } from '../firebase.js';
@@ -35,5 +36,7 @@ export const routeHome = () => {
     document.getElementById('root').innerHTML = viewHomePage;
     LoadHomeFunctions();
     
-    document.getElementById("profile").addEventListener('click', perfil)
+    document.getElementById('profile').addEventListener('click', () =>{
+    perfil(routeProfile)
+    });
 };

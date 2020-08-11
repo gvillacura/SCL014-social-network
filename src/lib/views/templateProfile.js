@@ -1,6 +1,6 @@
 import { routeLogin } from './templateLogin.js';
 import {
-  Profile,
+  perfil,
 } from '../firebase.js';
 
 const LoadProfileFunctions = () => {
@@ -34,5 +34,4 @@ export const routeProfile = () => {
     window.location.hash = '#/Profile';
     document.getElementById('root').innerHTML = viewProfilePage;
     LoadProfileFunctions();
-    document.getElementById('profile').addEventListener('click', perfil);
-};
+}
