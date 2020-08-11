@@ -88,7 +88,6 @@ export const inscription = (user) => {
         });
 };
 
-
 export const perfil = () => {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
@@ -108,4 +107,19 @@ export const perfil = () => {
       `;
         }
     });
+};
+
+export const getPosts = () => db.collection('publicaciones').get();
+
+export const dbPublicaciones = (post, callback) => {
+    db.collection('publicaciones').add({
+        publicacion: post,
+    })
+        .then(() => {
+            callback();
+            console.log('Document successfully written!');
+        })
+        .catch((error) => {
+            console.error('Error writing document: ', error);
+        });
 };
