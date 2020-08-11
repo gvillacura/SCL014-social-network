@@ -95,9 +95,9 @@ export const inscription = (callback, user) => {
     }); */
 };
 
-// export const getPosts = () => db.collection('publicaciones').onSnapshot();
+export const getPosts = () => db.collection('publicaciones').get();
 
-/* export const dbPublicaciones = (post, callback) => {
+export const dbPublicaciones = (post, callback) => {
     db.collection('publicaciones').add({
         publicacion: post,
     })
@@ -108,7 +108,7 @@ export const inscription = (callback, user) => {
         .catch((error) => {
             console.error('Error writing document: ', error);
         });
-}; */
+};
 
 
 /* export const getPosts = () => {

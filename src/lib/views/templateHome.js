@@ -1,7 +1,7 @@
 import { routeLogin } from './templateLogin.js';
 import {
-// dbPublicaciones,
-// getPosts,
+    dbPublicaciones,
+    getPosts,
 } from '../index.js';
 
 const LoadHomeFunctions = () => {
@@ -10,19 +10,20 @@ const LoadHomeFunctions = () => {
     artSpace.addEventListener('click', routeLogin);
 };
 
-/* const listadoPublicaciones = () => {
+const listadoPublicaciones = () => {
     const resultPost = getPosts();
     resultPost.then((posts) => {
+        const postContainer = document.querySelector('#lista-publicaciones');
+        postContainer.innerHTML = '';
         posts.forEach((post) => {
             const data = post.data();
-            const postContainer = document.querySelector('#lista-publicaciones');
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
             postPart.innerHTML = ` <p> ${data.publicacion} </p>`;
             postContainer.appendChild(postPart);
         });
     });
-}; */
+};
 
 export const routeHome = () => {
     const viewHomePage = ` 
@@ -47,11 +48,11 @@ export const routeHome = () => {
       <div id="ingreso-post">
       <form class="formulario-post">
         <div>
-          <textarea class="textarea" name="post" id="post"
+          <textarea class="textarea input" name="post" id="post"
             placeholder="¡Realiza una publicación!"></textarea>
         </div>
         <div class="imagen-post">
-          <button class="botones-post" type = "button" id="publicar">Publicar</button>
+          <button class="botones-post btn" type = "button" id="publicar">Publicar</button>
         </div>
       </form>
       </div>
@@ -63,11 +64,11 @@ export const routeHome = () => {
     window.location.hash = '#/home';
     document.getElementById('root').innerHTML = viewHomePage;
     LoadHomeFunctions();
-    // listadoPublicaciones();
+    listadoPublicaciones();
 
-    /* const btnPublicar = document.querySelector('#publicar');
+    const btnPublicar = document.querySelector('#publicar');
     btnPublicar.addEventListener('click', () => {
         const post = document.querySelector('#post').value;
         dbPublicaciones(post, listadoPublicaciones);
-    }); */
+    });
 };
