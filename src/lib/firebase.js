@@ -104,14 +104,13 @@ export const inscription = (callback, user) => {
 
 
 
-export const perfil = (callback) => {
-firebase.auth().onAuthStateChanged
- .then((user) => {
-    
+export const perfil = () => {
+    firebase.auth().onAuthStateChanged(function(user) {
+       if (user) {
+        
     // User is signed in.
       console.log(user);
-      let showData = document.getElementById('profile');
-      showData.innerHTML = '';
+      let showData = document.getElementById('root');
      showData.innerHTML += `
      <div>
      <br>
@@ -122,10 +121,10 @@ firebase.auth().onAuthStateChanged
       </div>
       
       `
-      callback();
-      // ...
+       }
+
  });
- }
+}
     
 
 
