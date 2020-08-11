@@ -8,7 +8,6 @@ export const changeRoute = (hash) => {
     switch (hash) {
     case '#/':
         routeLogin();
-        // containerRoot.appendChild(routeLogin());
         break;
     case '#/registro':
         routeRegistry();
@@ -19,9 +18,9 @@ export const changeRoute = (hash) => {
     case '#/home':
         routeHome();
         break;
-        case '#/Profile':
-            routeProfile();
-            break;
+    case '#/Profile':
+        routeProfile();
+        break;
     default:
         routeLogin();
     }
