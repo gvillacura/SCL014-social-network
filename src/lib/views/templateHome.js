@@ -1,10 +1,28 @@
 import { routeLogin } from './templateLogin.js';
+import {
+// dbPublicaciones,
+// getPosts,
+} from '../index.js';
 
 const LoadHomeFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
     const artSpace = document.getElementById('artSpace');
     artSpace.addEventListener('click', routeLogin);
 };
+
+/* const listadoPublicaciones = () => {
+    const resultPost = getPosts();
+    resultPost.then((posts) => {
+        posts.forEach((post) => {
+            const data = post.data();
+            const postContainer = document.querySelector('#lista-publicaciones');
+            const postPart = document.createElement('div');
+            postPart.classList.add('post-actual');
+            postPart.innerHTML = ` <p> ${data.publicacion} </p>`;
+            postContainer.appendChild(postPart);
+        });
+    });
+}; */
 
 export const routeHome = () => {
     const viewHomePage = ` 
@@ -24,10 +42,32 @@ export const routeHome = () => {
           </div> 
         </div>
     </header>
+    
+    <main>
+      <div id="ingreso-post">
+      <form class="formulario-post">
+        <div>
+          <textarea class="textarea" name="post" id="post"
+            placeholder="¡Realiza una publicación!"></textarea>
+        </div>
+        <div class="imagen-post">
+          <button class="botones-post" type = "button" id="publicar">Publicar</button>
+        </div>
+      </form>
+      </div>
+      <div id="lista-publicaciones"></div>
+    </main>
     <footer > &copy;2020 by Fabiane, Geraldine & Lady</footer>
   
     </div> `;
     window.location.hash = '#/home';
     document.getElementById('root').innerHTML = viewHomePage;
     LoadHomeFunctions();
+    // listadoPublicaciones();
+
+    /* const btnPublicar = document.querySelector('#publicar');
+    btnPublicar.addEventListener('click', () => {
+        const post = document.querySelector('#post').value;
+        dbPublicaciones(post, listadoPublicaciones);
+    }); */
 };

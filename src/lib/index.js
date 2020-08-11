@@ -1,4 +1,3 @@
-// aqui exportaras las funciones que necesites
 // Función firebase que captura mail y contraseña a usuarios ya registrados
 export const ingreso = (callback) => {
     const email = document.getElementById('input_email').value;
@@ -18,19 +17,6 @@ export const ingreso = (callback) => {
             console.log(error);
         });
 };
-// Función firebase para registrarse en la página
-// export const registrar = () => {
-//     const email = document.getElementById('input_email2').value;
-//     const password = document.getElementById('input_password2').value;
-
-//     firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
-//         // Handle Errors here.
-//         // eslint-disable-next-line no-unused-vars
-//         const errorCode = error.code;
-//         // eslint-disable-next-line no-unused-vars
-//         const errorMessage = error.message;
-//     });
-// };
 
 // Función firebase para registrarse mediante google
 export const loginG = (callback) => {
@@ -93,33 +79,42 @@ export const inscription = (callback, user) => {
                 });
         })
         .catch((error) => {
-            // Handle Errors here.
             // eslint-disable-next-line no-unused-vars
             const errorCode = error.code;
             // eslint-disable-next-line no-unused-vars
             const errorMessage = error.message;
         });
+
+
+    /* const getUser = () => db.collection('users').get();
+    window.addEventListener('DOMContentLoaded', () => {
+        const querySnapshot = getUser();
+        querySnapshot.array.forEach((user) => {
+            console.log(user);
+        });
+    }); */
 };
 
-// export const inscription = (callback, user) => {
-//     db.collection('users')
-//         .add({
-//             nombre: user.name,
-//             region: user.region,
-//             correo: user.email,
-//             contraseña: user.password,
-//             confirmación: user.passwordConfirm,
-//         })
-//         .then(
-//             () => {
-//                 alert('Su cuenta ha sido registrada');
-//                 callback();
-//             },
-//         )
-//         .catch(
-//             (error) => {
-//                 console.error('Error adding document: ', error);
-//                 // alert('Debe completar la totalidad de los campos');
-//             },
-//         );
-// };
+// export const getPosts = () => db.collection('publicaciones').onSnapshot();
+
+/* export const dbPublicaciones = (post, callback) => {
+    db.collection('publicaciones').add({
+        publicacion: post,
+    })
+        .then(() => {
+            callback();
+            console.log('Document successfully written!');
+        })
+        .catch((error) => {
+            console.error('Error writing document: ', error);
+        });
+}; */
+
+
+/* export const getPosts = () => {
+    db.collection('publicaciones').get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data().publicacion}`);
+        });
+    });
+    } */

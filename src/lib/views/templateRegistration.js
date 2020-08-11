@@ -8,7 +8,7 @@ const loadRegistryFunctions = () => {
     const btnLogin = document.querySelector('#loginBtn');
     btnLogin.addEventListener('click', routeLogin);
 
-    function preinscription() {
+    const preinscription = () => {
         const name = document.getElementById('input_name').value;
         const region = document.getElementById('input_address').value;
         const email = document.getElementById('input_email2').value;
@@ -32,7 +32,7 @@ const loadRegistryFunctions = () => {
         } else {
             inscription(routeHome, user);
         }
-    }
+    };
     const saveRegistration = document.querySelector('#save-registration-btn');
     saveRegistration.addEventListener('click', preinscription);
 };
