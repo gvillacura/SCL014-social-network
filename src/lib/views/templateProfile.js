@@ -1,17 +1,16 @@
 import { routeLogin } from './templateLogin.js';
-import { routeProfile } from './templateProfile.js';
 import {
-  perfil, 
+  perfil,
 } from '../firebase.js';
 
-const LoadHomeFunctions = () => {
+const LoadProfileFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
     const artSpace = document.getElementById('artSpace');
     artSpace.addEventListener('click', routeLogin);
 };
 
-export const routeHome = () => {
-    const viewHomePage = ` 
+export const routeProfile = () => {
+    const viewProfilePage = ` 
     <div>
     <header>
         <img class="header-image" src="img/img-cel.png" alt="">
@@ -24,7 +23,7 @@ export const routeHome = () => {
           <div class = "icons-General">
             <img class = "icoArt" src="img/articulo_icono.png" alt="">
             <img class = "icoCalen" src="img/calendario_icono.png" alt="">
-            <img class = "icoUsu" src="img/usuario_icono.png" alt="" id="profile">
+            <img class = "icoUsu" src="img/usuario_icono.png" alt=""id="profile">
           </div> 
         </div>
     </header>
@@ -32,11 +31,7 @@ export const routeHome = () => {
     
   
     </div> `;
-    window.location.hash = '#/home';
-    document.getElementById('root').innerHTML = viewHomePage;
-    LoadHomeFunctions();
-    
-    document.getElementById('profile').addEventListener('click', () =>{
-    perfil(routeProfile)
-    });
-};
+    window.location.hash = '#/Profile';
+    document.getElementById('root').innerHTML = viewProfilePage;
+    LoadProfileFunctions();
+}

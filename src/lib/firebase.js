@@ -56,6 +56,7 @@ export const pass = (callback) => {
     const emailAddress = document.getElementById('input_email_Pass').value;
 
     auth.sendPasswordResetEmail(emailAddress)
+
         .then(() => {
             alert('¡Correo enviado! Ingrese con su nueva contraseña en la pagina de inicio.');
             callback();
@@ -99,3 +100,44 @@ export const inscription = (user) => {
             const errorMessage = error.message;
         });
 };
+
+
+export const perfil = (callback) => {
+    firebase.auth().onAuthStateChanged
+        .then((user) => {
+            // User is signed in.
+            console.log(user);
+            const showData = document.getElementById('profile');
+            showData.innerHTML = '';
+            showData.innerHTML += `
+     <div>
+     <br>
+     <br>
+     <p> <img src='${user.photoURL}'></p>
+     <p>${user.displayName}</p>
+      <p>${user.email}</p>
+      </div>
+      
+      `;
+            callback();
+            // ...
+        });
+};
+
+
+// funcion para pintar datos en pantalla
+// export const perfil = () => {
+//    let showData = document.getElementById('perfil');
+//     db.collection("users").onSnapshot((querySnapshot) => {
+//         showData.innerHTML = '';
+//         querySnapshot.forEach((doc) => {
+//             console.log(`${doc.id} => ${doc.data().nombre}`)
+//       showData.innerHTML +=  `
+//        <p>${doc.id}</p>
+//        <p>${doc.data().displayName}</p>
+//        <p>${doc.data().email}</p>
+//        <p>${doc.data().correo}</p>
+//        `
+//         });
+//     });
+// };
