@@ -101,10 +101,16 @@ h4 {
   padding-inline-end: 2em;
 }
 
+<<<<<<< HEAD
 .icoLupa{
   padding-inline-end: 2em;
 }
 
+=======
+.icoUsu:hover, .icoCalen, .icoArt {
+  filter: opacity(0.5);
+}
+>>>>>>> 1936aa23cc8641dfe168ee7a3f1242e9049974d8
 .icons-General {
   float: right;
 }

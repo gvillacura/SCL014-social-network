@@ -37,6 +37,7 @@ export const loginG = (callback) => {
     firebase.auth().signInWithPopup(provider)
 
         .then((result) => {
+            
             console.log(result.user);
             callback();
         })
@@ -56,6 +57,7 @@ export const pass = (callback) => {
     const emailAddress = document.getElementById('input_email_Pass').value;
 
     auth.sendPasswordResetEmail(emailAddress)
+    
         .then(() => {
             alert('¡Correo enviado! Ingrese con su nueva contraseña en la pagina de inicio.');
             callback();
@@ -100,25 +102,49 @@ export const inscription = (callback, user) => {
         });
 };
 
-// export const inscription = (callback, user) => {
-//     db.collection('users')
-//         .add({
-//             nombre: user.name,
-//             region: user.region,
-//             correo: user.email,
-//             contraseña: user.password,
-//             confirmación: user.passwordConfirm,
-//         })
-//         .then(
-//             () => {
-//                 alert('Su cuenta ha sido registrada');
-//                 callback();
-//             },
-//         )
-//         .catch(
-//             (error) => {
-//                 console.error('Error adding document: ', error);
-//                 // alert('Debe completar la totalidad de los campos');
-//             },
-//         );
+
+
+export const perfil = () => {
+    firebase.auth().onAuthStateChanged(function(user) {
+       if (user) {
+        
+    // User is signed in.
+      console.log(user);
+      let showData = document.getElementById('root');
+     showData.innerHTML += `
+     <div>
+     <br>
+     <br>
+     <p> <img src='${user.photoURL}'></p>
+     <p>${ user.displayName}</p>
+      <p>${user.email}</p>
+      </div>
+      
+      `
+       }
+
+ });
+}
+    
+
+
+
+
+
+//funcion para pintar datos en pantalla
+// export const perfil = () => {
+//    let showData = document.getElementById('perfil');
+//     db.collection("users").onSnapshot((querySnapshot) => {
+//         showData.innerHTML = '';
+//         querySnapshot.forEach((doc) => {
+//             console.log(`${doc.id} => ${doc.data().nombre}`)
+//       showData.innerHTML +=  `
+//        <p>${doc.id}</p>
+//        <p>${doc.data().displayName}</p>
+//        <p>${doc.data().email}</p>
+//        <p>${doc.data().correo}</p>
+//        ` 
+//         });
+//     });
 // };
+
