@@ -1,6 +1,6 @@
 import { routeLogin } from './templateLogin.js';
 import {
-  perfil,
+  perfil, 
 } from '../firebase.js';
 
 const LoadHomeFunctions = () => {
@@ -23,16 +23,17 @@ export const routeHome = () => {
           <div class = "icons-General">
             <img class = "icoArt" src="img/articulo_icono.png" alt="">
             <img class = "icoCalen" src="img/calendario_icono.png" alt="">
-            <img class = "icoUsu" src="img/usuario_icono.png" alt="" >
+            <img class = "icoUsu" src="img/usuario_icono.png" alt="" id="profile">
           </div> 
         </div>
     </header>
 
-    <button class= 'btn' id='perfil'>Perfil</button><br>
+    
   
     </div> `;
     window.location.hash = '#/home';
     document.getElementById('root').innerHTML = viewHomePage;
     LoadHomeFunctions();
-    document.getElementById('perfil').addEventListener('click', perfil);
+    
+    document.getElementById("profile").addEventListener('click', perfil)
 };
