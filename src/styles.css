@@ -101,6 +101,9 @@ h4 {
   padding-inline-end: 2em;
 }
 
+.icoUsu:hover, .icoCalen, .icoArt {
+  filter: opacity(0.5);
+}
 .icons-General {
   float: right;
 }

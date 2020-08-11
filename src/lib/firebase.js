@@ -17,19 +17,6 @@ export const ingreso = (callback) => {
             console.log(error);
         });
 };
-// Función firebase para registrarse en la página
-// export const registrar = () => {
-//     const email = document.getElementById('input_email2').value;
-//     const password = document.getElementById('input_password2').value;
-
-//     firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
-//         // Handle Errors here.
-//         // eslint-disable-next-line no-unused-vars
-//         const errorCode = error.code;
-//         // eslint-disable-next-line no-unused-vars
-//         const errorMessage = error.message;
-//     });
-// };
 
 // Función firebase para registrarse mediante google
 export const loginG = (callback) => {
@@ -102,12 +89,12 @@ export const inscription = (user) => {
 };
 
 
-export const perfil = (callback) => {
-    firebase.auth().onAuthStateChanged
-        .then((user) => {
+export const perfil = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
             // User is signed in.
             console.log(user);
-            const showData = document.getElementById('profile');
+            const showData = document.getElementById('contenedor-perfil');
             showData.innerHTML = '';
             showData.innerHTML += `
      <div>
@@ -119,25 +106,6 @@ export const perfil = (callback) => {
       </div>
       
       `;
-            callback();
-            // ...
-        });
+        }
+    });
 };
-
-
-// funcion para pintar datos en pantalla
-// export const perfil = () => {
-//    let showData = document.getElementById('perfil');
-//     db.collection("users").onSnapshot((querySnapshot) => {
-//         showData.innerHTML = '';
-//         querySnapshot.forEach((doc) => {
-//             console.log(`${doc.id} => ${doc.data().nombre}`)
-//       showData.innerHTML +=  `
-//        <p>${doc.id}</p>
-//        <p>${doc.data().displayName}</p>
-//        <p>${doc.data().email}</p>
-//        <p>${doc.data().correo}</p>
-//        `
-//         });
-//     });
-// };

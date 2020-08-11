@@ -1,11 +1,10 @@
 import { routeLogin } from './templateLogin.js';
-import {
-  perfil,
-} from '../firebase.js';
+import { perfil } from '../firebase.js';
 
-const LoadProfileFunctions = () => {
+
+const loadProfileFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
-    const artSpace = document.getElementById('artSpace');
+    const artSpace = document.getElementById('artSpace2');
     artSpace.addEventListener('click', routeLogin);
 };
 
@@ -17,7 +16,7 @@ export const routeProfile = () => {
         <div class = "container-second-page">
           <div class = "container_left">
             <img class="header-image-desktop" src="img/img-desk.png" alt="">
-            <h1 class = "logo-second-page" id="artSpace" >Art Space</h1>
+            <h1 class = "logo-second-page" id="artSpace2" >Art Space</h1>
             <input type="search" id="input_search">
           </div>
           <div class = "icons-General">
@@ -27,11 +26,11 @@ export const routeProfile = () => {
           </div> 
         </div>
     </header>
-
-    
+    <main id = "contenedor-perfil" ></main>
   
     </div> `;
     window.location.hash = '#/Profile';
     document.getElementById('root').innerHTML = viewProfilePage;
-    LoadProfileFunctions();
-}
+    perfil();
+    loadProfileFunctions();
+};
