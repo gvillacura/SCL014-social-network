@@ -1,14 +1,4 @@
 import {
-<<<<<<< HEAD
-  pass,
-} from '../firebase.js'
-
-import { routeLogin } from './templateLogin.js'
-import { routeHome } from './templateWall.js'
-
-export const routeError = () => {
-  const viewErrorPage = `
-=======
     pass,
     loginG,
 } from '../firebase.js';
@@ -34,7 +24,6 @@ const LoadErrorFunctions = () => {
 
 export const routeError = () => {
     const viewErrorPage = `
->>>>>>> 74f450527e24e46335dee0dea52ca64d3d8dc506
       <header>
           <img class="header-image" src="img/img-cel.png">
           <img class="header-image-desktop" src="img/img-desk.png">
@@ -60,30 +49,7 @@ export const routeError = () => {
       <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
     
       `;
-<<<<<<< HEAD
-  window.location.hash = "#/recuperar_contrasena";
-  document.getElementById('root').innerHTML = viewErrorPage;
-  LoadErrorFunctions();
-};
-
-const LoadErrorFunctions = () => {
-  // Función que lleva desde recuperar contraseña a primera pagina
-  const btnLogin = document.getElementById('loginBtn');
-  btnLogin.addEventListener('click', routeLogin);
-
-  const enviar = document.querySelector('#start_btn');
-  enviar.addEventListener('click', () => {
-    pass(routeLogin);
-  });
-
-  const googlee = document.querySelector('#google');
-  googlee.addEventListener('click', () => {
-    loginG(routeHome);
-  });
-};
-=======
     window.location.hash = '#/recuperar_contrasena';
     document.getElementById('root').innerHTML = viewErrorPage;
     LoadErrorFunctions();
 };
->>>>>>> 74f450527e24e46335dee0dea52ca64d3d8dc506
