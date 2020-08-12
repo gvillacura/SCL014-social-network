@@ -11,33 +11,6 @@ const loadHomeFunctions = () => {
     artSpace.addEventListener('click', routeLogin);
 };
 
-const listadoPublicaciones = () => {
-    const resultPost = getPosts();
-    resultPost.then((posts) => {
-        const postContainer = document.querySelector('#lista-publicaciones');
-        postContainer.innerHTML = '';
-        posts.forEach((post) => {
-            const data = post.data();
-            const postPart = document.createElement('div');
-            postPart.classList.add('post-actual');
-            postPart.innerHTML = `  
-            <img class = "icoperfil2" src="img/artista2.png" alt="">
-            <p class= "post2"> ${data.publicacion} </p>
-            <div class = icoReacall>
-            <img class = "icoReac" src="img/reac1.png" alt="">
-            <img class = "icoReac" src="img/reac3.png" alt="">
-            <img class = "icoReac" src="img/reac4.png" alt="">
-            <img class = "icoReac" src="img/reac5.png" alt="">
-            <img class = "icoReac" src="img/reac6.png" alt="">
-            </div>
-            `;
-
-            postContainer.appendChild(postPart);
-        });
-    });
-};
-
-
 export const routeHome = () => {
     const viewHomePage = ` 
     <div>

@@ -1,4 +1,4 @@
-import { routeLogin } from './templateLogin.js';
+import { routeHome} from './templateWall.js';
 import { profile } from '../firebase.js';
 
 

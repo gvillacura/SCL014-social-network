@@ -232,7 +232,7 @@ input#input_email.imput {
   
   margin-right: 15em;
   margin-left: 17em;
-  margin-top: 4em;
+  margin-top: 7em;
   border: solid 1px #edefb0;
   background-color: white;
 }
@@ -242,10 +242,14 @@ input#input_email.imput {
   width: 10em;
   height: 9em;
   border-radius: 50%;
-  border: solid 1px #edefb0;
+  border: none;
   background-color: #edefb0;
-  
+  outline: none;
 }
+
+.imgProfile:focus{ outline:none;
+}
+
 
 .imgProfileimg{
   margin-top: -6em;
