@@ -20,7 +20,18 @@ const listadoPublicaciones = () => {
             const data = post.data();
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
-            postPart.innerHTML = ` <p> ${data.publicacion} </p>`;
+            postPart.innerHTML = `  
+            <img class = "icoperfil2" src="img/artista2.png" alt="">
+            <p class= "post2"> ${data.publicacion} </p>
+            <div class = icoReacall>
+            <img class = "icoReac" src="img/reac1.png" alt="">
+            <img class = "icoReac" src="img/reac3.png" alt="">
+            <img class = "icoReac" src="img/reac4.png" alt="">
+            <img class = "icoReac" src="img/reac5.png" alt="">
+            <img class = "icoReac" src="img/reac6.png" alt="">
+            </div>
+            `;
+
             postContainer.appendChild(postPart);
         });
     });
@@ -48,10 +59,13 @@ export const routeHome = () => {
     <div id="ingreso-post">
      <form class="formulario-post">
        <div>
+       <img class = "icoperfil" src="img/artista2.png" alt="">
         <textarea class="textarea" name="post" id="post"
           placeholder="¡Realiza una publicación!"></textarea>
+        
        </div>
        <hr class='hr'>
+       <img class = "icoLoadimg" src="img/img1.png" alt="">
        <div class="imagen-post">
          <button class="botones-post" type = "button" id="publicar">Publicar</button>
         </div>

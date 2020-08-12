@@ -99,9 +99,10 @@ export const perfil = () => {
      <div>
      <br>
      <br>
-     <p> <img src='${user.photoURL}'></p>
-     <p>${user.displayName}</p>
-      <p>${user.email}</p>
+
+     <p class = 'imgProfileimg'> <img class = 'imgProfile' src='${user.photoURL}'></p>
+     <p class = 'nameProfile'>${user.displayName}</p>
+      <p class = 'emailProfile'>${user.email}</p>
       </div>
       
       `;
