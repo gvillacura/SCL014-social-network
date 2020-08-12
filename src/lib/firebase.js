@@ -1,25 +1,7 @@
-// Función firebase que captura mail y contraseña a usuarios ya registrados
-export const ingreso = (callback) => {
-    const email = document.getElementById('input_email').value;
-    const password = document.getElementById('input_password').value;
-    firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(() => {
-            callback();
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-
-            if (errorCode === 'auth/wrong-password') {
-                alert('Contraseña erronea.');
-            } else {
-                alert('¡Ingrese un correo valido!');
-            }
-            console.log(error);
-        });
-};
+const db = firebase.firestore();
 
 // Función firebase para registrarse mediante google
-export const loginG = (callback) => {
+export const loginGoogle = (callback) => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
 
@@ -37,25 +19,6 @@ export const loginG = (callback) => {
         });
 };
 
-// función firebase para cambiar contraseña
-export const pass = (callback) => {
-    const auth = firebase.auth();
-    const emailAddress = document.getElementById('input_email_Pass').value;
-
-    auth.sendPasswordResetEmail(emailAddress)
-
-        .then(() => {
-            alert('¡Correo enviado! Ingrese con su nueva contraseña en la pagina de inicio.');
-            callback();
-        })
-        .catch((error) => {
-            alert('¡Ingrese una dirección de correo!');
-            // eslint-disable-next-line no-unused-vars
-            const errorMessage = error.message;
-        });
-};
-
-const db = firebase.firestore();
 
 export const inscription = (user) => {
     // Función para autenticar
@@ -88,7 +51,47 @@ export const inscription = (user) => {
         });
 };
 
-export const perfil = () => {
+// Función firebase que captura mail y contraseña a usuarios ya registrados
+export const ingreso = (callback) => {
+    const email = document.getElementById('input_email').value;
+    const password = document.getElementById('input_password').value;
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(() => {
+            callback();
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+
+            if (errorCode === 'auth/wrong-password') {
+                alert('Contraseña erronea.');
+            } else {
+                alert('¡Ingrese un correo valido!');
+            }
+            console.log(error);
+        });
+};
+
+
+// función firebase para cambiar contraseña
+export const pass = (callback) => {
+    const auth = firebase.auth();
+    const emailAddress = document.getElementById('input_email_Pass').value;
+
+    auth.sendPasswordResetEmail(emailAddress)
+
+        .then(() => {
+            alert('¡Correo enviado! Ingrese con su nueva contraseña en la pagina de inicio.');
+            callback();
+        })
+        .catch((error) => {
+            alert('¡Ingrese una dirección de correo!');
+            // eslint-disable-next-line no-unused-vars
+            const errorMessage = error.message;
+        });
+};
+
+
+export const profile = () => {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
             // User is signed in.
@@ -109,17 +112,29 @@ export const perfil = () => {
     });
 };
 
-export const getPosts = () => db.collection('publicaciones').get();
-
-export const dbPublicaciones = (post, callback) => {
+export const createPost = (post) => {
     db.collection('publicaciones').add({
         publicacion: post,
     })
         .then(() => {
-            callback();
+        
             console.log('Document successfully written!');
         })
         .catch((error) => {
             console.error('Error writing document: ', error);
         });
+};
+
+ export const containerPost = () => {
+    db.collection('publicaciones').onSnapshot((posts) => {
+        const postContainer = document.querySelector('#lista-publicaciones');
+        postContainer.innerHTML = '';
+        posts.forEach((post) => {
+            const data = post.data();
+            const postPart = document.createElement('div');
+            postPart.classList.add('post-actual');
+            postPart.innerHTML = ` <p> ${data.publicacion} </p>`;
+            postContainer.appendChild(postPart);
+        });
+    });
 };
