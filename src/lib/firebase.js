@@ -135,7 +135,7 @@ export const createPost = (post) => {
         fecha: currentTime(),
        
         
-
+>>>>>>> 7e62d72981994ac3e39e7deebc06d056019c1a7c
     })
         .then(() => {
             console.log('Document successfully written!');
