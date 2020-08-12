@@ -133,12 +133,9 @@ export const createPost = (post) => {
         users: db.collection('users').doc(localStorage.getItem('userId')),
         publicacion: post,
         fecha: currentTime(),
-<<<<<<< HEAD
        
-=======
-      
         
->>>>>>> 7e62d72981994ac3e39e7deebc06d056019c1a7c
+
     })
         .then(() => {
             console.log('Document successfully written!');
@@ -158,6 +155,7 @@ export const containerPost = () => {
             postPart.classList.add('post-actual');
             postPart.innerHTML = `  
             <img class = "icoperfil2" src="img/artista2.png" alt="">
+            <p class = 'nameProfile'>${data.displayName}</p>
             <p> ${data.fecha} </p><br><br>
             <p class= "post2"> ${data.publicacion} </p>
            
