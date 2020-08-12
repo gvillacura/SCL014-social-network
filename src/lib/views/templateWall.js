@@ -1,8 +1,8 @@
 import { routeLogin } from './templateLogin.js';
 import { routeProfile } from './templateProfile.js';
 import {
-  createPost,
-  containerPost,
+    createPost,
+    containerPost,
 } from '../firebase.js';
 
 const loadHomeFunctions = () => {

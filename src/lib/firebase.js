@@ -1,5 +1,43 @@
 const db = firebase.firestore();
 
+// Función para obtener fecha y hora.
+const currentTime = () => {
+    let date = new Date();
+
+    const day = date.getDate();
+    const month = (date.getMonth() + 1);
+    const year = date.getFullYear();
+
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    date = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+    return date;
+};
+
+// Función firebase que captura mail y contraseña a usuarios ya registrados
+export const ingreso = (callback) => {
+    const email = document.getElementById('input_email').value;
+    const password = document.getElementById('input_password').value;
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((loggedUser) => {
+            localStorage.setItem('userId', loggedUser.user.uid);
+            console.log(loggedUser.user.uid);
+            callback();
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+
+            if (errorCode === 'auth/wrong-password') {
+                alert('Contraseña erronea.');
+            } else {
+                alert('¡Ingrese un correo valido!');
+            }
+            console.log(error);
+        });
+};
+
 // Función firebase para registrarse mediante google
 export const loginGoogle = (callback) => {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -18,7 +56,6 @@ export const loginGoogle = (callback) => {
             console.log(error);
         });
 };
-
 
 export const inscription = (user) => {
     // Función para autenticar
@@ -51,27 +88,6 @@ export const inscription = (user) => {
         });
 };
 
-// Función firebase que captura mail y contraseña a usuarios ya registrados
-export const ingreso = (callback) => {
-    const email = document.getElementById('input_email').value;
-    const password = document.getElementById('input_password').value;
-    firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(() => {
-            callback();
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-
-            if (errorCode === 'auth/wrong-password') {
-                alert('Contraseña erronea.');
-            } else {
-                alert('¡Ingrese un correo valido!');
-            }
-            console.log(error);
-        });
-};
-
-
 // función firebase para cambiar contraseña
 export const pass = (callback) => {
     const auth = firebase.auth();
@@ -89,7 +105,6 @@ export const pass = (callback) => {
             const errorMessage = error.message;
         });
 };
-
 
 export const profile = () => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -115,10 +130,11 @@ export const profile = () => {
 
 export const createPost = (post) => {
     db.collection('publicaciones').add({
+        users: db.collection('users').doc(localStorage.getItem('userId')),
         publicacion: post,
+        fecha: currentTime(),
     })
         .then(() => {
-        
             console.log('Document successfully written!');
         })
         .catch((error) => {
@@ -126,7 +142,7 @@ export const createPost = (post) => {
         });
 };
 
- export const containerPost = () => {
+export const containerPost = () => {
     db.collection('publicaciones').onSnapshot((posts) => {
         const postContainer = document.querySelector('#lista-publicaciones');
         postContainer.innerHTML = '';

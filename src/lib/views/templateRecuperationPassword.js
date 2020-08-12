@@ -1,6 +1,6 @@
 import {
     pass,
-    loginGoogle ,
+    loginGoogle,
 } from '../firebase.js';
 
 import { routeLogin } from './templateLogin.js';
@@ -18,7 +18,7 @@ const LoadErrorFunctions = () => {
 
     const googlee = document.querySelector('#google');
     googlee.addEventListener('click', () => {
-        loginGoogle (routeHome);
+        loginGoogle(routeHome);
     });
 };
 

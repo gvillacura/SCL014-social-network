@@ -1,5 +1,5 @@
 import {
-    loginGoogle ,
+    loginGoogle,
     ingreso,
 } from '../firebase.js';
 import { routeRegistry } from './templateRegistration.js';
@@ -24,8 +24,7 @@ const loadLoginFunctions = () => {
     // Función que lleva desde el login google a la segunda pantalla
     const googlee = document.querySelector('#google');
     googlee.addEventListener('click', () => {
-        loginGoogle (routeHome);
-        
+        loginGoogle(routeHome);
     });
 };
 
