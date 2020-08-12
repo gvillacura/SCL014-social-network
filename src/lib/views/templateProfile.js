@@ -1,6 +1,5 @@
 import { routeLogin } from './templateLogin.js';
-import { perfil } from '../firebase.js';
-import { routeHome } from './templateWall.js';
+import { profile } from '../firebase.js';
 
 
 const loadProfileFunctions = () => {
@@ -30,8 +29,8 @@ export const routeProfile = () => {
     <main id = "contenedor-perfil" ></main>
   
     </div> `;
-    window.location.hash = '#/Profile';
+    window.location.hash = '#/perfil';
     document.getElementById('root').innerHTML = viewProfilePage;
-    perfil();
+    profile();
     loadProfileFunctions();
 };

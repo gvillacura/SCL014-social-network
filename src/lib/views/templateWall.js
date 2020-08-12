@@ -1,8 +1,8 @@
 import { routeLogin } from './templateLogin.js';
 import { routeProfile } from './templateProfile.js';
 import {
-    dbPublicaciones,
-    getPosts,
+  createPost,
+  containerPost,
 } from '../firebase.js';
 
 const loadHomeFunctions = () => {
@@ -36,6 +36,7 @@ const listadoPublicaciones = () => {
         });
     });
 };
+
 
 export const routeHome = () => {
     const viewHomePage = ` 
@@ -74,18 +75,18 @@ export const routeHome = () => {
     <div id="lista-publicaciones"></div>
   </main>
     </div> `;
-    window.location.hash = '#/home';
+    window.location.hash = '#/muro';
     document.getElementById('root').innerHTML = viewHomePage;
     loadHomeFunctions();
     document.getElementById('profile').addEventListener('click', () => {
         routeProfile();
     });
 
-    listadoPublicaciones();
+    containerPost();
 
     const btnPublicar = document.querySelector('#publicar');
     btnPublicar.addEventListener('click', () => {
         const post = document.querySelector('#post').value;
-        dbPublicaciones(post, listadoPublicaciones);
+        createPost(post);
     });
 };

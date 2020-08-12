@@ -1,12 +1,12 @@
 import {
-    loginG,
+    loginGoogle ,
     ingreso,
 } from '../firebase.js';
 import { routeRegistry } from './templateRegistration.js';
 import { routeError } from './templateRecuperationPassword.js';
 import { routeHome } from './templateWall.js';
 
-const LoadLoginFunctions = () => {
+const loadLoginFunctions = () => {
     // Función que lleva desde la pagina de inicio a la segunda
     const btnHome = document.querySelector('#home_btn');
     btnHome.addEventListener('click', () => {
@@ -24,7 +24,7 @@ const LoadLoginFunctions = () => {
     // Función que lleva desde el login google a la segunda pantalla
     const googlee = document.querySelector('#google');
     googlee.addEventListener('click', () => {
-        loginG(routeHome);
+        loginGoogle (routeHome);
         
     });
 };
@@ -60,7 +60,7 @@ export const routeLogin = () => {
 </div>
  `;
 
-    window.location.hash = '#/';
+    window.location.hash = '#/inicio-sesion';
     document.getElementById('root').innerHTML = viewLogin;
-    LoadLoginFunctions();
+    loadLoginFunctions();
 };
