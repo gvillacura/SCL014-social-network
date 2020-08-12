@@ -1,9 +1,12 @@
+const time = new Date();
 // Función firebase que captura mail y contraseña a usuarios ya registrados
 export const ingreso = (callback) => {
     const email = document.getElementById('input_email').value;
     const password = document.getElementById('input_password').value;
     firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(() => {
+        .then((loggedUser) => {
+            localStorage.setItem('userId', loggedUser.user.uid);
+            console.log(loggedUser.user.uid);
             callback();
         })
         .catch((error) => {
@@ -113,7 +116,9 @@ export const getPosts = () => db.collection('publicaciones').get();
 
 export const dbPublicaciones = (post, callback) => {
     db.collection('publicaciones').add({
+        users: db.collection('users').doc(localStorage.getItem('userId')),
         publicacion: post,
+        fecha: time.getDate(),
     })
         .then(() => {
             callback();
@@ -123,3 +128,19 @@ export const dbPublicaciones = (post, callback) => {
             console.error('Error writing document: ', error);
         });
 };
+
+
+/* const currentTime = () => {
+    let date = new Date();
+
+    const day = date.getDate();
+    const month = (date.getMonth() + 1);
+    const year = date.getFullYear();
+
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    date = `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
+    return date;
+  }; */
