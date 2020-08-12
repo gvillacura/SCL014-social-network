@@ -46,14 +46,15 @@ export const routeHome = () => {
     </header>
     <main>
     <div id="ingreso-post">
-    <form class="formulario-post">
-      <div>
-        <textarea class="textarea input" name="post" id="post"
+     <form class="formulario-post">
+       <div>
+        <textarea class="textarea" name="post" id="post"
           placeholder="¡Realiza una publicación!"></textarea>
-      </div>
-      <div class="imagen-post">
-        <button class="botones-post btn" type = "button" id="publicar">Publicar</button>
-      </div>
+       </div>
+       <hr class='hr'>
+       <div class="imagen-post">
+         <button class="botones-post" type = "button" id="publicar">Publicar</button>
+        </div>
     </form>
     </div>
     <div id="lista-publicaciones"></div>

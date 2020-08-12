@@ -101,16 +101,9 @@ h4 {
   padding-inline-end: 2em;
 }
 
-<<<<<<< HEAD
-.icoLupa{
-  padding-inline-end: 2em;
-}
-
-=======
 .icoUsu:hover, .icoCalen, .icoArt {
   filter: opacity(0.5);
 }
->>>>>>> 1936aa23cc8641dfe168ee7a3f1242e9049974d8
 .icons-General {
   float: right;
 }
@@ -141,7 +134,61 @@ input#input_email.imput {
   float: left;
 }
 
-@media (max-width: 425px) {
+
+.formulario-post{
+  border: solid 1px #fdab1a;
+    margin-top: 2em;
+    margin-right: 10em;
+    margin-left: 12em;
+    border-radius: 10px;
+
+}
+.textarea {
+  border-bottom: solid 1px;
+    font-family: "Open Sans", sans-serif;
+    padding-top: 1em;
+    width: 25vw;
+    outline: none;
+    background: transparent !important;
+    border-radius: 2em;
+    font-size: 15px;
+    text-align: center;
+    border-color: #00000080;
+    margin-top: 1em;
+    padding-block-start: 0em ;
+}
+
+.hr{
+  width: 35em;
+  margin-top: 2em;
+}
+
+.post-actual{
+ 
+ border: solid 1px #fdab1a;
+  margin-top: 2em;
+  margin-right: 10em;
+  margin-left: 12em;
+  padding-top: -12px;
+  padding-block-end: -12px;
+  border-radius: 10px;
+}
+
+.botones-post{
+  margin: 0em;
+  margin-top: 2em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 9vw;
+  font-size: 15px;
+  height: 5vh;
+  outline: none;
+margin-block-end: 1em;
+}
+
+@media (max-width: 300px) and (max-width: 801px) {
   body {
     margin-left: 0;
   }
