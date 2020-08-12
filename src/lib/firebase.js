@@ -117,9 +117,10 @@ export const profile = () => {
      <div>
      <br>
      <br>
-     <p> <img src='${user.photoURL}'></p>
-     <p>${user.displayName}</p>
-      <p>${user.email}</p>
+
+     <p class = 'imgProfileimg'> <img class = 'imgProfile' src='${user.photoURL}'></p>
+     <p class = 'nameProfile'>${user.displayName}</p>
+      <p class = 'emailProfile'>${user.email}</p>
       </div>
       
       `;
@@ -149,7 +150,18 @@ export const containerPost = () => {
             const data = post.data();
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
-            postPart.innerHTML = ` <p> ${data.publicacion} </p>`;
+            postPart.innerHTML = `  
+            <img class = "icoperfil2" src="img/artista2.png" alt="">
+            <p class= "post2"> ${data.publicacion} </p>
+            <div class = icoReacall>
+            <img class = "icoReac" src="img/reac1.png" alt="">
+            <img class = "icoReac" src="img/reac3.png" alt="">
+            <img class = "icoReac" src="img/reac4.png" alt="">
+            <img class = "icoReac" src="img/reac5.png" alt="">
+            <img class = "icoReac" src="img/reac6.png" alt="">
+            </div>
+            `;
+
             postContainer.appendChild(postPart);
         });
     });

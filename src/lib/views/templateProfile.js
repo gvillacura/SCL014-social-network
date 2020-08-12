@@ -1,11 +1,11 @@
-import { routeLogin } from './templateLogin.js';
+import { routeHome} from './templateWall.js';
 import { profile } from '../firebase.js';
 
 
 const loadProfileFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
     const artSpace = document.getElementById('artSpace2');
-    artSpace.addEventListener('click', routeLogin);
+    artSpace.addEventListener('click', routeHome);
 };
 
 export const routeProfile = () => {
