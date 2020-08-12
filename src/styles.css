@@ -263,7 +263,7 @@ input#input_email.imput {
   font-size: 20px;
 }
 
-@media (max-width: 300px) and (max-width: 801px) {
+@media (max-width: 801px) {
   body {
     margin-left: 0;
   }
