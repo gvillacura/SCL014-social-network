@@ -1,5 +1,20 @@
 const db = firebase.firestore();
-const time = new Date();
+
+// Función para obtener fecha y hora.
+const currentTime = () => {
+    let date = new Date();
+
+    const day = date.getDate();
+    const month = (date.getMonth() + 1);
+    const year = date.getFullYear();
+
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    date = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+    return date;
+};
 
 // Función firebase que captura mail y contraseña a usuarios ya registrados
 export const ingreso = (callback) => {
@@ -116,7 +131,7 @@ export const createPost = (post) => {
     db.collection('publicaciones').add({
         users: db.collection('users').doc(localStorage.getItem('userId')),
         publicacion: post,
-        fecha: time.getDate(),
+        fecha: currentTime(),
     })
         .then(() => {
             console.log('Document successfully written!');
@@ -139,18 +154,3 @@ export const containerPost = () => {
         });
     });
 };
-
-/* const currentTime = () => {
-    let date = new Date();
-
-    const day = date.getDate();
-    const month = (date.getMonth() + 1);
-    const year = date.getFullYear();
-
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-
-    date = `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
-    return date;
-  }; */
