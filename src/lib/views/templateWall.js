@@ -1,8 +1,8 @@
 import { routeLogin } from './templateLogin.js';
 import { routeProfile } from './templateProfile.js';
 import {
-    dbPublicaciones,
-    getPosts,
+    createPost,
+    containerPost,
 } from '../firebase.js';
 
 const loadHomeFunctions = () => {
@@ -11,20 +11,6 @@ const loadHomeFunctions = () => {
     artSpace.addEventListener('click', routeLogin);
 };
 
-const listadoPublicaciones = () => {
-    const resultPost = getPosts();
-    resultPost.then((posts) => {
-        const postContainer = document.querySelector('#lista-publicaciones');
-        postContainer.innerHTML = '';
-        posts.forEach((post) => {
-            const data = post.data();
-            const postPart = document.createElement('div');
-            postPart.classList.add('post-actual');
-            postPart.innerHTML = ` <p> ${data.publicacion} </p>`;
-            postContainer.appendChild(postPart);
-        });
-    });
-};
 
 export const routeHome = () => {
     const viewHomePage = ` 
@@ -59,18 +45,18 @@ export const routeHome = () => {
     <div id="lista-publicaciones"></div>
   </main>
     </div> `;
-    window.location.hash = '#/home';
+    window.location.hash = '#/muro';
     document.getElementById('root').innerHTML = viewHomePage;
     loadHomeFunctions();
     document.getElementById('profile').addEventListener('click', () => {
         routeProfile();
     });
 
-    listadoPublicaciones();
+    containerPost();
 
     const btnPublicar = document.querySelector('#publicar');
     btnPublicar.addEventListener('click', () => {
         const post = document.querySelector('#post').value;
-        dbPublicaciones(post, listadoPublicaciones);
+        createPost(post);
     });
 };

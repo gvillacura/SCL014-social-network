@@ -6,19 +6,19 @@ import { routeProfile } from './views/templateProfile.js';
 
 export const changeRoute = (hash) => {
     switch (hash) {
-    case '#/':
+    case '#/inicio-sesion':
         routeLogin();
         break;
     case '#/registro':
         routeRegistry();
         break;
-    case '#/recuperar_contrasena':
+    case '#/recuperar-contrasena':
         routeError();
         break;
-    case '#/home':
+    case '#/muro':
         routeHome();
         break;
-    case '#/Profile':
+    case '#/perfil':
         routeProfile();
         break;
     default:

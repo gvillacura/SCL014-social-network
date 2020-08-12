@@ -1,6 +1,6 @@
 import {
     pass,
-    loginG,
+    loginGoogle,
 } from '../firebase.js';
 
 import { routeLogin } from './templateLogin.js';
@@ -18,7 +18,7 @@ const LoadErrorFunctions = () => {
 
     const googlee = document.querySelector('#google');
     googlee.addEventListener('click', () => {
-        loginG(routeHome);
+        loginGoogle(routeHome);
     });
 };
 
@@ -49,7 +49,7 @@ export const routeError = () => {
       <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
     
       `;
-    window.location.hash = '#/recuperar_contrasena';
+    window.location.hash = '#/recuperar-contrasena';
     document.getElementById('root').innerHTML = viewErrorPage;
     LoadErrorFunctions();
 };
