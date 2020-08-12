@@ -2,6 +2,7 @@ body {
   margin: 0;
   text-align: center;
   margin-left: 21em;
+  background-color: #f2f5821a;
 }
 
 .header-image {
@@ -34,7 +35,7 @@ h1 {
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px white inset;
-}
+} 
 
 .btn {
   margin: 0em;
@@ -134,7 +135,135 @@ input#input_email.imput {
   float: left;
 }
 
-@media (max-width: 425px) {
+
+.formulario-post{
+  
+    margin-top: 2em;
+    margin-right: 10em;
+    margin-left: 12em;
+    border-radius: 10px;
+    border: solid 1px #f2f3b2;
+    background-color: white;
+
+}
+.textarea {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 1em;
+  outline: none;
+  background: #fdfdf2 !important;
+  border-radius: 2em;
+  font-size: 15px;
+  text-align: center;
+  border-color: #00000029;
+  width: 30em;
+  height: 31px;
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+.hr{
+  width: 35em;
+    margin-top: 13px;
+    background-color: #747373;
+}
+
+.post-actual{
+  margin-top: 2em;
+  margin-right: 10em;
+  margin-left: 12em;
+  padding-block-end: 13px;
+  border-radius: 10px;
+  padding-block-start: 13px;
+  border: solid 1px #edefb0;
+  background-color: white;
+}
+
+.botones-post{
+  margin: 0em;
+    margin-top: 1em;
+    background: #ff9a02ad;
+    border-radius: 17px;
+    border: 2px #f7e22d;
+    font-family: "Open Sans", sans-serif;
+    width: 9vw;
+    font-size: 15px;
+    height: 5vh;
+    outline: none;
+    margin-block-end: 1em;
+}
+.icoperfil{
+  width: 3em;
+  border: solid 1px #0808087d;
+  border-radius: 2em;
+}
+.icoperfil2{
+  width: 3em;
+  border: solid 1px #0808087d;
+  border-radius: 2em;
+  margin-right: 32em;
+  margin-top: 1em;
+}
+
+
+.icoLoadimg{
+  width: 3em;
+}
+
+.icoReac{
+  width: 21px;
+  margin-right: 9px;
+}
+
+.icoReacall{
+  margin-right: 3px;
+}
+
+.post2{
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+  margin-top: -34px;
+  text-align: initial;
+  margin-left: 8em;
+  margin-right: 2em;
+
+}
+
+#contenedor-perfil{
+  
+  margin-right: 15em;
+  margin-left: 17em;
+  margin-top: 7em;
+  border: solid 1px #edefb0;
+  background-color: white;
+}
+
+.imgProfile{
+ 
+  width: 10em;
+  height: 9em;
+  border-radius: 50%;
+  border: none;
+  background-color: #edefb0;
+  outline: none;
+}
+
+.imgProfile:focus{ outline:none;
+}
+
+
+.imgProfileimg{
+  margin-top: -6em;
+}
+
+.nameProfile{
+  font-size: 20px;
+}
+
+.emailProfile{
+  font-size: 20px;
+}
+
+@media (max-width: 300px) and (max-width: 801px) {
   body {
     margin-left: 0;
   }
