@@ -146,6 +146,8 @@ export const createPost = (post) => {
 };
 
 export const containerPost = () => {
+    firebase.auth().onAuthStateChanged((user)=> {
+        if (user) {
     db.collection('publicaciones').onSnapshot((posts) => {
         const postContainer = document.querySelector('#lista-publicaciones');
         postContainer.innerHTML = '';
@@ -153,13 +155,11 @@ export const containerPost = () => {
             const data = post.data();
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
+            
             postPart.innerHTML = `  
             <img class = "icoperfil2" src="img/artista2.png" alt="">
-            <p class = 'nameProfile'>${data.displayName}</p>
-            <p> ${data.fecha} </p><br><br>
+            <p> Soy ${user.displayName ? user.displayName : user.email }, en: ${data.fecha} </p><br><br>
             <p class= "post2"> ${data.publicacion} </p>
-           
-        
             <div class = icoReacall>
             <img class = "icoReac" src="img/reac1.png" alt="">
             <img class = "icoReac" src="img/reac3.png" alt="">
@@ -168,8 +168,10 @@ export const containerPost = () => {
             <img class = "icoReac" src="img/reac6.png" alt="">
             </div>
             `;
-
+            
             postContainer.appendChild(postPart);
         });
     });
 };
+})
+}
