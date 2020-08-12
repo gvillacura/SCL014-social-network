@@ -133,6 +133,7 @@ export const createPost = (post) => {
         users: db.collection('users').doc(localStorage.getItem('userId')),
         publicacion: post,
         fecha: currentTime(),
+       
     })
         .then(() => {
             console.log('Document successfully written!');
