@@ -128,13 +128,17 @@ export const profile = () => {
     });
 };
 
+
 export const createPost = (post) => {
+
+    const user = () => firebase.auth()
+    .currentUser
     db.collection('publicaciones').add({
-        users: db.collection('users').doc(localStorage.getItem('userId')),
+        uid: user().uid,
         publicacion: post,
         fecha: currentTime(),
-      
-        
+        nombre: user().displayName,
+        email: user().email
     })
         .then(() => {
             console.log('Document successfully written!');
@@ -145,19 +149,19 @@ export const createPost = (post) => {
 };
 
 export const containerPost = () => {
-    firebase.auth().onAuthStateChanged((user)=> {
-        if (user) {
-    db.collection('publicaciones').onSnapshot((posts) => {
+    
+    db.collection('publicaciones').onSnapshot((querySnapshot) => {
         const postContainer = document.querySelector('#lista-publicaciones');
         postContainer.innerHTML = '';
-        posts.forEach((post) => {
+        querySnapshot.forEach((post) => {
             const data = post.data();
+            console.log(data)
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
             
             postPart.innerHTML = `  
             <img class = "icoperfil2" src="img/artista2.png" alt="">
-            <p> Soy ${user.displayName ? user.displayName : user.email }, en: ${data.fecha} </p><br><br>
+            <p> Soy ${data.nombre? data.nombre : data.email }, en: ${data.fecha} </p><br><br>
             <p class= "post2"> ${data.publicacion} </p>
             <div class = icoReacall>
             <img class = "icoReac" src="img/reac1.png" alt="">
@@ -171,6 +175,5 @@ export const containerPost = () => {
             postContainer.appendChild(postPart);
         });
     });
-};
-})
+
 }
