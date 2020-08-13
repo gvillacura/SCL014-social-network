@@ -8,7 +8,7 @@ const currentTime = () => {
     const month = (date.getMonth() + 1);
     const year = date.getFullYear();
 
-    const hours = date.getHours();
+    const hours = (date.getHours() < 10 ? '0' : '') + date.getHours();
     const minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
     const seconds = (date.getSeconds() < 10 ? '0' : '') + date.getSeconds();
 
@@ -18,8 +18,9 @@ const currentTime = () => {
 
 // Función firebase que captura mail y contraseña a usuarios ya registrados
 export const ingreso = (callback) => {
-    const email = document.getElementById('input_email').value;
-    const password = document.getElementById('input_password').value;
+    const showErrorMessage = document.querySelector('#error-message');
+    const email = document.querySelector('#input_email').value;
+    const password = document.querySelector('#input_password').value;
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((loggedUser) => {
             localStorage.setItem('userId', loggedUser.user.uid);
@@ -30,11 +31,10 @@ export const ingreso = (callback) => {
             const errorCode = error.code;
 
             if (errorCode === 'auth/wrong-password') {
-                alert('Contraseña erronea.');
+                showErrorMessage.innerHTML = '<p>Contraseña incorrecta, intente nuevamente.</p>';
             } else {
-                alert('¡Ingrese un correo valido!');
+                showErrorMessage.innerHTML = '<p>Correo inválido.</p>';
             }
-            console.log(error);
         });
 };
 
@@ -48,12 +48,8 @@ export const loginGoogle = (callback) => {
             callback();
         })
         .catch((error) => {
+            // eslint-disable-next-line no-unused-vars
             const errorCode = error.code;
-
-            if (errorCode === 'auth/wrong-password') {
-                alert('Contraseña erronea.');
-            }
-            console.log(error);
         });
 };
 
@@ -89,18 +85,18 @@ export const inscription = (user) => {
 };
 
 // función firebase para cambiar contraseña
-export const pass = (callback) => {
+export const pass = () => {
+    const showErrorMessage = document.querySelector('#error-message');
     const auth = firebase.auth();
     const emailAddress = document.getElementById('input_email_Pass').value;
 
     auth.sendPasswordResetEmail(emailAddress)
 
         .then(() => {
-            alert('¡Correo enviado! Ingrese con su nueva contraseña en la pagina de inicio.');
-            callback();
+            showErrorMessage.innerHTML = '<p>Correo para reestablecer contraseña ha sido enviado, por favor revisar email.</p>';
         })
         .catch((error) => {
-            alert('¡Ingrese una dirección de correo!');
+            showErrorMessage.innerHTML = '<p>Correo inválido.</p>';
             // eslint-disable-next-line no-unused-vars
             const errorMessage = error.message;
         });
@@ -154,7 +150,7 @@ export const containerPost = () => {
             console.log(data);
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
-          postPart.innerHTML = `  
+            postPart.innerHTML = `  
             <img class = "icoperfil2" src="img/artista2.png" alt="">
             <p class= "name1" > ${data.nombre ? data.nombre : data.email}</p><br><br>
             <p class= "post2"> ${data.fecha} </p><br><br>
@@ -172,4 +168,3 @@ export const containerPost = () => {
         });
     });
 };
-

@@ -15,6 +15,7 @@ const loadRegistryFunctions = () => {
         const email = document.getElementById('input_email2').value;
         const password = document.getElementById('input_password2').value;
         const passwordConfirm = document.getElementById('password_confirm').value;
+        const showErrorMessage = document.querySelector('#error-message');
 
         const user = {
             name,
@@ -26,10 +27,10 @@ const loadRegistryFunctions = () => {
 
         if (user.name === '' || user.region === '' || user.email === '' || user.password === ''
       || user.passwordConfirm === '') {
-            alert('Debe rellenar todos los campos');
+            showErrorMessage.innerHTML = '<p>Debe rellenar todos los campos.</p>';
         }
         if (user.password !== user.passwordConfirm) {
-            alert('No coinciden las contraseñas');
+            showErrorMessage.innerHTML = '<p>Las contraseñas no coinciden.</p>';
         } else {
             inscription(user);
         }
@@ -48,7 +49,8 @@ export const routeRegistry = () => {
           <img class="header-image-desktop" src="img/img-desk.png">
           <h1>Art Space</h1>
         </header>
-    
+
+        <div id = "error-message" class = "error-format"></div>
         <div class="input_section">
           <div>
             <img src="img/usuario_icono.png" class="icono" alt="Icono usuario">
