@@ -75,6 +75,7 @@ footer {
 p {
   font-family: "Open Sans", sans-serif;
   cursor: default;
+   
 }
 
 .icono {
@@ -181,10 +182,16 @@ input#input_email.imput {
   border: solid 1px #edefb0;
   background-color: white;
 }
+.img-responsive{
+  width: 5em;
+  margin-left: -33em;
+  margin-top: 1em;
+}
+
 
 .botones-post {
   margin: 0em;
-  margin-top: 1em;
+  margin-top: -1em;
   background: #ff9a02ad;
   border-radius: 17px;
   border: 2px #f7e22d;
@@ -194,6 +201,7 @@ input#input_email.imput {
   height: 5vh;
   outline: none;
   margin-block-end: 1em;
+ 
 }
 
 .icoperfil {
@@ -268,6 +276,43 @@ input#input_email.imput {
 
 .emailProfile {
   font-size: 20px;
+}
+
+#fichero{
+  margin: 0em;
+    margin-top: 1em;
+    background: #ff9a02ad;
+    border-radius: 17px;
+    border: 2px #f7e22d;
+    font-family: "Open Sans", sans-serif;
+    width: 32vw;
+    font-size: 15px;
+    height: 4vh;
+    outline: none;
+    margin-block-end: 5em;
+}
+.btn-file{
+  margin: 0em;
+  margin-top: -3em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 9vw;
+  font-size: 15px;
+  height: 5vh;
+  outline: none;
+  margin-block-end: 0em;
+}
+.name1{
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+    text-align: initial;
+    margin-left: 8em;
+    margin-top: -3em;
+}
+.hidden{
+  visibility: hidden;
 }
 
 @media (max-width: 801px) {

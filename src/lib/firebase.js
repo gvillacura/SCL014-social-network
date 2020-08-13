@@ -154,10 +154,10 @@ export const containerPost = () => {
             console.log(data);
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
-
-            postPart.innerHTML = `  
+          postPart.innerHTML = `  
             <img class = "icoperfil2" src="img/artista2.png" alt="">
-            <p> Soy ${data.nombre ? data.nombre : data.email}, en: ${data.fecha} </p><br><br>
+            <p class= "name1" > ${data.nombre ? data.nombre : data.email}</p><br><br>
+            <p class= "post2"> ${data.fecha} </p><br><br>
             <p class= "post2"> ${data.publicacion} </p>
             <div class = icoReacall>
             <img class = "icoReac" src="img/reac1.png" alt="">
@@ -172,3 +172,4 @@ export const containerPost = () => {
         });
     });
 };
+
