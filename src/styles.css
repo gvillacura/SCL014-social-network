@@ -35,7 +35,7 @@ h1 {
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px white inset;
-} 
+}
 
 .btn {
   margin: 0em;
@@ -102,9 +102,12 @@ h4 {
   padding-inline-end: 2em;
 }
 
-.icoUsu:hover, .icoCalen, .icoArt {
+.icoUsu:hover,
+.icoCalen,
+.icoArt {
   filter: opacity(0.5);
 }
+
 .icons-General {
   float: right;
 }
@@ -136,16 +139,17 @@ input#input_email.imput {
 }
 
 
-.formulario-post{
-  
-    margin-top: 2em;
-    margin-right: 10em;
-    margin-left: 12em;
-    border-radius: 10px;
-    border: solid 1px #f2f3b2;
-    background-color: white;
+.formulario-post {
+
+  margin-top: 2em;
+  margin-right: 10em;
+  margin-left: 12em;
+  border-radius: 10px;
+  border: solid 1px #f2f3b2;
+  background-color: white;
 
 }
+
 .textarea {
   font-family: "Open Sans", sans-serif;
   padding-top: 1em;
@@ -161,13 +165,13 @@ input#input_email.imput {
   margin-left: 2em;
 }
 
-.hr{
+.hr {
   width: 35em;
-    margin-top: 13px;
-    background-color: #747373;
+  margin-top: 13px;
+  background-color: #747373;
 }
 
-.post-actual{
+.post-actual {
   margin-top: 2em;
   margin-right: 10em;
   margin-left: 12em;
@@ -178,25 +182,27 @@ input#input_email.imput {
   background-color: white;
 }
 
-.botones-post{
+.botones-post {
   margin: 0em;
-    margin-top: 1em;
-    background: #ff9a02ad;
-    border-radius: 17px;
-    border: 2px #f7e22d;
-    font-family: "Open Sans", sans-serif;
-    width: 9vw;
-    font-size: 15px;
-    height: 5vh;
-    outline: none;
-    margin-block-end: 1em;
+  margin-top: 1em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 9vw;
+  font-size: 15px;
+  height: 5vh;
+  outline: none;
+  margin-block-end: 1em;
 }
-.icoperfil{
+
+.icoperfil {
   width: 3em;
   border: solid 1px #0808087d;
   border-radius: 2em;
 }
-.icoperfil2{
+
+.icoperfil2 {
   width: 3em;
   border: solid 1px #0808087d;
   border-radius: 2em;
@@ -205,20 +211,20 @@ input#input_email.imput {
 }
 
 
-.icoLoadimg{
+.icoLoadimg {
   width: 3em;
 }
 
-.icoReac{
+.icoReac {
   width: 21px;
   margin-right: 9px;
 }
 
-.icoReacall{
+.icoReacall {
   margin-right: 3px;
 }
 
-.post2{
+.post2 {
   font-family: "Open Sans", sans-serif;
   cursor: default;
   margin-top: -34px;
@@ -228,8 +234,8 @@ input#input_email.imput {
 
 }
 
-#contenedor-perfil{
-  
+#contenedor-perfil {
+
   margin-right: 15em;
   margin-left: 17em;
   margin-top: 7em;
@@ -237,8 +243,8 @@ input#input_email.imput {
   background-color: white;
 }
 
-.imgProfile{
- 
+.imgProfile {
+
   width: 10em;
   height: 9em;
   border-radius: 50%;
@@ -247,19 +253,20 @@ input#input_email.imput {
   outline: none;
 }
 
-.imgProfile:focus{ outline:none;
+.imgProfile:focus {
+  outline: none;
 }
 
 
-.imgProfileimg{
+.imgProfileimg {
   margin-top: -6em;
 }
 
-.nameProfile{
+.nameProfile {
   font-size: 20px;
 }
 
-.emailProfile{
+.emailProfile {
   font-size: 20px;
 }
 
