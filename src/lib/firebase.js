@@ -129,17 +129,13 @@ export const profile = () => {
 };
 
 export const createPost = (post) => {
-    const user = firebase.auth().currentUser;
-    // const dataUser = db.collection('users').doc()
-
+    const user = () => firebase.auth().currentUser;
     db.collection('publicaciones').add({
-        users: db.collection('users').doc(localStorage.getItem('userId')),
+        uid: user().uid,
         publicacion: post,
         fecha: currentTime(),
-        nombre: user.displayName,
-        correo: user.email,
-        uid: user.uid,
-        // id: docRef.id,
+        nombre: user().displayName,
+        email: user().email,
     })
         .then(() => {
             console.log('Document successfully written!');
@@ -150,16 +146,18 @@ export const createPost = (post) => {
 };
 
 export const containerPost = () => {
-    db.collection('publicaciones').orderBy('fecha', 'desc').onSnapshot((posts) => {
+    db.collection('publicaciones').orderBy('fecha', 'desc').onSnapshot((querySnapshot) => {
         const postContainer = document.querySelector('#lista-publicaciones');
         postContainer.innerHTML = '';
-        posts.forEach((post) => {
+        querySnapshot.forEach((post) => {
             const data = post.data();
+            console.log(data);
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
+
             postPart.innerHTML = `  
             <img class = "icoperfil2" src="img/artista2.png" alt="">
-            <p> ${data.fecha} </p><br><br>
+            <p> Soy ${data.nombre ? data.nombre : data.email}, en: ${data.fecha} </p><br><br>
             <p class= "post2"> ${data.publicacion} </p>
             <div class = icoReacall>
             <img class = "icoReac" src="img/reac1.png" alt="">
