@@ -1,32 +1,29 @@
-import { routeLogin } from './templateLogin.js';
-import { routeProfile } from './templateProfile.js';
+
 import {
     createPost,
     containerPost,
 } from '../firebase.js';
-import { routeEvents } from './templateEventos.js';
 
 
-const  inicializar = () => {
-  const fichero= document.getElementById("fichero");
-  if(fichero)
-  fichero.addEventListener("change", subirImagenAFirebase, false);
-}
- const subirImagenAFirebase = () => {
-   const imagenASubir=fichero.files[0].name;
+const inicializar = () => {
+    const fichero = document.getElementById('fichero');
+    if (fichero) fichero.addEventListener('change', subirImagenAFirebase, false);
+};
+const subirImagenAFirebase = () => {
+    const imagenASubir = fichero.files[0].name;
 
 // const subirImagenAFirebase = () => {
 //   alert("subir imagen a firebase");
-}
+};
 
-window.onload= inicializar
+window.onload = inicializar;
 let fichero;
 
 
 const loadHomeFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
     const artSpace = document.getElementById('artSpace');
-    artSpace.addEventListener('click', routeLogin);
+    artSpace.addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
 };
 
 export const routeHome = () => {
@@ -85,9 +82,9 @@ export const routeHome = () => {
     window.location.hash = '#/muro';
     document.getElementById('root').innerHTML = viewHomePage;
     loadHomeFunctions();
-    document.getElementById( "icoArt").addEventListener('click', routeEvents)
+    document.getElementById('icoArt').addEventListener('click', () => { window.location.hash = '#/conozca'; });
     document.getElementById('profile').addEventListener('click', () => {
-        routeProfile();
+        window.location.hash = '#/perfil';
     });
 
     containerPost();
@@ -97,8 +94,4 @@ export const routeHome = () => {
         const post = document.querySelector('#post').value;
         createPost(post);
     });
-
-    
 };
-
-

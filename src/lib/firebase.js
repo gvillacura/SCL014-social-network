@@ -5,7 +5,7 @@ const currentTime = () => {
     let date = new Date();
 
     const day = date.getDate();
-    const month = (date.getMonth() + 1);
+    const month = (date.getMonth() < 10 ? '0' : '') + (date.getMonth() + 1);
     const year = date.getFullYear();
 
     const hours = (date.getHours() < 10 ? '0' : '') + date.getHours();
@@ -17,7 +17,7 @@ const currentTime = () => {
 };
 
 // Función firebase que captura mail y contraseña a usuarios ya registrados
-export const ingreso = (callback) => {
+export const ingreso = () => {
     const showErrorMessage = document.querySelector('#error-message');
     const email = document.querySelector('#input_email').value;
     const password = document.querySelector('#input_password').value;
@@ -25,7 +25,7 @@ export const ingreso = (callback) => {
         .then((loggedUser) => {
             localStorage.setItem('userId', loggedUser.user.uid);
             console.log(loggedUser.user.uid);
-            callback();
+            window.location.hash = '#/muro';
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -39,13 +39,14 @@ export const ingreso = (callback) => {
 };
 
 // Función firebase para registrarse mediante google
-export const loginGoogle = (callback) => {
+export const loginGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
 
         .then((result) => {
             console.log(result.user);
-            callback();
+            window.location.hash = '#/muro';
+            // callback();
         })
         .catch((error) => {
             // eslint-disable-next-line no-unused-vars

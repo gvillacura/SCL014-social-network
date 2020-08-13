@@ -1,4 +1,3 @@
-
 import {
     inscription,
 } from '../firebase.js';

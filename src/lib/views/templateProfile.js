@@ -1,12 +1,9 @@
-import { routeHome} from './templateWall.js';
 import { profile } from '../firebase.js';
-import { routeLogin } from './templateLogin.js';
-
 
 const loadProfileFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
     const artSpace = document.getElementById('artSpace2');
-    artSpace.addEventListener('click', routeHome);
+    artSpace.addEventListener('click', () => { window.location.hash = '#/muro'; });
 };
 
 export const routeProfile = () => {
@@ -36,5 +33,5 @@ export const routeProfile = () => {
     document.getElementById('root').innerHTML = viewProfilePage;
     profile();
     loadProfileFunctions();
-    document.getElementById('closeProfile').addEventListener('click', routeLogin)
+    document.getElementById('closeProfile').addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
 };
