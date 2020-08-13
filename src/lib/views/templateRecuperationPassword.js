@@ -31,6 +31,7 @@ export const routeError = () => {
         </header>
     
       <h4> Ingrese su correo para enviar su nueva contraseña </h4>
+      <div id = "error-message" class = "recover-password"></div>
     
       <section class="input_section">
       <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">

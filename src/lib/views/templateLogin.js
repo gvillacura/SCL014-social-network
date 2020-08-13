@@ -37,6 +37,7 @@ export const routeLogin = () => {
 </header>
 
 <section class="input_section">
+<div id = "error-message" class = "error-format"></div>
   <form>
       <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
       <input class="input" type="email" autocomplete="email" placeholder="Correo electrónico" id="input_email"> <br>
