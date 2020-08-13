@@ -40,7 +40,8 @@ export const routeHome = () => {
           </div>
           <div class = "icons-General">
             <img class = "icoArt" id= "icoArt"  src="img/articulo_icono.png" alt="">
-            <img class = "icoCalen" src="img/calendario_icono.png" alt="">
+            <a href="https://calendar.google.com/calendar/r?tab=mc" target="_blank"><img
+          src="img/calendario_icono.png" class = "icoCalen"></a>
             <img class = "icoUsu" src="img/usuario_icono.png" alt=""  id='profile'>
           </div> 
         </div>
@@ -77,7 +78,10 @@ export const routeHome = () => {
     <div id="lista-publicaciones"></div>
   </main>
     </div> 
-    <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
+    <footer>
+    &copy;2020 by Fabiane, Geraldine & Lady
+   <h5>Contactenos: artspacechile@gmail.com</h5>
+   </footer>
     `;
     window.location.hash = '#/muro';
     document.getElementById('root').innerHTML = viewHomePage;

@@ -11,8 +11,9 @@ export const routeEvents = () => {
           </div>
           <div class = "icons-General">
             <img class = "icoArt" src="img/articulo_icono.png" alt="">
-            <img class = "icoCalen" src="img/calendario_icono.png" alt="">
-            <img class = "icoUsu" src="img/usuario_icono.png" alt=""id="profile">
+            <a href="https://calendar.google.com/calendar/r?tab=mc" target="_blank"><img
+            src="img/calendario_icono.png" class = "icoCalen"></a>
+            <img class = "icoUsu" src="img/usuario_icono.png" alt="" id="profile">
           </div> 
        
     </header>
@@ -28,11 +29,19 @@ export const routeEvents = () => {
 <br>
   <a href=" https://finde.latercera.com/viajes/donde-comer-pasear-y-pasarlo-chancho-en-pomaire-2019/" target="_blank">Conozca Pomaire y su variedad en greda</a>
 </section>
-<footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
+<footer>
+     &copy;2020 by Fabiane, Geraldine & Lady
+    <h5>Contactenos: artspacechile@gmail.com</h5>
+    </footer>
 `;
     window.location.hash = '#/conozca';
     document.getElementById('root').innerHTML = viewEventsPage;
     document.getElementById('artSpace2').addEventListener('click', () => {
         window.location.hash = '#/muro';
+    })
+    document.getElementById('profile').addEventListener('click', () => {
+        window.location.hash = '#/perfil';
     });
+       
+   
 };

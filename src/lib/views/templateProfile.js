@@ -18,8 +18,9 @@ export const routeProfile = () => {
             <input type="search" id="input_search">
           </div>
           <div class = "icons-General">
-            <img class = "icoArt" src="img/articulo_icono.png" alt="">
-            <img class = "icoCalen" src="img/calendario_icono.png" alt="">
+            <img class = "icoArt" id= "icoArt"  src="img/articulo_icono.png" alt="">
+            <a href="https://calendar.google.com/calendar/r?tab=mc" target="_blank"><img
+            src="img/calendario_icono.png" class = "icoCalen"></a>
             <img class = "icoUsu" src="img/usuario_icono.png" alt=""id="profile">
           </div> 
        
@@ -28,10 +29,18 @@ export const routeProfile = () => {
     <button class="btn" id= "closeProfile">Cerrar Sesión</button>
     </div>
   
-    </div> `;
+    </div>
+    <footer>
+     &copy;2020 by Fabiane, Geraldine & Lady
+    <h5>Contactenos: artspacechile@gmail.com</h5>
+    </footer>
+    `;
     window.location.hash = '#/perfil';
     document.getElementById('root').innerHTML = viewProfilePage;
     profile();
     loadProfileFunctions();
+    document.getElementById('icoArt').addEventListener('click', () => { window.location.hash = '#/conozca'; });
     document.getElementById('closeProfile').addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
-};
+    
+   
+}
