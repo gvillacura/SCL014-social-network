@@ -4,6 +4,7 @@ import {
     createPost,
     containerPost,
 } from '../firebase.js';
+import { routeEvents } from './templateEventos.js';
 
 
 const  inicializar = () => {
@@ -41,7 +42,7 @@ export const routeHome = () => {
             <input type="search" id="input_search">
           </div>
           <div class = "icons-General">
-            <img class = "icoArt" src="img/articulo_icono.png" alt="">
+            <img class = "icoArt" id= "icoArt"  src="img/articulo_icono.png" alt="">
             <img class = "icoCalen" src="img/calendario_icono.png" alt="">
             <img class = "icoUsu" src="img/usuario_icono.png" alt=""  id='profile'>
           </div> 
@@ -78,10 +79,13 @@ export const routeHome = () => {
     </div>
     <div id="lista-publicaciones"></div>
   </main>
-    </div> `;
+    </div> 
+    <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
+    `;
     window.location.hash = '#/muro';
     document.getElementById('root').innerHTML = viewHomePage;
     loadHomeFunctions();
+    document.getElementById( "icoArt").addEventListener('click', routeEvents)
     document.getElementById('profile').addEventListener('click', () => {
         routeProfile();
     });
@@ -93,6 +97,8 @@ export const routeHome = () => {
         const post = document.querySelector('#post').value;
         createPost(post);
     });
+
+    
 };
 
 

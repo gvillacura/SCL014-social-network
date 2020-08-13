@@ -1,5 +1,6 @@
 import { routeHome} from './templateWall.js';
 import { profile } from '../firebase.js';
+import { routeLogin } from './templateLogin.js';
 
 
 const loadProfileFunctions = () => {
@@ -24,13 +25,16 @@ export const routeProfile = () => {
             <img class = "icoCalen" src="img/calendario_icono.png" alt="">
             <img class = "icoUsu" src="img/usuario_icono.png" alt=""id="profile">
           </div> 
-        </div>
+       
     </header>
     <main id = "contenedor-perfil" ></main>
+    <button class="btn" id= "closeProfile">Cerrar Sesión</button>
+    </div>
   
     </div> `;
     window.location.hash = '#/perfil';
     document.getElementById('root').innerHTML = viewProfilePage;
     profile();
     loadProfileFunctions();
+    document.getElementById('closeProfile').addEventListener('click', routeLogin)
 };

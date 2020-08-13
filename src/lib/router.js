@@ -3,6 +3,7 @@ import { routeRegistry } from './views/templateRegistration.js';
 import { routeError } from './views/templateRecuperationPassword.js';
 import { routeHome } from './views/templateWall.js';
 import { routeProfile } from './views/templateProfile.js';
+import { routeEvents } from './views/templateEventos.js';
 
 export const changeRoute = (hash) => {
     switch (hash) {
@@ -20,6 +21,9 @@ export const changeRoute = (hash) => {
         break;
     case '#/perfil':
         routeProfile();
+        break;
+        case '#/conozca':
+        routeEvents();
         break;
     default:
         routeLogin();
