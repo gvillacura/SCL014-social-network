@@ -9,10 +9,10 @@ const currentTime = () => {
     const year = date.getFullYear();
 
     const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
+    const minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+    const seconds = (date.getSeconds() < 10 ? '0' : '') + date.getSeconds();
 
-    date = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+    date = `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
     return date;
 };
 
@@ -129,12 +129,17 @@ export const profile = () => {
 };
 
 export const createPost = (post) => {
+    const user = firebase.auth().currentUser;
+    // const dataUser = db.collection('users').doc()
+
     db.collection('publicaciones').add({
         users: db.collection('users').doc(localStorage.getItem('userId')),
         publicacion: post,
         fecha: currentTime(),
-      
-        
+        nombre: user.displayName,
+        correo: user.email,
+        uid: user.uid,
+        // id: docRef.id,
     })
         .then(() => {
             console.log('Document successfully written!');
@@ -145,7 +150,7 @@ export const createPost = (post) => {
 };
 
 export const containerPost = () => {
-    db.collection('publicaciones').onSnapshot((posts) => {
+    db.collection('publicaciones').orderBy('fecha', 'desc').onSnapshot((posts) => {
         const postContainer = document.querySelector('#lista-publicaciones');
         postContainer.innerHTML = '';
         posts.forEach((post) => {
@@ -156,8 +161,6 @@ export const containerPost = () => {
             <img class = "icoperfil2" src="img/artista2.png" alt="">
             <p> ${data.fecha} </p><br><br>
             <p class= "post2"> ${data.publicacion} </p>
-           
-        
             <div class = icoReacall>
             <img class = "icoReac" src="img/reac1.png" alt="">
             <img class = "icoReac" src="img/reac3.png" alt="">
