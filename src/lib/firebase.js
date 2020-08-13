@@ -133,9 +133,9 @@ export const createPost = (post) => {
         users: db.collection('users').doc(localStorage.getItem('userId')),
         publicacion: post,
         fecha: currentTime(),
-       
         
 
+        
     })
         .then(() => {
             console.log('Document successfully written!');
@@ -158,7 +158,9 @@ export const containerPost = () => {
             
             postPart.innerHTML = `  
             <img class = "icoperfil2" src="img/artista2.png" alt="">
-            <p> Soy ${user.displayName ? user.displayName : user.email }, en: ${data.fecha} </p><br><br>
+            <p class = 'imgProfileimg'> <img class = 'imgProfile' src='${user.photoURL}'></p>
+            <p>  ${user.displayName ? user.displayName : user.email }</p>
+            <p> ${data.fecha} </p><br><br>
             <p class= "post2"> ${data.publicacion} </p>
             <div class = icoReacall>
             <img class = "icoReac" src="img/reac1.png" alt="">
