@@ -1,8 +1,3 @@
-import { routeHome } from "./templateWall.js";
-
-
-
-
 export const routeEvents = () => {
     const viewEventsPage = ` 
     <div>
@@ -34,10 +29,10 @@ export const routeEvents = () => {
   <a href=" https://finde.latercera.com/viajes/donde-comer-pasear-y-pasarlo-chancho-en-pomaire-2019/" target="_blank">Conozca Pomaire y su variedad en greda</a>
 </section>
 <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
-`
-window.location.hash = '#/conozca';
-document.getElementById('root').innerHTML = viewEventsPage;
-document.getElementById('artSpace2').addEventListener('click', routeHome)
-
-
+`;
+    window.location.hash = '#/conozca';
+    document.getElementById('root').innerHTML = viewEventsPage;
+    document.getElementById('artSpace2').addEventListener('click', () => {
+        window.location.hash = '#/muro';
+    });
 };

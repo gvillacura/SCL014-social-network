@@ -2,29 +2,26 @@ import {
     loginGoogle,
     ingreso,
 } from '../firebase.js';
-import { routeRegistry } from './templateRegistration.js';
-import { routeError } from './templateRecuperationPassword.js';
-import { routeHome } from './templateWall.js';
 
 const loadLoginFunctions = () => {
     // Función que lleva desde la pagina de inicio a la segunda
     const btnHome = document.querySelector('#home_btn');
     btnHome.addEventListener('click', () => {
-        ingreso(routeHome);
+        ingreso();
     });
 
     // Función que lleva desde la de inicio a la de registro
     const btnRegistration = document.querySelector('#registration-btn');
-    btnRegistration.addEventListener('click', routeRegistry);
+    btnRegistration.addEventListener('click', () => { window.location.hash = '#/registro'; });
 
     // Función que lleva desde el texto olvido su contraseña  a  pantalla recuperar tu contraseña
     const mensaje = document.querySelector('#errorMensaje');
-    mensaje.addEventListener('click', routeError);
+    mensaje.addEventListener('click', () => { window.location.hash = '#/recuperar-contrasena'; });
 
     // Función que lleva desde el login google a la segunda pantalla
     const googlee = document.querySelector('#google');
     googlee.addEventListener('click', () => {
-        loginGoogle(routeHome);
+        loginGoogle();
     });
 };
 
@@ -59,7 +56,6 @@ export const routeLogin = () => {
 <script type="module" src="main.js"></script>
 </div>
  `;
-
     window.location.hash = '#/inicio-sesion';
     document.getElementById('root').innerHTML = viewLogin;
     loadLoginFunctions();

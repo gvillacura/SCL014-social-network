@@ -3,22 +3,19 @@ import {
     loginGoogle,
 } from '../firebase.js';
 
-import { routeLogin } from './templateLogin.js';
-import { routeHome } from './templateWall.js';
-
 const LoadErrorFunctions = () => {
     // Función que lleva desde recuperar contraseña a primera pagina
-    const btnLogin = document.getElementById('loginBtn');
-    btnLogin.addEventListener('click', routeLogin);
+    const btnLogin = document.querySelector('#loginBtn');
+    btnLogin.addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
 
     const enviar = document.querySelector('#start_btn');
     enviar.addEventListener('click', () => {
-        pass(routeLogin);
+        pass();
     });
 
     const googlee = document.querySelector('#google');
     googlee.addEventListener('click', () => {
-        loginGoogle(routeHome);
+        loginGoogle();
     });
 };
 
@@ -51,6 +48,6 @@ export const routeError = () => {
     
       `;
     window.location.hash = '#/recuperar-contrasena';
-    document.getElementById('root').innerHTML = viewErrorPage;
+    document.querySelector('#root').innerHTML = viewErrorPage;
     LoadErrorFunctions();
 };
