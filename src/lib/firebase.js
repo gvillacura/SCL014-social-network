@@ -119,7 +119,7 @@ export const profile = () => {
      <br>
 
      <p class = 'imgProfileimg'> <img class = 'imgProfile' src='${user.photoURL}'></p>
-     <p class = 'nameProfile'>${user.displayName}</p>
+     <h1 class = 'nameProfile'>${user.displayName ? user.displayName : user.email}</h1>
       <p class = 'emailProfile'>${user.email}</p>
       </div>
       
