@@ -36,12 +36,15 @@ export const routeHome = () => {
           <div class = "container_left">
             <img class="header-image-desktop" src="img/img-desk.png" alt="">
             <h1 class = "logo-second-page" id="artSpace" >Art Space</h1>
-            <input type="search" id="input_search">
+            <input  type="search" id="input_search"  placeholder="Buscar en Art Space" >
+            <div class = "lupa">
+              <img class = "icoLupa" id= "icoLupa"  src="img/buscar_icono.png" alt="">
+            </div>
           </div>
           <div class = "icons-General">
             <img class = "icoArt" id= "icoArt"  src="img/articulo_icono.png" alt="">
-            <a href="https://calendar.google.com/calendar/r?tab=mc" target="_blank"><img
-          src="img/calendario_icono.png" class = "icoCalen"></a>
+            <a href="https://calendar.google.com/calendar/r?tab=mc" target="_blank">
+            <img src="img/calendario_icono.png" class = "icoCalen"></a>
             <img class = "icoUsu" src="img/usuario_icono.png" alt=""  id='profile'>
           </div> 
         </div>
@@ -49,38 +52,44 @@ export const routeHome = () => {
     <main>
     <div id="ingreso-post">
      <form class="formulario-post">
+     <img class = "icoperfil" src="img/artista2.png" alt="">
        <div>
-         <img class = "icoperfil" src="img/artista2.png" alt="">
-         <textarea class="textarea" name="post" id="post"
+        
+         <textarea  type="search"class="textarea" name="post" id="post"
            placeholder="¡Realiza una publicación!"></textarea>
         
        </div>
-       <hr class='hr'>
+
+       
        <div class="container">
        <div class="row">
        <div class="col-sm-8">
        </div>
        <div class="col-sm-4">
          <form id="form-imagenes">
-           <label class="btn-file">
+           <label class="btn-file"> 
+           <div class = "prueba">
               <input type ="file" name="fichero" value="" id="fichero" class="hidden">
               <img src="img/img1.png"  class="img-responsive" alt="descargar">
+              </div>
            </label>
          </form>
        </div>
        </div>
        </div>
-       <div class="imagen-post">
+       <hr class='hr'>
+       
          <button class="botones-post" type = "button" id="publicar">Publicar</button>
-        </div>
+        
     </form>
     </div>
+    
     <div id="lista-publicaciones"></div>
   </main>
     </div> 
     <footer>
+    <h5> Contacto: artspacechile@gmail.com</h5>
     &copy;2020 by Fabiane, Geraldine & Lady
-   <h5>Contactenos: artspacechile@gmail.com</h5>
    </footer>
     `;
     window.location.hash = '#/muro';

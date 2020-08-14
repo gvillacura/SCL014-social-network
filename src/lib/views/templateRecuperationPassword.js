@@ -45,8 +45,8 @@ export const routeError = () => {
         </div>
       </section>
       <footer>
+      <h5>Contactenos: artspacechile@gmail.com</h5>
       &copy;2020 by Fabiane, Geraldine & Lady
-     <h5>Contactenos: artspacechile@gmail.com</h5>
      </footer>
     
       `;
