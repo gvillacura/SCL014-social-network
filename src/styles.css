@@ -21,6 +21,7 @@ body {
 h1 {
   font-size: 4vw;
   font-family: "Dancing Script", cursive;
+  margin-top: 10px;
 }
 
 .input {
@@ -60,7 +61,7 @@ input:-webkit-autofill {
 }
 
 .img-events{
-  width: 200px;
+  width: 100%;
   height: 150px;
 }
 
@@ -69,11 +70,12 @@ input:-webkit-autofill {
   margin-top: -4px;
   padding: 7px;
   height: 2em;
+ 
 }
 
 footer {
-  font-size: 3vh;
-  margin-top: 5vh;
+  font-size: 20px;
+  margin-top: 10vh;
   font-family: "Dancing Script", cursive;
 }
 
@@ -100,17 +102,19 @@ h4 {
   padding-inline-end: 1em;
 }
 
+
 .icoCalen {
   padding-inline-end: 1em;
 }
+
 
 .icoUsu {
   padding-inline-end: 2em;
 }
 
 .icoUsu:hover,
-.icoCalen,
-.icoArt {
+.icoCalen:hover,
+.icoArt:hover {
   filter: opacity(0.5);
 }
 
@@ -122,19 +126,31 @@ h4 {
   display: inline-block;
   margin: 0;
   font-size: 2em;
-  margin-left: 104px;
+  margin-left: 66px;
   margin-top: -4px;
+
 }
 
 #input_search {
   background: rgba(255, 154, 2, 0.81);
-  border-radius: 10px;
-  border: none;
-  height: 28px;
-  width: 11em;
-  margin-left: 2em;
-  padding-block-start: 7px;
+    border-radius: 17px;
+    height: 28px;
+    width: 14;
+    margin-left: 2em;
+    padding-block-end: 6px;
+    padding-block-start: 7px;
+    padding-right: 1em;
+    padding-left: 35px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    border: none;
+    outline: none;
+
 }
+#input_search:hover {
+  filter: opacity(0.5);
+}
+
 
 input#input_email.imput {
   background: transparent;
@@ -146,14 +162,13 @@ input#input_email.imput {
 
 
 .formulario-post {
-
   margin-top: 2em;
   margin-right: 10em;
   margin-left: 12em;
   border-radius: 10px;
   border: solid 1px #f2f3b2;
   background-color: white;
-
+  height: 15em;
 }
 
 .textarea {
@@ -167,15 +182,46 @@ input#input_email.imput {
   border-color: #00000029;
   width: 30em;
   height: 31px;
-  margin-top: 1em;
-  margin-left: 2em;
+  margin-top: -12em;
+  margin-left: 5em;
+  padding-right: 1em;
+  padding-left: 35px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  padding-block-end: 11px;
+  padding-block-start: 25px;
 }
-
+/* 
 .hr {
   width: 35em;
   margin-top: 13px;
   background-color: #747373;
-}
+} */
+
+
+ .hr {
+  border: 0 none #eeeaea;
+  border-top: 1px solid #e4e1e1;
+  height: 1px;
+  margin: 5px 0;
+  display: block;
+  clear: both;
+  margin-left: 15em;
+  margin-right: 12em;
+  margin-top: -53px;
+    }
+
+    .hr2 {
+      border: 0 none #eeeaea;
+      border-top: 1px solid #e4e1e1;
+      height: 1px;
+      margin: 5px 0;
+      display: block;
+      clear: both;
+      margin-left: 3em;
+      margin-right: 3em;
+      margin-top: 3px;
+        } 
 
 .post-actual {
   margin-top: 2em;
@@ -190,14 +236,16 @@ input#input_email.imput {
 
 .img-responsive {
   width: 5em;
-  margin-left: -33em;
-  margin-top: 1em;
+  margin-left: -29em;
+  margin-top: -2em;
 }
 
+.img-responsive:hover{
+  filter: opacity(0.5);
+}
 
 .botones-post {
-  margin: 0em;
-  margin-top: -1em;
+  margin-top: 4px;
   background: #ff9a02ad;
   border-radius: 17px;
   border: 2px #f7e22d;
@@ -207,13 +255,31 @@ input#input_email.imput {
   height: 5vh;
   outline: none;
   margin-block-end: 1em;
+  margin-left: 3em;
+}
+.botones-post:hover {
+  filter: opacity(0.5);
+}
 
+.imagen-post{
+  margin-top: -3em;
+}
+
+#ingreso-post{
+  margin-top: -1em;
+    margin-block-end: 2em;
+}
+.prueba{
+  margin: 2em;
 }
 
 .icoperfil {
   width: 3em;
   border: solid 1px #0808087d;
-  border-radius: 2em;
+  border-radius: 3em;
+  margin-left: -32em;
+  margin-top: 2em;
+  margin-block-end: -8px;
 }
 
 .icoperfil2 {
@@ -235,17 +301,40 @@ input#input_email.imput {
 }
 
 .icoReacall {
-  margin-right: 3px;
+  margin-right: 26em;
 }
 
-.post2 {
+.name1 {
   font-family: "Open Sans", sans-serif;
   cursor: default;
-  margin-top: -34px;
   text-align: initial;
-  margin-left: 8em;
-  margin-right: 2em;
+  margin-left: 8vw;
+  margin-top: -55px;
+  font-size: 18.5px;
+  color: #080808;
+}
 
+
+
+.post2 {
+    font-family: "Open Sans", sans-serif;
+    cursor: default;
+    margin-top: -52px;
+    text-align: initial;
+    margin-left: 8vw;
+    margin-right: 2em;
+    font-size: 14px;
+    color: #747373;
+}
+
+.post3 {
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+  margin-top: -2em;
+  text-align: initial;
+  margin-left: 4vw;
+  margin-right: 3vw;
+  font-size: 15px;
 }
 
 #contenedor-perfil {
@@ -255,6 +344,9 @@ input#input_email.imput {
   margin-top: 7em;
   border: solid 1px #edefb0;
   background-color: white;
+  height: 15em;
+  border-radius: 1em;
+
 }
 
 .imgProfile {
@@ -273,15 +365,18 @@ input#input_email.imput {
 
 
 .imgProfileimg {
-  margin-top: -6em;
+  margin-top: -7em;
+  font-family: "Open Sans", sans-serif;
 }
 
 .nameProfile {
   font-size: 20px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .emailProfile {
   font-size: 20px;
+  font-family: "Open Sans", sans-serif;
 }
 
 #fichero {
@@ -312,13 +407,7 @@ input#input_email.imput {
   margin-block-end: 0em;
 }
 
-.name1 {
-  font-family: "Open Sans", sans-serif;
-  cursor: default;
-  text-align: initial;
-  margin-left: 8em;
-  margin-top: -3em;
-}
+
 
 .hidden {
   visibility: hidden;
@@ -330,6 +419,70 @@ input#input_email.imput {
 
 .recover-password {
   color: #1f5873;
+}
+
+h5{
+font-family: "Open Sans", sans-serif;
+font-size: 13px;
+
+}
+
+.lupa{
+  margin-left: 9em;
+  margin-top: -24px;
+}
+
+.icoLupa{
+  width: 1em;
+  margin-inline-start: -7em;
+}
+
+.titulos{
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  text-align: initial;
+  margin-left: 15px;
+  margin-top: -17px;
+}
+.containerEvent{
+  border: solid 1px #f2f3b2;
+  margin-top: 2em;
+  margin-inline-end: 18em;
+  margin-inline-start: 17em;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.subtitulos{
+  font-family: "Open Sans", sans-serif;
+  text-align: initial;
+  margin-left: 16px;
+  color: #747373c2;
+  margin-top: -16px;
+}
+.btnArt{
+  margin: 0em;
+  margin-top: -3em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 24vw;
+  font-size: 15px;
+  height: 6vh;
+  outline: none;
+  margin-block-end: 2em;
+}
+
+.btnArt:hover {
+  filter: opacity(0.5);
+}
+.article{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;;
+ 
+
 }
 
 @media (max-width: 801px) {
