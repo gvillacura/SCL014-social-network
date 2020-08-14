@@ -64,8 +64,9 @@ export const routeLogin = () => {
  </div>
 <button class="btn" id="registration-btn">Registrarse</button> 
 </section>
-<footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
-<script type="module" src="main.js"></script>
+<footer>
+<h5>Contacto: artspacechile@gmail.com</h5>
+&copy;2020 by Fabiane, Geraldine & Lady
 </div>
  `;
     window.location.hash = '#/inicio-sesion';

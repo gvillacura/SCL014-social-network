@@ -44,7 +44,10 @@ export const routeError = () => {
          
         </div>
       </section>
-      <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
+      <footer>
+      <h5>Contactenos: artspacechile@gmail.com</h5>
+      &copy;2020 by Fabiane, Geraldine & Lady
+     </footer>
     
       `;
     window.location.hash = '#/recuperar-contrasena';

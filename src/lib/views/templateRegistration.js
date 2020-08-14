@@ -77,9 +77,10 @@ export const routeRegistry = () => {
           <button class="btn" id="save-registration-btn">Registrar</button> <br>
           <button class="btn" id="loginBtn">Inicio</button>
         </div>
-        <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
-    
-        <script type="module" src="main.js"></script>
+        <footer>
+        <h5>Contacto: artspacechile@gmail.com</h5>
+        &copy;2020 by Fabiane, Geraldine & Lady
+       </footer>
       </div>`;
 
     // Función que lleva desde pagina de registrarse a primera pagina
