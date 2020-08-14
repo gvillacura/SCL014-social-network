@@ -1,3 +1,4 @@
+/* Estilos generales para versión desktop*/
 body {
   margin: 0;
   text-align: center;
@@ -5,6 +6,17 @@ body {
   background-color: #f2f5821a;
 }
 
+p {
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+}
+
+h4 {
+  font-family: "Open Sans", sans-serif;
+  color: #191818db;
+}
+
+/* Estilos para header*/
 .header-image {
   display: none;
 }
@@ -16,84 +28,6 @@ body {
   visibility: visible;
   min-height: 100%;
   position: fixed;
-}
-
-h1 {
-  font-size: 4vw;
-  font-family: "Dancing Script", cursive;
-}
-
-.input {
-  border: none;
-  border-bottom: solid 1px;
-  font-family: "Open Sans", sans-serif;
-  padding-top: 3em;
-  width: 22vw;
-  outline: none;
-  background: transparent !important;
-}
-
-input:-webkit-autofill {
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-.btn {
-  margin: 0em;
-  margin-top: 2em;
-  background: #ff9a02ad;
-  border-radius: 17px;
-  border: 2px #f7e22d;
-  font-family: "Open Sans", sans-serif;
-  width: 13vw;
-  font-size: 3vh;
-  height: 6vh;
-  outline: none;
-}
-
-.btn:hover {
-  filter: opacity(0.5);
-}
-
-.logo {
-  width: 3em;
-  margin: 0 1em;
-}
-
-.img-events{
-  width: 200px;
-  height: 150px;
-}
-
-.container-second-page {
-  background-color: #f4f683;
-  margin-top: -4px;
-  padding: 7px;
-  height: 2em;
-}
-
-footer {
-  font-size: 3vh;
-  margin-top: 5vh;
-  font-family: "Dancing Script", cursive;
-}
-
-p {
-  font-family: "Open Sans", sans-serif;
-  cursor: default;
-
-}
-
-.icono {
-  width: 1.3em;
-}
-
-.errorMensaje:hover {
-  color: salmon;
-}
-
-h4 {
-  font-family: "Open Sans", sans-serif;
-  color: #191818db;
 }
 
 .icoArt {
@@ -118,12 +52,25 @@ h4 {
   float: right;
 }
 
-.logo-second-page {
-  display: inline-block;
-  margin: 0;
-  font-size: 2em;
-  margin-left: 104px;
-  margin-top: -4px;
+/*Estilos logo Art Space*/
+h1 {
+  font-size: 4vw;
+  font-family: "Dancing Script", cursive;
+}
+
+/*Estilos para inputs*/
+.input {
+  border: none;
+  border-bottom: solid 1px;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 3em;
+  width: 22vw;
+  outline: none;
+  background: transparent !important;
+}
+
+input:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 #input_search {
@@ -140,20 +87,74 @@ input#input_email.imput {
   background: transparent;
 }
 
+/*Estilos para botones*/
+.btn {
+  margin: 0em;
+  margin-top: 2em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 13vw;
+  font-size: 3vh;
+  height: 6vh;
+  outline: none;
+}
+
+.btn:hover {
+  filter: opacity(0.5);
+}
+
+.logo {
+  width: 3em;
+  margin: 0 1em;
+}
+
+.img-events {
+  width: 200px;
+  height: 150px;
+}
+
+.container-second-page {
+  background-color: #f4f683;
+  margin-top: -4px;
+  padding: 7px;
+  height: 2em;
+}
+
+footer {
+  font-size: 3vh;
+  margin-top: 5vh;
+  font-family: "Dancing Script", cursive;
+}
+
+.icono {
+  width: 1.3em;
+}
+
+.errorMensaje:hover {
+  color: salmon;
+}
+
+.logo-second-page {
+  display: inline-block;
+  margin: 0;
+  font-size: 2em;
+  margin-left: 104px;
+  margin-top: -4px;
+}
+
 .container_left {
   float: left;
 }
 
-
 .formulario-post {
-
   margin-top: 2em;
   margin-right: 10em;
   margin-left: 12em;
   border-radius: 10px;
   border: solid 1px #f2f3b2;
   background-color: white;
-
 }
 
 .textarea {
@@ -194,7 +195,6 @@ input#input_email.imput {
   margin-top: 1em;
 }
 
-
 .botones-post {
   margin: 0em;
   margin-top: -1em;
@@ -224,7 +224,6 @@ input#input_email.imput {
   margin-top: 1em;
 }
 
-
 .icoLoadimg {
   width: 3em;
 }
@@ -238,18 +237,19 @@ input#input_email.imput {
   margin-right: 3px;
 }
 
-.post2 {
+.post2,
+.date {
   font-family: "Open Sans", sans-serif;
   cursor: default;
   margin-top: -34px;
   text-align: initial;
   margin-left: 8em;
   margin-right: 2em;
-
 }
 
-#contenedor-perfil {
 
+/* Estilos para sección de perfil*/
+#contenedor-perfil {
   margin-right: 15em;
   margin-left: 17em;
   margin-top: 7em;
@@ -258,7 +258,6 @@ input#input_email.imput {
 }
 
 .imgProfile {
-
   width: 10em;
   height: 9em;
   border-radius: 50%;
@@ -324,6 +323,7 @@ input#input_email.imput {
   visibility: hidden;
 }
 
+/*Estilos para mensajes de alerta*/
 .error-format {
   color: salmon;
 }
@@ -368,6 +368,18 @@ input#input_email.imput {
 
   .icono {
     width: 1.3em;
+  }
+
+  .icoArt {
+    padding-inline-end: 0.5em;
+  }
+
+  .icoCalen {
+    padding-inline-end: 0.5em;
+  }
+
+  .icoUsu {
+    padding-inline-end: 0;
   }
 
   .input {
@@ -433,5 +445,59 @@ input#input_email.imput {
 
   .header-image-desktop {
     visibility: hidden;
+  }
+
+  /*Estilos para post*/
+  .img-responsive {
+    width: 3em;
+    margin-left: -7em;
+    margin-top: 0;
+  }
+
+  .formulario-post {
+    margin-top: 2em;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+    padding-block-end: 13px;
+    padding-block-start: 13px;
+  }
+
+  .textarea {
+    width: 16em;
+    margin-left: 0;
+  }
+
+  .hr {
+    width: 12em;
+  }
+
+  .botones-post {
+    width: 18vh;
+  }
+
+  .post-actual {
+    margin-top: 1em;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+  }
+
+  .icoperfil2 {
+    width: 3em;
+    margin-right: 13em;
+    margin-top: 0em;
+  }
+
+  .post2 {
+    font-size: 15px;
+    margin-top: -34px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .date {
+    font-size: 13px;
+    margin-top: -45px;
+    margin-left: 109px;
+    margin-right: 0;
   }
 }
