@@ -28,8 +28,8 @@ const loadHomeFunctions = () => {
 
 export const routeHome = () => {
     const viewHomePage = ` 
-    <div>
-    <header>
+  <div>
+  <header>
     <script src="js/imagenes.js"></script>
         <img class="header-image" src="img/img-cel.png" alt="">
         <div class = "container-second-page">

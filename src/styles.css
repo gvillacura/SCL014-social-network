@@ -1,3 +1,4 @@
+/* Estilos generales para versión desktop*/
 body {
   margin: 0;
   text-align: center;
@@ -5,6 +6,17 @@ body {
   background-color: #f2f5821a;
 }
 
+p {
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+}
+
+h4 {
+  font-family: "Open Sans", sans-serif;
+  color: #191818db;
+}
+
+/* Estilos para header*/
 .header-image {
   display: none;
 }
@@ -18,12 +30,36 @@ body {
   position: fixed;
 }
 
+.icoArt {
+  padding-inline-end: 1em;
+}
+
+.icoCalen {
+  padding-inline-end: 1em;
+}
+
+.icoUsu {
+  padding-inline-end: 2em;
+}
+
+.icoUsu:hover,
+.icoCalen,
+.icoArt {
+  filter: opacity(0.5);
+}
+
+.icons-General {
+  float: right;
+}
+
+/*Estilos logo Art Space*/
 h1 {
   font-size: 4vw;
   font-family: "Dancing Script", cursive;
   margin-top: 10px;
 }
 
+/*Estilos para inputs*/
 .input {
   border: none;
   border-bottom: solid 1px;
@@ -38,6 +74,21 @@ input:-webkit-autofill {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+#input_search {
+  background: rgba(255, 154, 2, 0.81);
+  border-radius: 10px;
+  border: none;
+  height: 28px;
+  width: 11em;
+  margin-left: 2em;
+  padding-block-start: 7px;
+}
+
+input#input_email.imput {
+  background: transparent;
+}
+
+/*Estilos para botones*/
 .btn {
   margin: 0em;
   margin-top: 2em;
@@ -60,7 +111,11 @@ input:-webkit-autofill {
   margin: 0 1em;
 }
 
-.img-events{
+.img-events {
+  width: 200px;
+}
+
+.img-events {
   width: 100%;
   height: 150px;
 }
@@ -70,19 +125,13 @@ input:-webkit-autofill {
   margin-top: -4px;
   padding: 7px;
   height: 2em;
- 
+
 }
 
 footer {
   font-size: 20px;
   margin-top: 10vh;
   font-family: "Dancing Script", cursive;
-}
-
-p {
-  font-family: "Open Sans", sans-serif;
-  cursor: default;
-
 }
 
 .icono {
@@ -133,20 +182,20 @@ h4 {
 
 #input_search {
   background: rgba(255, 154, 2, 0.81);
-    border-radius: 17px;
-    height: 28px;
-    width: 14;
-    margin-left: 2em;
-    padding-block-end: 6px;
-    padding-block-start: 7px;
-    padding-right: 1em;
-    padding-left: 35px;
-    font-family: "Open Sans", sans-serif;
-    text-align: center;
-    border: none;
-    outline: none;
-
+  border-radius: 17px;
+  height: 28px;
+  width: 14;
+  margin-left: 2em;
+  padding-block-end: 6px;
+  padding-block-start: 7px;
+  padding-right: 1em;
+  padding-left: 35px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  border: none;
+  outline: none;
 }
+
 #input_search:hover {
   filter: opacity(0.5);
 }
@@ -159,7 +208,6 @@ input#input_email.imput {
 .container_left {
   float: left;
 }
-
 
 .formulario-post {
   margin-top: 2em;
@@ -191,6 +239,7 @@ input#input_email.imput {
   padding-block-end: 11px;
   padding-block-start: 25px;
 }
+
 /* 
 .hr {
   width: 35em;
@@ -199,7 +248,7 @@ input#input_email.imput {
 } */
 
 
- .hr {
+.hr {
   border: 0 none #eeeaea;
   border-top: 1px solid #e4e1e1;
   height: 1px;
@@ -209,19 +258,19 @@ input#input_email.imput {
   margin-left: 15em;
   margin-right: 12em;
   margin-top: -53px;
-    }
+}
 
-    .hr2 {
-      border: 0 none #eeeaea;
-      border-top: 1px solid #e4e1e1;
-      height: 1px;
-      margin: 5px 0;
-      display: block;
-      clear: both;
-      margin-left: 3em;
-      margin-right: 3em;
-      margin-top: 3px;
-        } 
+.hr2 {
+  border: 0 none #eeeaea;
+  border-top: 1px solid #e4e1e1;
+  height: 1px;
+  margin: 5px 0;
+  display: block;
+  clear: both;
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-top: 3px;
+}
 
 .post-actual {
   margin-top: 2em;
@@ -240,7 +289,7 @@ input#input_email.imput {
   margin-top: -2em;
 }
 
-.img-responsive:hover{
+.img-responsive:hover {
   filter: opacity(0.5);
 }
 
@@ -257,19 +306,21 @@ input#input_email.imput {
   margin-block-end: 1em;
   margin-left: 3em;
 }
+
 .botones-post:hover {
   filter: opacity(0.5);
 }
 
-.imagen-post{
+.imagen-post {
   margin-top: -3em;
 }
 
-#ingreso-post{
+#ingreso-post {
   margin-top: -1em;
-    margin-block-end: 2em;
+  margin-block-end: 2em;
 }
-.prueba{
+
+.prueba {
   margin: 2em;
 }
 
@@ -289,7 +340,6 @@ input#input_email.imput {
   margin-right: 32em;
   margin-top: 1em;
 }
-
 
 .icoLoadimg {
   width: 3em;
@@ -314,17 +364,15 @@ input#input_email.imput {
   color: #080808;
 }
 
-
-
 .post2 {
-    font-family: "Open Sans", sans-serif;
-    cursor: default;
-    margin-top: -52px;
-    text-align: initial;
-    margin-left: 8vw;
-    margin-right: 2em;
-    font-size: 14px;
-    color: #747373;
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+  margin-top: -52px;
+  text-align: initial;
+  margin-left: 8vw;
+  margin-right: 2em;
+  font-size: 14px;
+  color: #747373;
 }
 
 .post3 {
@@ -337,8 +385,9 @@ input#input_email.imput {
   font-size: 15px;
 }
 
-#contenedor-perfil {
 
+/* Estilos para sección de perfil*/
+#contenedor-perfil {
   margin-right: 15em;
   margin-left: 17em;
   margin-top: 7em;
@@ -350,7 +399,6 @@ input#input_email.imput {
 }
 
 .imgProfile {
-
   width: 10em;
   height: 9em;
   border-radius: 50%;
@@ -407,12 +455,11 @@ input#input_email.imput {
   margin-block-end: 0em;
 }
 
-
-
 .hidden {
   visibility: hidden;
 }
 
+/*Estilos para mensajes de alerta*/
 .error-format {
   color: salmon;
 }
@@ -421,30 +468,31 @@ input#input_email.imput {
   color: #1f5873;
 }
 
-h5{
-font-family: "Open Sans", sans-serif;
-font-size: 13px;
+h5 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
 
 }
 
-.lupa{
+.lupa {
   margin-left: 9em;
   margin-top: -24px;
 }
 
-.icoLupa{
+.icoLupa {
   width: 1em;
   margin-inline-start: -7em;
 }
 
-.titulos{
+.titulos {
   font-family: "Open Sans", sans-serif;
   font-size: 22px;
   text-align: initial;
   margin-left: 15px;
   margin-top: -17px;
 }
-.containerEvent{
+
+.containerEvent {
   border: solid 1px #f2f3b2;
   margin-top: 2em;
   margin-inline-end: 18em;
@@ -453,14 +501,15 @@ font-size: 13px;
   background-color: white;
 }
 
-.subtitulos{
+.subtitulos {
   font-family: "Open Sans", sans-serif;
   text-align: initial;
   margin-left: 16px;
   color: #747373c2;
   margin-top: -16px;
 }
-.btnArt{
+
+.btnArt {
   margin: 0em;
   margin-top: -3em;
   background: #ff9a02ad;
@@ -477,12 +526,11 @@ font-size: 13px;
 .btnArt:hover {
   filter: opacity(0.5);
 }
-.article{
+
+.article {
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: wrap;;
- 
-
+  flex-wrap: wrap;
 }
 
 @media (max-width: 801px) {
@@ -521,6 +569,18 @@ font-size: 13px;
 
   .icono {
     width: 1.3em;
+  }
+
+  .icoArt {
+    padding-inline-end: 0.5em;
+  }
+
+  .icoCalen {
+    padding-inline-end: 0.5em;
+  }
+
+  .icoUsu {
+    padding-inline-end: 0;
   }
 
   .input {
@@ -586,5 +646,59 @@ font-size: 13px;
 
   .header-image-desktop {
     visibility: hidden;
+  }
+
+  /*Estilos para post*/
+  .img-responsive {
+    width: 3em;
+    margin-left: -7em;
+    margin-top: 0;
+  }
+
+  .formulario-post {
+    margin-top: 2em;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+    padding-block-end: 13px;
+    padding-block-start: 13px;
+  }
+
+  .textarea {
+    width: 16em;
+    margin-left: 0;
+  }
+
+  .hr {
+    width: 12em;
+  }
+
+  .botones-post {
+    width: 18vh;
+  }
+
+  .post-actual {
+    margin-top: 1em;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+  }
+
+  .icoperfil2 {
+    width: 3em;
+    margin-right: 13em;
+    margin-top: 0em;
+  }
+
+  .post2 {
+    font-size: 15px;
+    margin-top: -34px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .date {
+    font-size: 13px;
+    margin-top: -45px;
+    margin-left: 109px;
+    margin-right: 0;
   }
 }

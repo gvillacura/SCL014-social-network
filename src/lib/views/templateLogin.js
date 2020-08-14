@@ -23,6 +23,18 @@ const loadLoginFunctions = () => {
     googlee.addEventListener('click', () => {
         loginGoogle();
     });
+
+    const inputEmail = document.querySelector('#input_email');
+    const showErrorMessage = document.querySelector('#error-message');
+
+    const deleteMessage = () => {
+        showErrorMessage.innerHTML = '';
+    };
+
+    inputEmail.addEventListener('focus', deleteMessage);
+
+    const inputPassword = document.querySelector('#input_password');
+    inputPassword.addEventListener('focus', deleteMessage);
 };
 
 export const routeLogin = () => {
