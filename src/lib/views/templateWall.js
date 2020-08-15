@@ -52,6 +52,7 @@ export const routeHome = () => {
     <main>
     <div id="ingreso-post">
      <form class="formulario-post">
+    
      <img class = "icoperfil" src="img/artista2.png" alt="">
        <div>
         
