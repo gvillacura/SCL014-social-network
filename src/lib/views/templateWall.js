@@ -2,22 +2,10 @@
 import {
     createPost,
     containerPost,
+    uploadFile
 } from '../firebase.js';
 
 
-const inicializar = () => {
-    const fichero = document.getElementById('fichero');
-    if (fichero) fichero.addEventListener('change', subirImagenAFirebase, false);
-};
-const subirImagenAFirebase = () => {
-    const imagenASubir = fichero.files[0].name;
-
-// const subirImagenAFirebase = () => {
-//   alert("subir imagen a firebase");
-};
-
-window.onload = inicializar;
-let fichero;
 
 
 const loadHomeFunctions = () => {
@@ -28,8 +16,8 @@ const loadHomeFunctions = () => {
 
 export const routeHome = () => {
     const viewHomePage = ` 
-  <div>
-  <header>
+   <div>
+   <header>
     <script src="js/imagenes.js"></script>
         <img class="header-image" src="img/img-cel.png" alt="">
         <div class = "container-second-page">
@@ -69,8 +57,8 @@ export const routeHome = () => {
        <div class="col-sm-4">
          <form id="form-imagenes">
            <label class="btn-file"> 
-           <div class = "prueba">
-              <input type ="file" name="fichero" value="" id="fichero" class="hidden">
+           <div class="prueba">
+              <input type="file" name="fichero" value="" id="fichero" class="hidden">
               <img src="img/img1.png"  class="img-responsive" alt="descargar">
               </div>
            </label>
@@ -107,5 +95,17 @@ export const routeHome = () => {
     btnPublicar.addEventListener('click', () => {
         const post = document.querySelector('#post').value;
         createPost(post);
+      
+      
+      
     });
+    const valueFichero = document.getElementById('fichero');
+    valueFichero.addEventListener('change', () =>{
+     console.log("archivo cargado");
+     var archivoImg= valueFichero.files[0];
+     uploadFile(archivoImg);
+     
+     });
 };
+
+ 
