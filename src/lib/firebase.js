@@ -1,21 +1,22 @@
 const db = firebase.firestore();
-var storage = firebase.storage();
-var storageRef = storage.ref();
-// var imagesRef = storageRef.child('images/');
+let storage = firebase.storage();
+let storageRef = storage.ref();
+
+// let imagesRef = storageRef.child('images/');
 
 
 export const uploadFile = (archivoImg) => {
     console.log('se a recibido el archivo')
-    var file = archivoImg;
-    var metadata = {
+    let file = archivoImg;
+    let metadata = {
      contentType: 'images/jpeg'
 
     };
-    var tareaSubir = storageRef.child('images/' + file.name).put(file,metadata);
+    let tareaSubir = storageRef.child('images/' + file.name).put(file,metadata);
     tareaSubir.on(firebase.storage.TaskEvent.STATE_CHANGED,
         function(snapshot) {
             // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             console.log('Upload is ' + progress + '% done');
             switch (snapshot.state) {
               case firebase.storage.TaskState.PAUSED: // or 'paused'
@@ -81,7 +82,7 @@ export const loginGoogle = () => {
             // callback();
         })
         .catch((error) => {
-            // eslint-disable-next-line no-unused-vars
+            // eslint-disable-next-line no-unused-lets
             const errorCode = error.code;
         });
 };
@@ -98,6 +99,7 @@ export const inscription = (user) => {
                     region: user.region,
                     correo: user.email,
                     userid: response.user.uid,
+                
                 })
                 .then((userDataCreated) => {
                     console.log(userDataCreated);
@@ -110,9 +112,9 @@ export const inscription = (user) => {
         })
         .catch((error) => {
             // Handle Errors here.
-            // eslint-disable-next-line no-unused-vars
+            // eslint-disable-next-line no-unused-lets
             const errorCode = error.code;
-            // eslint-disable-next-line no-unused-vars
+            // eslint-disable-next-line no-unused-lets
             const errorMessage = error.message;
         });
 };
@@ -130,7 +132,7 @@ export const pass = () => {
         })
         .catch((error) => {
             showErrorMessage.innerHTML = '<p>Correo inválido.</p>';
-            // eslint-disable-next-line no-unused-vars
+            // eslint-disable-next-line no-unused-lets
             const errorMessage = error.message;
         });
 };
@@ -148,8 +150,8 @@ export const profile = () => {
      <br>
      <br>
        
-      <p class = 'imgProfileimg'> <img class = 'imgProfile' src='${user.photoURL}'></p>
-      <h1 class = 'nameProfile'>${user.displayName ? user.displayName : user.email}</h1>
+      <p class = 'imgProfileimg'> <img class = 'imgProfile' src='${user.photoURL? user.photoURL: `img/artista2.png`}'></p>
+      <h1 class = 'nameProfile'>${user.displayName ? user.displayName : `Art Space Lover's`}</h1>
         <p class = 'emailProfile'>${user.email}</p>
         </div>
              
@@ -166,6 +168,8 @@ export const createPost = (post) => {
         fecha: currentTime(),
         nombre: user().displayName,
         email: user().email,
+        foto: user().photoURL
+     
     })
         .then(() => {
             console.log('Document successfully written!');
@@ -180,27 +184,31 @@ export const containerPost = () => {
         const postContainer = document.querySelector('#lista-publicaciones');
         postContainer.innerHTML = '';
         querySnapshot.forEach((post) => {
+            
             const data = post.data();
             console.log(data);
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
             postPart.innerHTML = `  
-            <img class = "icoperfil2" src="img/artista2.png" alt="">
+           
+          <img class = "icoperfil2" src='${data.foto ? data.foto : `img/artista2.png`}'>
             <p class= "name1" > ${data.nombre ? data.nombre : data.email}</p><br><br>
             <p class= "post2"> ${data.fecha} </p><br><br>
             <p class= "post3"> ${data.publicacion} </p>
             <hr class= "hr2">
-            <div class = icoReacall>
-            <img class = "icoReac" src="img/reac1.png" alt="">
-            <img class = "icoReac" src="img/reac3.png" alt="">
-            <img class = "icoReac" src="img/reac4.png" alt="">
-            <img class = "icoReac" src="img/reac5.png" alt="">
-            <img class = "icoReac" src="img/reac6.png" alt="">
+            
+             <div class = icoReacall>
+            <img id = "icoReac" class = "icoReac" src="img/reac6.png" alt=""> 
+            <p id=result> </p>
+           
             </div>
             `;
-
+        
             postContainer.appendChild(postPart);
         });
+       
+     
+
     });
 };
 
