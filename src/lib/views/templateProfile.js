@@ -15,11 +15,14 @@ export const routeProfile = () => {
           <div class = "container_left">
             <img class="header-image-desktop" src="img/img-desk.png" alt="">
             <h1 class = "logo-second-page" id="artSpace2" >Art Space</h1>
-            <input type="search" id="input_search">
+            <input type="search" id="input_search" placeholder="Buscar en Art Space" >
+            <div class = "lupa">
+            <img class = "icoLupa" id= "icoLupa"  src="img/buscar_icono.png" alt="">
+          </div>
           </div>
           <div class = "icons-General">
             <img class = "icoArt" id= "icoArt"  src="img/articulo_icono.png" alt="">
-            <a href="https://calendar.google.com/calendar/r?tab=mc" target="_blank"><img
+            <a href="https://calendar.google.com/calendar/b/4/r?tab=mc" target="_blank"><img
             src="img/calendario_icono.png" class = "icoCalen"></a>
             <img class = "icoUsu" src="img/usuario_icono.png" alt=""id="profile">
           </div> 
@@ -31,8 +34,8 @@ export const routeProfile = () => {
   
     </div>
     <footer>
+    <h5>Contacto: artspacechile@gmail.com</h5>
      &copy;2020 by Fabiane, Geraldine & Lady
-    <h5>Contactenos: artspacechile@gmail.com</h5>
     </footer>
     `;
     window.location.hash = '#/perfil';

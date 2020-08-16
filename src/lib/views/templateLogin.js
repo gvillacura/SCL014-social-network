@@ -23,13 +23,25 @@ const loadLoginFunctions = () => {
     googlee.addEventListener('click', () => {
         loginGoogle();
     });
+
+    const inputEmail = document.querySelector('#input_email');
+    const showErrorMessage = document.querySelector('#error-message');
+
+    const deleteMessage = () => {
+        showErrorMessage.innerHTML = '';
+    };
+
+    inputEmail.addEventListener('focus', deleteMessage);
+
+    const inputPassword = document.querySelector('#input_password');
+    inputPassword.addEventListener('focus', deleteMessage);
 };
 
 export const routeLogin = () => {
     const viewLogin = `
 <header>
  <img class="header-image" src="img/img-cel.png">
- <img class="header-image-desktop" src="img/img-desk.png">
+ <img class="header-image-desktop" src="./img/apertura.gif">
  <h1>Art Space</h1>
 </header>
 
@@ -53,9 +65,8 @@ export const routeLogin = () => {
 <button class="btn" id="registration-btn">Registrarse</button> 
 </section>
 <footer>
-     &copy;2020 by Fabiane, Geraldine & Lady
-    <h5>Contactenos: artspacechile@gmail.com</h5>
-    </footer>
+<h5>Contacto: artspacechile@gmail.com</h5>
+&copy;2020 by Fabiane, Geraldine & Lady
 </div>
  `;
     window.location.hash = '#/inicio-sesion';
