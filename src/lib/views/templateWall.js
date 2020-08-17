@@ -31,7 +31,7 @@ export const routeHome = () => {
           </div>
           <div class = "icons-General">
             <img class = "icoArt" id= "icoArt"  src="img/articulo_icono.png" alt="">
-            <a href="https://calendar.google.com/calendar/r?tab=mc" target="_blank">
+            <a href="https://calendar.google.com/calendar/b/4/r?tab=mc" target="_blank">
             <img src="img/calendario_icono.png" class = "icoCalen"></a>
             <img class = "icoUsu" src="img/usuario_icono.png" alt=""  id='profile'>
           </div> 
@@ -41,7 +41,7 @@ export const routeHome = () => {
     <div id="ingreso-post">
      <form class="formulario-post">
     
-     <img class = "icoperfil" src="img/artista2.png" alt="">
+    
        <div>
         
          <textarea  type="search"class="textarea" name="post" id="post"
