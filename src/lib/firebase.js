@@ -1,36 +1,33 @@
 const db = firebase.firestore();
-var storage = firebase.storage();
-var storageRef = storage.ref();
+const storage = firebase.storage();
+const storageRef = storage.ref();
 // var imagesRef = storageRef.child('images/');
 
 
 export const uploadFile = (archivoImg) => {
-    console.log('se a recibido el archivo')
-    var file = archivoImg;
-    var metadata = {
-     contentType: 'images/jpeg'
-
+    console.log('se ha recibido el archivo');
+    const file = archivoImg;
+    const metadata = {
+        contentType: 'images/jpeg',
     };
-    var tareaSubir = storageRef.child('images/' + file.name).put(file,metadata);
+
+    const tareaSubir = storageRef.child(`images/${file.name}`).put(file, metadata);
     tareaSubir.on(firebase.storage.TaskEvent.STATE_CHANGED,
-        function(snapshot) {
+        (snapshot) => {
             // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            console.log('Upload is ' + progress + '% done');
+            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log(`Upload is ${progress}% done`);
             switch (snapshot.state) {
-              case firebase.storage.TaskState.PAUSED: // or 'paused'
+            case firebase.storage.TaskState.PAUSED: // or 'paused'
                 console.log('Upload is paused');
                 break;
-              case firebase.storage.TaskState.RUNNING: // or 'running'
+            case firebase.storage.TaskState.RUNNING: // or 'running'
                 console.log('Upload is running');
                 break;
             }
-          })
+        });
+};
 
-   
-}
-
- 
 
 // Función para obtener fecha y hora.
 const currentTime = () => {
@@ -154,7 +151,7 @@ export const profile = () => {
         </div>
              
          `;
-           }
+        }
     });
 };
 
@@ -175,13 +172,15 @@ export const createPost = (post) => {
         });
 };
 
+export const createComment = data => db.collection('publicaciones').doc(data.postId)
+    .collection('comentarios').add(data.comment);
+
 export const containerPost = () => {
     db.collection('publicaciones').orderBy('fecha', 'desc').onSnapshot((querySnapshot) => {
         const postContainer = document.querySelector('#lista-publicaciones');
         postContainer.innerHTML = '';
         querySnapshot.forEach((post) => {
             const data = post.data();
-            console.log(data);
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
             postPart.innerHTML = `  
@@ -194,13 +193,65 @@ export const containerPost = () => {
             <img class = "icoReac" src="img/reac1.png" alt="">
             <img class = "icoReac" src="img/reac3.png" alt="">
             <img class = "icoReac" src="img/reac4.png" alt="">
-            <img class = "icoReac" src="img/reac5.png" alt="">
-            <img class = "icoReac" src="img/reac6.png" alt="">
+            <img class = "icoReac btnComment" src="img/reac6.png" alt="">
+            </div>
+            <div id="comments">
             </div>
             `;
 
+            const dataComments = {
+                postId: post.id,
+            };
+
+            const showComments = (comment, postId) => {
+                document.querySelector('#comments').innerHTML = '';
+                const commentsInPostElement = document.querySelector(`.post-actual[data-id="${postId}"] #comments`);
+                const commentElement = document.createElement('div');
+                commentElement.innerText = comment.texto;
+                commentsInPostElement.appendChild(commentElement);
+            };
+
+            getComments(dataComments, showComments);
+
+            postPart.setAttribute('data-id', post.id);
+
             postContainer.appendChild(postPart);
+        });
+
+        const btnComments = document.querySelectorAll('.btnComment');
+        btnComments.forEach((btnComment) => {
+            btnComment.addEventListener('click', (e) => {
+                const newComment = e.target.parentElement.nextElementSibling;
+                newComment.innerHTML = `<textarea  type="search"class="textarea" name="post" id="post"
+                placeholder="Escribe un comentario!"></textarea>
+                <button class="botones-post" type = "button" id="publicar">Comentar</button>`;
+                const btnSaveComment = newComment.lastElementChild;
+                btnSaveComment.addEventListener('click', (e) => {
+                    const data = {
+                        postId: e.target.parentElement.parentElement.dataset.id,
+                        comment: {
+                            texto: e.target.previousElementSibling.value,
+                            autor: '',
+                            fecha: currentTime(),
+                        },
+                    };
+                    createComment(data);
+                });
+            });
         });
     });
 };
 
+const getComments = (data, callback) => {
+    db.collection('publicaciones')
+        .doc(data.postId)
+        .collection('comentarios')
+        .onSnapshot((snapshot) => {
+            snapshot.docChanges().forEach((change) => {
+                if (change.type === 'added' || change.type === 'modified') {
+                    const comentario = change.doc.data();
+                    callback(comentario, data.postId);
+                }
+            });
+        });
+};
