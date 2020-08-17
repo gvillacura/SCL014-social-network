@@ -191,9 +191,9 @@ export const containerPost = () => {
             <hr class= "hr2">
             <div class = icoReacall>
             <img class = "icoReac" src="img/reac1.png" alt="">
-            <img class = "icoReac" src="img/reac3.png" alt="">
+            <img class = "icoReac btnComment" src="img/reac3.png" alt="">
             <img class = "icoReac" src="img/reac4.png" alt="">
-            <img class = "icoReac btnComment" src="img/reac6.png" alt="">
+            <img class = "icoReac" src="img/reac6.png" alt="">
             </div>
             <div id="comments">
             </div>

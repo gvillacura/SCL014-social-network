@@ -94,6 +94,7 @@ export const routeHome = () => {
         const post = document.querySelector('#post').value;
         createPost(post);
     });
+
     const valueFichero = document.getElementById('fichero');
     valueFichero.addEventListener('change', () => {
         console.log('archivo cargado');
