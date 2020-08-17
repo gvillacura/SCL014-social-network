@@ -1,11 +1,18 @@
 const db = firebase.firestore();
 let storage = firebase.storage();
 let storageRef = storage.ref();
+let total=1;
+let btnLike;
+let resultLikes;
+
+
+            
 
 // let imagesRef = storageRef.child('images/');
 
 
 export const uploadFile = (archivoImg) => {
+    
     console.log('se a recibido el archivo')
     let file = archivoImg;
     let metadata = {
@@ -168,7 +175,8 @@ export const createPost = (post) => {
         fecha: currentTime(),
         nombre: user().displayName,
         email: user().email,
-        foto: user().photoURL
+        foto: user().photoURL,
+        likes: user().likes
      
     })
         .then(() => {
@@ -179,13 +187,17 @@ export const createPost = (post) => {
         });
 };
 
+
+
 export const containerPost = () => {
     db.collection('publicaciones').orderBy('fecha', 'desc').onSnapshot((querySnapshot) => {
+        
         const postContainer = document.querySelector('#lista-publicaciones');
         postContainer.innerHTML = '';
         querySnapshot.forEach((post) => {
             
             const data = post.data();
+            
             console.log(data);
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
@@ -198,17 +210,30 @@ export const containerPost = () => {
             <hr class= "hr2">
             
              <div class = icoReacall>
-            <img id = "icoReac" class = "icoReac" src="img/reac6.png" alt=""> 
-            <p id=result> </p>
+            <img id = "icoReac" class = "icoReac" src="img/reac6.png" alt="" onclick="addLikes(data.uid)"> 
+            <p id="result" class="like"> </p>
            
             </div>
             `;
         
+           
+                      
             postContainer.appendChild(postPart);
         });
-       
-     
+        // const addLikes = (uid) =>{
+        //     console.log('id', uid, addLikes)
+        // } 
+        // btnLike = document.getElementById("icoReac");
+        // btnLike.addEventListener('click',() =>{
+        //         resultLikes = document.getElementById("result");
+        //         resultLikes.innerHTML = `${total++}`;
+        //         console.log('me gusta', resultLikes);
+         
+        // })
 
     });
+    
 };
+
+
 

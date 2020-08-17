@@ -90,7 +90,7 @@ export const routeHome = () => {
     });
 
     containerPost();
-
+   
     const btnPublicar = document.querySelector('#publicar');
     btnPublicar.addEventListener('click', () => {
         const post = document.querySelector('#post').value;
@@ -108,4 +108,4 @@ export const routeHome = () => {
      });
 };
 
- 
+

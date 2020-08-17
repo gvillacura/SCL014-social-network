@@ -31,7 +31,12 @@ h4 {
   position: fixed;
 }
 
-
+/* .like {
+  width: 10px;
+  height: 10px;
+  border: 1px black solid;
+  border-radius: 5px;
+} */
 
 .icons-General {
   float: right;
@@ -91,6 +96,7 @@ input#input_email.imput {
   font-size: 3vh;
   height: 6vh;
   outline: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -288,6 +294,7 @@ input#input_email.imput {
   outline: none;
   margin-block-end: 1em;
   margin-left: 3em;
+  cursor: pointer;
 }
 
 .botones-post:hover {
@@ -380,7 +387,6 @@ input#input_email.imput {
   height: 9em;
   border-radius: 50%;
   border: none;
-  background-color: #edefb0;
   outline: none;
 }
 
@@ -419,6 +425,7 @@ input#input_email.imput {
   height: 4vh;
   outline: none;
   margin-block-end: 5em;
+  cursor: pointer;
 }
 
 .btn-file {
@@ -433,6 +440,7 @@ input#input_email.imput {
   height: 5vh;
   outline: none;
   margin-block-end: 0em;
+  cursor: pointer;
 }
 
 .hidden {
@@ -501,6 +509,7 @@ h5 {
   height: 6vh;
   outline: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btnArt:hover {
@@ -517,10 +526,7 @@ h5 {
   height: 6vh;
   outline: none;
   display: inline-block;
-}
-
-.btnArt:hover {
-  filter: opacity(0.5);
+  cursor: pointer;
 }
 
 .btnArt3 {
@@ -533,11 +539,10 @@ h5 {
   height: 6vh;
   outline: none;
   display: inline-block;
+  cursor: pointer;
 }
 
-.btnArt:hover {
-  filter: opacity(0.5);
-}
+
 
 .btnArt4{
   background: #ff9a02ad;
@@ -549,10 +554,7 @@ h5 {
   height: 6vh;
   outline: none;
   display: inline-block;
-}
-
-.btnArt:hover {
-  filter: opacity(0.5);
+  cursor: pointer;
 }
 
 .article {
@@ -593,6 +595,7 @@ h5 {
     border-radius: 17px;
     border: 2px #f7e22d;
     font-family: "Open Sans", sans-serif;
+    cursor: pointer;
   }
 
   .btn:hover {
@@ -855,6 +858,7 @@ margin-inline-start: -133px;
   height: 5vh;
   display: inline-block;
   margin-top: 14px;
+  cursor: pointer;
 }
 .botArt:hover{
   filter: opacity(0.5);
@@ -870,6 +874,7 @@ margin-inline-start: -133px;
   height: 5vh;
   display: inline-block;
   margin-top: 13px;
+  cursor: pointer;
 }
 .botArt2:hover{
   filter: opacity(0.5);
@@ -884,6 +889,7 @@ margin-inline-start: -133px;
   height: 5vh;
   display: inline-block;
   margin-top: -6px;
+  cursor: pointer;
 }
 .botArt3:hover{
   filter: opacity(0.5);
@@ -899,6 +905,7 @@ margin-inline-start: -133px;
   height: 5vh;
   display: inline-block;
   margin-top: 12px;
+  cursor: pointer;
 }
 .botArt4:hover{
   filter: opacity(0.5);
