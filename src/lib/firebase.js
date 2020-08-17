@@ -25,12 +25,33 @@ export const uploadFile = (archivoImg) => {
                 console.log('Upload is running');
                 break;
             }
+    //    }, function(error) {
+
+    //           // A full list of error codes is available at
+    //           // https://firebase.google.com/docs/storage/web/handle-errors
+    //           switch (error.code) {
+    //             case 'storage/unauthorized':
+    //               // User doesn't have permission to access the object
+    //               break;
+            
+    //             case 'storage/canceled':
+    //               // User canceled the upload
+    //               break;
+            
+    //             case 'storage/unknown':
+    //               // Unknown error occurred, inspect error.serverResponse
+    //               break;
+    //           }
+    //         }, function() {
+    //           // Upload completed successfully, now we can get the download URL
+    //           uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    //             console.log('File available at', downloadURL);
+    //           });
           })
 
    
 }
 
- 
 
 // Función para obtener fecha y hora.
 const currentTime = () => {
