@@ -1,11 +1,8 @@
-
 import {
     createPost,
     containerPost,
-    uploadFile
+    uploadFile,
 } from '../firebase.js';
-
-
 
 
 const loadHomeFunctions = () => {
@@ -95,17 +92,12 @@ export const routeHome = () => {
     btnPublicar.addEventListener('click', () => {
         const post = document.querySelector('#post').value;
         createPost(post);
-      
-      
-      
     });
-    const valueFichero = document.getElementById('fichero');
-    valueFichero.addEventListener('change', () =>{
-     console.log("archivo cargado");
-     var archivoImg= valueFichero.files[0];
-     uploadFile(archivoImg);
-     
-     });
-};
 
- 
+    const valueFichero = document.getElementById('fichero');
+    valueFichero.addEventListener('change', () => {
+        console.log('archivo cargado');
+        const archivoImg = valueFichero.files[0];
+        uploadFile(archivoImg);
+    });
+};
