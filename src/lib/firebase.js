@@ -1,4 +1,5 @@
 const db = firebase.firestore();
+<<<<<<< HEAD
 let storage = firebase.storage();
 let storageRef = storage.ref();
 let total=1;
@@ -18,47 +19,57 @@ export const uploadFile = (archivoImg) => {
     let metadata = {
      contentType: 'images/jpeg'
 
+=======
+const storage = firebase.storage();
+const storageRef = storage.ref();
+// var imagesRef = storageRef.child('images/');
+
+
+export const uploadFile = (archivoImg) => {
+    console.log('se ha recibido el archivo');
+    const file = archivoImg;
+    const metadata = {
+        contentType: 'images/jpeg',
+>>>>>>> fa4900cc53d6311a707156d400311e04ca491cd6
     };
-    let tareaSubir = storageRef.child('images/' + file.name).put(file,metadata);
+
+    const tareaSubir = storageRef.child(`images/${file.name}`).put(file, metadata);
     tareaSubir.on(firebase.storage.TaskEvent.STATE_CHANGED,
-        function(snapshot) {
+        (snapshot) => {
             // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-            let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            console.log('Upload is ' + progress + '% done');
+            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log(`Upload is ${progress}% done`);
             switch (snapshot.state) {
-              case firebase.storage.TaskState.PAUSED: // or 'paused'
+            case firebase.storage.TaskState.PAUSED: // or 'paused'
                 console.log('Upload is paused');
                 break;
-              case firebase.storage.TaskState.RUNNING: // or 'running'
+            case firebase.storage.TaskState.RUNNING: // or 'running'
                 console.log('Upload is running');
                 break;
             }
-        }, function(error) {
+        }, (error) => {
+            // A full list of error codes is available at
+            // https://firebase.google.com/docs/storage/web/handle-errors
+            switch (error.code) {
+            case 'storage/unauthorized':
+                // User doesn't have permission to access the object
+                break;
 
-               // A full list of error codes is available at
-              // https://firebase.google.com/docs/storage/web/handle-errors
-             switch (error.code) {
-                case 'storage/unauthorized':
-                  // User doesn't have permission to access the object
-                   break;
-            
-                 case 'storage/canceled':
-                   // User canceled the upload
-               break;
-            
-                 case 'storage/unknown':
-                   // Unknown error occurred, inspect error.serverResponse
-                   break;
-               }
-             }, function() {
-               // Upload completed successfully, now we can get the download URL
-               tareaSubir.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-                 console.log('File available at', downloadURL);
-               });
-          })
+            case 'storage/canceled':
+                // User canceled the upload
+                break;
 
-   
-}
+            case 'storage/unknown':
+                // Unknown error occurred, inspect error.serverResponse
+                break;
+            }
+        }, () => {
+            // Upload completed successfully, now we can get the download URL
+            tareaSubir.snapshot.ref.getDownloadURL().then((downloadURL) => {
+                console.log('File available at', downloadURL);
+            });
+        });
+};
 
 
 // Función para obtener fecha y hora.
@@ -127,7 +138,7 @@ export const inscription = (user) => {
                     region: user.region,
                     correo: user.email,
                     userid: response.user.uid,
-                
+
                 })
                 .then((userDataCreated) => {
                     console.log(userDataCreated);
@@ -178,13 +189,13 @@ export const profile = () => {
      <br>
      <br>
        
-      <p class = 'imgProfileimg'> <img class = 'imgProfile' src='${user.photoURL? user.photoURL: `img/artista2.png`}'></p>
-      <h1 class = 'nameProfile'>${user.displayName ? user.displayName : `Art Space Lover's`}</h1>
+      <p class = 'imgProfileimg'> <img class = 'imgProfile' src='${user.photoURL ? user.photoURL : 'img/artista2.png'}'></p>
+      <h1 class = 'nameProfile'>${user.displayName ? user.displayName : 'Art Space Lover\'s'}</h1>
         <p class = 'emailProfile'>${user.email}</p>
         </div>
              
          `;
-           }
+        }
     });
 };
 
@@ -197,8 +208,12 @@ export const createPost = (post) => {
         nombre: user().displayName,
         email: user().email,
         foto: user().photoURL,
+<<<<<<< HEAD
         likes: user().likes
      
+=======
+
+>>>>>>> fa4900cc53d6311a707156d400311e04ca491cd6
     })
         .then(() => {
             console.log('Document successfully written!');
@@ -208,7 +223,12 @@ export const createPost = (post) => {
         });
 };
 
+<<<<<<< HEAD
 
+=======
+export const createComment = data => db.collection('publicaciones').doc(data.postId)
+    .collection('comentarios').add(data.comment);
+>>>>>>> fa4900cc53d6311a707156d400311e04ca491cd6
 
 export const containerPost = () => {
     db.collection('publicaciones').orderBy('fecha', 'desc').onSnapshot((querySnapshot) => {
@@ -216,26 +236,37 @@ export const containerPost = () => {
         const postContainer = document.querySelector('#lista-publicaciones');
         postContainer.innerHTML = '';
         querySnapshot.forEach((post) => {
-            
             const data = post.data();
+<<<<<<< HEAD
             
             console.log(data);
+=======
+>>>>>>> fa4900cc53d6311a707156d400311e04ca491cd6
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
             postPart.innerHTML = `  
            
-          <img class = "icoperfil2" src='${data.foto ? data.foto : `img/artista2.png`}'>
+          <img class = "icoperfil2" src='${data.foto ? data.foto : 'img/artista2.png'}'>
             <p class= "name1" > ${data.nombre ? data.nombre : data.email}</p><br><br>
             <p class= "post2"> ${data.fecha} </p><br><br>
             <p class= "post3"> ${data.publicacion} </p>
             <hr class= "hr2">
             
              <div class = icoReacall>
+<<<<<<< HEAD
             <img id = "icoReac" class = "icoReac" src="img/reac6.png" alt="" onclick="addLikes(data.uid)"> 
             <p id="result" class="like"> </p>
+=======
+            <img id = "icoReac" class = "icoReac" src="img/reac6.png" alt=""> 
+            <img class = "icoReac btnComment" src="img/reac3.png" alt="">
+            <p id=result> </p>
+>>>>>>> fa4900cc53d6311a707156d400311e04ca491cd6
            
             </div>
+            <div id="comments">
+            </div>
             `;
+<<<<<<< HEAD
         
            
                       
@@ -251,10 +282,68 @@ export const containerPost = () => {
         //         console.log('me gusta', resultLikes);
          
         // })
+=======
 
+            const dataComments = {
+                postId: post.id,
+            };
+
+            const showComments = (comment, postId) => {
+                // document.querySelector('#comments').innerHTML = '';
+                const commentsInPostElement = document.querySelector(`.post-actual[data-id="${postId}"] #comments`);
+                const commentElement = document.createElement('div');
+                commentElement.innerText = comment.texto;
+                commentsInPostElement.appendChild(commentElement);
+            };
+
+            getComments(dataComments, showComments);
+
+            postPart.setAttribute('data-id', post.id);
+
+            postContainer.appendChild(postPart);
+        });
+>>>>>>> fa4900cc53d6311a707156d400311e04ca491cd6
+
+        const btnComments = document.querySelectorAll('.btnComment');
+        btnComments.forEach((btnComment) => {
+            btnComment.addEventListener('click', (e) => {
+                const newComment = e.target.parentElement.nextElementSibling;
+                newComment.innerHTML = `<textarea  type="search"class="textarea" name="post" id="post"
+                placeholder="Escribe un comentario!"></textarea>
+                <button class="botones-post" type = "button" id="publicar">Comentar</button>`;
+                const btnSaveComment = newComment.lastElementChild;
+                btnSaveComment.addEventListener('click', (e) => {
+                    const data = {
+                        postId: e.target.parentElement.parentElement.dataset.id,
+                        comment: {
+                            texto: e.target.previousElementSibling.value,
+                            autor: '',
+                            fecha: currentTime(),
+                        },
+                    };
+                    createComment(data);
+                });
+            });
+        });
     });
     
 };
 
+<<<<<<< HEAD
 
 
+=======
+const getComments = (data, callback) => {
+    db.collection('publicaciones')
+        .doc(data.postId)
+        .collection('comentarios')
+        .onSnapshot((snapshot) => {
+            snapshot.docChanges().forEach((change) => {
+                if (change.type === 'added' || change.type === 'modified') {
+                    const comentario = change.doc.data();
+                    callback(comentario, data.postId);
+                }
+            });
+        });
+};
+>>>>>>> fa4900cc53d6311a707156d400311e04ca491cd6
