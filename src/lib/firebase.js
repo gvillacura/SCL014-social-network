@@ -3,50 +3,17 @@ const storage = firebase.storage();
 const storageRef = storage.ref();
 // var imagesRef = storageRef.child('images/');
 
-
-export const uploadFile = (archivoImg) => {
+export const uploadFile = async (archivoImg) => {
     console.log('se ha recibido el archivo');
     const file = archivoImg;
     const metadata = {
         contentType: 'images/jpeg',
     };
 
-    const tareaSubir = storageRef.child(`images/${file.name}`).put(file, metadata);
-    tareaSubir.on(firebase.storage.TaskEvent.STATE_CHANGED,
-        (snapshot) => {
-            // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            console.log(`Upload is ${progress}% done`);
-            switch (snapshot.state) {
-            case firebase.storage.TaskState.PAUSED: // or 'paused'
-                console.log('Upload is paused');
-                break;
-            case firebase.storage.TaskState.RUNNING: // or 'running'
-                console.log('Upload is running');
-                break;
-            }
-        }, (error) => {
-            // A full list of error codes is available at
-            // https://firebase.google.com/docs/storage/web/handle-errors
-            switch (error.code) {
-            case 'storage/unauthorized':
-                // User doesn't have permission to access the object
-                break;
+    const fileUploaded = await storageRef.child(`images/${file.name}`)
+        .put(file, metadata);
 
-            case 'storage/canceled':
-                // User canceled the upload
-                break;
-
-            case 'storage/unknown':
-                // Unknown error occurred, inspect error.serverResponse
-                break;
-            }
-        }, () => {
-            // Upload completed successfully, now we can get the download URL
-            tareaSubir.snapshot.ref.getDownloadURL().then((downloadURL) => {
-                console.log('File available at', downloadURL);
-            });
-        });
+    return fileUploaded;
 };
 
 
@@ -99,7 +66,7 @@ export const loginGoogle = () => {
             // callback();
         })
         .catch((error) => {
-            // eslint-disable-next-line no-unused-lets
+            // eslint-disable-next-line no-unused-vars
             const errorCode = error.code;
         });
 };
@@ -129,9 +96,9 @@ export const inscription = (user) => {
         })
         .catch((error) => {
             // Handle Errors here.
-            // eslint-disable-next-line no-unused-lets
+            // eslint-disable-next-line no-unused-vars
             const errorCode = error.code;
-            // eslint-disable-next-line no-unused-lets
+            // eslint-disable-next-line no-unused-vars
             const errorMessage = error.message;
         });
 };
@@ -149,7 +116,7 @@ export const pass = () => {
         })
         .catch((error) => {
             showErrorMessage.innerHTML = '<p>Correo inválido.</p>';
-            // eslint-disable-next-line no-unused-lets
+            // eslint-disable-next-line no-unused-vars
             const errorMessage = error.message;
         });
 };
@@ -177,16 +144,23 @@ export const profile = () => {
     });
 };
 
-export const createPost = (post) => {
+export const createPost = async (post) => {
+    let url = '';
+    if (post.image !== undefined && post.image !== null) {
+        const uploadedFile = await uploadFile(post.image);
+        url = await uploadedFile.ref.getDownloadURL();
+    }
+
     const user = () => firebase.auth().currentUser;
+
     db.collection('publicaciones').add({
         uid: user().uid,
-        publicacion: post,
+        publicacion: post.text,
+        imagenPublicacion: url,
         fecha: currentTime(),
         nombre: user().displayName,
         email: user().email,
         foto: user().photoURL,
-
     })
         .then(() => {
             console.log('Document successfully written!');
@@ -198,6 +172,21 @@ export const createPost = (post) => {
 
 export const createComment = data => db.collection('publicaciones').doc(data.postId)
     .collection('comentarios').add(data.comment);
+
+const getComments = (data, callback) => {
+    db.collection('publicaciones')
+        .doc(data.postId)
+        .collection('comentarios')
+        .onSnapshot((snapshot) => {
+            snapshot.docChanges().forEach((change) => {
+                if (change.type === 'added' || change.type === 'modified') {
+                    const comentario = change.doc.data();
+                    callback(comentario, data.postId);
+                }
+            });
+        });
+};
+
 
 export const containerPost = () => {
     db.collection('publicaciones').orderBy('fecha', 'desc').onSnapshot((querySnapshot) => {
@@ -213,6 +202,7 @@ export const containerPost = () => {
             <p class= "name1" > ${data.nombre ? data.nombre : data.email}</p><br><br>
             <p class= "post2"> ${data.fecha} </p><br><br>
             <p class= "post3"> ${data.publicacion} </p>
+            <img class = "icoperfil2" src='${data.imagenPublicacion}'>
             <hr class= "hr2">
             
              <div class = icoReacall>
@@ -252,9 +242,9 @@ export const containerPost = () => {
                 placeholder="Escribe un comentario!"></textarea>
                 <button class="botones-post" type = "button" id="publicar">Comentar</button>`;
                 const btnSaveComment = newComment.lastElementChild;
-                btnSaveComment.addEventListener('click', (e) => {
+                btnSaveComment.addEventListener('click', (event) => {
                     const data = {
-                        postId: e.target.parentElement.parentElement.dataset.id,
+                        postId: event.target.parentElement.parentElement.dataset.id,
                         comment: {
                             texto: e.target.previousElementSibling.value,
                             autor: '',
@@ -266,18 +256,4 @@ export const containerPost = () => {
             });
         });
     });
-};
-
-const getComments = (data, callback) => {
-    db.collection('publicaciones')
-        .doc(data.postId)
-        .collection('comentarios')
-        .onSnapshot((snapshot) => {
-            snapshot.docChanges().forEach((change) => {
-                if (change.type === 'added' || change.type === 'modified') {
-                    const comentario = change.doc.data();
-                    callback(comentario, data.postId);
-                }
-            });
-        });
 };
