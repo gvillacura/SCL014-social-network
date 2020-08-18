@@ -1,7 +1,6 @@
 import {
     createPost,
     containerPost,
-    uploadFile,
 } from '../firebase.js';
 
 
@@ -90,16 +89,15 @@ export const routeHome = () => {
 
     containerPost();
 
+    const valueFichero = document.querySelector('#fichero');
     const btnPublicar = document.querySelector('#publicar');
     btnPublicar.addEventListener('click', () => {
-        const post = document.querySelector('#post').value;
+        const archivoImg = valueFichero.files[0];
+        const textPost = document.querySelector('#post').value;
+        const post = {
+            text: textPost,
+            image: archivoImg,
+        };
         createPost(post);
     });
-
-     const valueFichero = document.getElementById('fichero');
-    valueFichero.addEventListener('change', () => {
-        console.log('archivo cargado');
-        const archivoImg = valueFichero.files[0];
-        uploadFile(archivoImg);
-    }); 
 };
