@@ -44,7 +44,6 @@ export const routeHome = () => {
            placeholder="¡Realiza una publicación!"></textarea>
         
        </div>
-
        
        <div class="container">
        <div class="row">
@@ -54,8 +53,8 @@ export const routeHome = () => {
          <form id="form-imagenes">
            <label class="btn-file"> 
            <div class="prueba">
-              <input type="file" name="fichero" value="" id="fichero" class="hidden">
-              <img src="img/img1.png"  class="img-responsive" alt="descargar">
+              <input type="file" name="fichero" value="" id="fichero" class="hidden" >
+              <img src="img/img1.png" id="output" class="img-responsive" alt="descargar">
               </div>
            </label>
          </form>
@@ -80,7 +79,9 @@ export const routeHome = () => {
     window.location.hash = '#/muro';
     document.getElementById('root').innerHTML = viewHomePage;
     loadHomeFunctions();
-    document.getElementById('icoArt').addEventListener('click', () => { window.location.hash = '#/conozca'; });
+    document.getElementById('icoArt').addEventListener('click', () => {
+        window.location.hash = '#/conozca';
+    });
     document.getElementById('profile').addEventListener('click', () => {
         window.location.hash = '#/perfil';
     });
@@ -97,5 +98,10 @@ export const routeHome = () => {
             image: archivoImg,
         };
         createPost(post);
+    });
+
+    valueFichero.addEventListener('change', () => {
+        const output = document.getElementById('output');
+        output.src = URL.createObjectURL(valueFichero.files[0]);
     });
 };
