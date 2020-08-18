@@ -7,7 +7,7 @@ export const uploadFile = async (archivoImg) => {
     console.log('se ha recibido el archivo');
     const file = archivoImg;
     const metadata = {
-        contentType: 'images/jpeg',
+        contentType: 'images/jpeg,jpg',
     };
 
     const fileUploaded = await storageRef.child(`images/${file.name}`)
@@ -202,7 +202,7 @@ export const containerPost = () => {
             <p class= "name1" > ${data.nombre ? data.nombre : data.email}</p><br><br>
             <p class= "post2"> ${data.fecha} </p><br><br>
             <p class= "post3"> ${data.publicacion} </p>
-            <img class = "icoperfil2" src='${data.imagenPublicacion}'>
+            <img class = "imgPost" src='${data.imagenPublicacion}'>
             <hr class= "hr2">
             
              <div class = icoReacall>

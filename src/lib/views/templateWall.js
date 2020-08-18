@@ -57,7 +57,7 @@ export const routeHome = () => {
            <label class="btn-file"> 
            <div class="prueba">
               <input type="file" name="fichero" value="" id="fichero" class="hidden">
-              <img src="img/img1.png"  class="img-responsive" alt="descargar">
+              <img src="img/img1.png" id="output" class="img-responsive" alt="descargar">
               </div>
            </label>
          </form>
@@ -100,4 +100,8 @@ export const routeHome = () => {
         };
         createPost(post);
     });
+    valueFichero.addEventListener('change', () => {
+      const output = document.getElementById('output');
+      output.src = URL.createObjectURL(valueFichero.files[0]);
+  });
 };
