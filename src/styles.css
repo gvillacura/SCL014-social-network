@@ -47,22 +47,16 @@ h4 {
 }
 
 .header-image-desktop {
-  /* filter: opacity(0.4);
+   filter: opacity(0.4);
   height: 100%;
   left: -41px;
   top: 0px;
   visibility: visible;
   min-height: 100%;
-  position: fixed; */
+  position: fixed; 
 
-  filter: opacity(0.4);
-    height: 9em;
-    left: -41px;
-    top: 0px;
-    visibility: visible;
-    min-height: 100%;
-    width: 100%;
 }
+
 .header-image-desktop2 {
  filter: opacity(0.4);
   height: 100%;
@@ -71,6 +65,7 @@ h4 {
   visibility: visible;
   min-height: 100%;
   position: fixed; 
+  display:none;
 }
 
 
