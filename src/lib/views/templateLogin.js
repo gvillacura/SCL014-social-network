@@ -53,16 +53,16 @@ export const routeLogin = () => {
       <img class="icono" src="img/contraseña_icono.png" alt="">
       <input class="input" type="password" autocomplete="current-password" placeholder="Contraseña" id="input_password" class="input_password">
       <p id="errorMensaje" class="errorMensaje">¿Olvidó su contraseña?</p>
-      <button class="btn" id="home_btn" type = "button"> Comenzar</button>
+      <button class="btnComenzar" id="home_btn" type = "button"> Comenzar</button>
   </form>
 </section>
 
-<section>
+<section class = 'loginSecons'>
  <p>Ingresa con </p>
  <div>
    <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
  </div>
-<button class="btn" id="registration-btn">Registrarse</button> 
+<button class="btnResgitro" id="registration-btn">Registrarse</button> 
 </section>
 <footer>
 <h5>Contacto: artspacechile@gmail.com</h5>

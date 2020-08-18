@@ -1,11 +1,11 @@
 const db = firebase.firestore();
 const storage = firebase.storage();
 const storageRef = storage.ref();
-// var imagesRef = storageRef.child('images/');
+const imagesRef = storageRef.child('images/');
 
 
 export const uploadFile = (archivoImg) => {
-    console.log('se ha recibido el archivo');
+    console.log('se ha recibido el archivo', archivoImg );
     const file = archivoImg;
     const metadata = {
         contentType: 'images/jpeg',
@@ -16,6 +16,7 @@ export const uploadFile = (archivoImg) => {
         (snapshot) => {
             // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            var downloadURL = tareasSubir.snapshot.downloadURL;
             console.log(`Upload is ${progress}% done`);
             switch (snapshot.state) {
             case firebase.storage.TaskState.PAUSED: // or 'paused'
@@ -41,11 +42,12 @@ export const uploadFile = (archivoImg) => {
                 // Unknown error occurred, inspect error.serverResponse
                 break;
             }
-        }, () => {
+        },   function () {
             // Upload completed successfully, now we can get the download URL
-            tareaSubir.snapshot.ref.getDownloadURL().then((downloadURL) => {
+            tareaSubir.snapshot.ref.getDownloadURL().then((imagesRef) => {
                 console.log('File available at', downloadURL);
             });
+            var downloadURL= tareasSubir.snapshot.downloadURL;
         });
 };
 

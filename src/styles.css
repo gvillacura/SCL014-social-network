@@ -2,18 +2,43 @@
 body {
   margin: 0;
   text-align: center;
-  margin-left: 21em;
   background-color: #f2f5821a;
+}
+
+.input_section{
+  display: flex;
+  flex-direction:column ;
+   margin-left: 20em;
+}
+
+.input_section2{
+  display: flex;
+  flex-direction:column ;
+  
+}
+
+.loginSecons{
+  display: flex;
+  flex-direction:column ;
+  margin-left: 20em;
 }
 
 p {
   font-family: "Open Sans", sans-serif;
   cursor: default;
+  
 }
+.par2 {
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+  margin-left: 21em;
+}
+
 
 h4 {
   font-family: "Open Sans", sans-serif;
   color: #191818db;
+  margin-left: 24em;
 }
 
 /* Estilos para header*/
@@ -22,15 +47,31 @@ h4 {
 }
 
 .header-image-desktop {
-  filter: opacity(0.5);
+  /* filter: opacity(0.4);
   height: 100%;
   left: -41px;
   top: 0px;
   visibility: visible;
   min-height: 100%;
-  position: fixed;
-}
+  position: fixed; */
 
+  filter: opacity(0.4);
+    height: 9em;
+    left: -41px;
+    top: 0px;
+    visibility: visible;
+    min-height: 100%;
+    width: 100%;
+}
+.header-image-desktop2 {
+ filter: opacity(0.4);
+  height: 100%;
+  left: -41px;
+  top: 0px;
+  visibility: visible;
+  min-height: 100%;
+  position: fixed; 
+}
 
 
 .icons-General {
@@ -42,6 +83,17 @@ h1 {
   font-size: 4vw;
   font-family: "Dancing Script", cursive;
   margin-top: 10px;
+  display: flex;
+  flex-direction:column ;
+  margin-left: 6em;
+}
+.artSecond{
+  font-size: 4vw;
+  font-family: "Dancing Script", cursive;
+  margin-top: 10px;
+  display: flex;
+  flex-direction:column ;
+  margin-left: 6em;
 }
 
 /*Estilos para inputs*/
@@ -59,6 +111,23 @@ input:-webkit-autofill {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.input2{
+  border: none;
+  border-bottom: solid 1px;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 3em;
+  width: 22vw;
+  outline: none;
+  background: transparent !important;
+  margin-left: 52em;
+  margin-top: -4em;
+}
+
+
+.input2:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 #input_search {
   background: rgba(255, 154, 2, 0.81);
   border-radius: 17px;
@@ -73,6 +142,7 @@ input:-webkit-autofill {
   text-align: center;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 input#input_email.imput {
@@ -91,16 +161,87 @@ input#input_email.imput {
   font-size: 3vh;
   height: 6vh;
   outline: none;
+  cursor: pointer;
+  margin-left: 18em;
 }
 
 .btn:hover {
   filter: opacity(0.5);
 }
-
-.logo {
-  width: 3em;
-  margin: 0 1em;
+.btnResgitro{
+  margin: 0em;
+  margin-top: 2em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 13vw;
+  font-size: 3vh;
+  height: 6vh;
+  outline: none;
+  cursor: pointer;
+  margin-left: 25em;
 }
+.btnRegistro:hover {
+  filter: opacity(0.5);
+}
+
+.btnComenzar{
+  margin: 0em;
+  margin-top: 2em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 13vw;
+  font-size: 3vh;
+  height: 6vh;
+  outline: none;
+  cursor: pointer;
+ 
+}
+
+.btnComenzar:hover {
+  filter: opacity(0.5);
+}
+.btnR{
+  margin: 0em;
+  margin-top: 2em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 13vw;
+  font-size: 3vh;
+  height: 6vh;
+  outline: none;
+  cursor: pointer;
+  margin-left: 43em;
+
+}
+.btnR:hover {
+  filter: opacity(0.5);
+}
+.logo{
+  width: 3em;
+  cursor: pointer;
+
+}
+.logo:hover {
+  filter: opacity(0.5);
+}
+
+
+.logo2{
+  width: 3em;
+  margin-left:  20em;
+  cursor: pointer;
+
+}
+.logo2:hover {
+  filter: opacity(0.5);
+}
+
 
 .img-events {
   width: 100%;
@@ -119,10 +260,27 @@ footer {
   font-size: 20px;
   margin-top: 10vh;
   font-family: "Dancing Script", cursive;
+  display: flex;
+  flex-direction:column ;
+  margin-left: 16em;
+}
+.f2{
+  font-size: 20px;
+  margin-top: 10vh;
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  flex-direction:column ;
+  margin-left: 18em;
+
 }
 
 .icono {
   width: 1.3em;
+}
+.icono2 {
+  width: 1.3em;
+  margin-left: 41em;
+  margin-top: 2em;
 }
 
 .errorMensaje:hover {
@@ -132,6 +290,11 @@ footer {
 h4 {
   font-family: "Open Sans", sans-serif;
   color: #191818db;
+}
+.hsecond{
+  font-family: "Open Sans", sans-serif;
+  color: #191818db;
+  margin-left: 20em;
 }
 
 .icoArt {
@@ -182,6 +345,7 @@ h4 {
   border: none;
   outline: none;
   color: #ff0000;
+  cursor: pointer;
 }
 
 #input_search:hover {
@@ -226,6 +390,7 @@ input#input_email.imput {
   text-align: center;
   padding-block-end: 11px;
   padding-block-start: 25px;
+  cursor: pointer;
 
 }
 
@@ -264,12 +429,16 @@ input#input_email.imput {
   padding-block-start: 13px;
   border: solid 1px #edefb0;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .img-responsive {
   width: 5em;
   margin-left: -29em;
   margin-top: -2em;
+  cursor: pointer;
 }
 
 .img-responsive:hover {
@@ -288,6 +457,7 @@ input#input_email.imput {
   outline: none;
   margin-block-end: 1em;
   margin-left: 3em;
+  cursor: pointer;
 }
 
 .botones-post:hover {
@@ -310,10 +480,11 @@ input#input_email.imput {
 
 .icoperfil2 {
   width: 4em;
-  border: solid 1px #0808087d;
-  border-radius: 5em;
-  margin-right: 30em;
-  margin-top: 1em;
+    border: solid 1px #0808087d;
+    border-radius: 5em;
+    margin-right: 30em;
+    margin-top: 1em;
+    margin-left: 2em;
 }
 
 .icoLoadimg {
@@ -326,10 +497,11 @@ input#input_email.imput {
 }
 
 .icoReacall {
-  margin-right: 26em;
+  margin-right: 55em;
 }
 
 .name1 {
+
   font-family: "Open Sans", sans-serif;
   cursor: default;
   text-align: initial;
@@ -337,6 +509,7 @@ input#input_email.imput {
   margin-top: -55px;
   font-size: 18.5px;
   color: #080808;
+
 }
 
 .post2 {
@@ -348,7 +521,6 @@ input#input_email.imput {
   margin-right: 2em;
   font-size: 14px;
   color: #747373;
-
 }
 
 .post3 {
@@ -433,6 +605,7 @@ input#input_email.imput {
   height: 5vh;
   outline: none;
   margin-block-end: 0em;
+  cursor: pointer;
 }
 
 .hidden {
@@ -501,6 +674,7 @@ h5 {
   height: 6vh;
   outline: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btnArt:hover {
@@ -517,6 +691,7 @@ h5 {
   height: 6vh;
   outline: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btnArt:hover {
@@ -533,6 +708,7 @@ h5 {
   height: 6vh;
   outline: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btnArt:hover {
@@ -549,6 +725,7 @@ h5 {
   height: 6vh;
   outline: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btnArt:hover {
@@ -562,6 +739,20 @@ h5 {
     width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
+
+}
+
+#comments{
+  margin-top: 2em;
+  margin-right: 10em;
+  margin-left: 12em;
+  padding-block-end: 13px;
+  border-radius: 10px;
+  padding-block-start: 13px;
+  border: solid 1px #edefb0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
 
 }
 
@@ -593,6 +784,7 @@ h5 {
     border-radius: 17px;
     border: 2px #f7e22d;
     font-family: "Open Sans", sans-serif;
+    cursor: pointer;
   }
 
   .btn:hover {
@@ -601,18 +793,22 @@ h5 {
 
   .icono {
     width: 1.3em;
+    cursor: pointer;
   }
 
   .icoArt {
     padding-inline-end: 0.5em;
+    cursor: pointer;
   }
 
   .icoCalen {
     padding-inline-end: 0.5em;
+    cursor: pointer;
   }
 
   .icoUsu {
     padding-inline-end: 0;
+    cursor: pointer;
   }
   .icoUsu:hover,
   .icoCalen:hover,
@@ -670,6 +866,7 @@ h5 {
     height: 24px;
     width: 107px;
     margin-left: 7px;
+    cursor: pointer;
 }
 
 .container_left {
@@ -720,6 +917,7 @@ h5 {
 .botones-post {
   width: 18vh;
   margin-left: 1em;
+  cursor: pointer;
 }
 .botones-post:hover{
   filter: opacity(0.5);
@@ -855,6 +1053,7 @@ margin-inline-start: -133px;
   height: 5vh;
   display: inline-block;
   margin-top: 14px;
+  cursor: pointer;
 }
 .botArt:hover{
   filter: opacity(0.5);
@@ -870,6 +1069,7 @@ margin-inline-start: -133px;
   height: 5vh;
   display: inline-block;
   margin-top: 13px;
+  cursor: pointer;
 }
 .botArt2:hover{
   filter: opacity(0.5);
@@ -884,6 +1084,7 @@ margin-inline-start: -133px;
   height: 5vh;
   display: inline-block;
   margin-top: -6px;
+  cursor: pointer;
 }
 .botArt3:hover{
   filter: opacity(0.5);
@@ -899,6 +1100,7 @@ margin-inline-start: -133px;
   height: 5vh;
   display: inline-block;
   margin-top: 12px;
+  cursor: pointer;
 }
 .botArt4:hover{
   filter: opacity(0.5);
