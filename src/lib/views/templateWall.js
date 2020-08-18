@@ -16,9 +16,11 @@ export const routeHome = () => {
    <header>
     <script src="js/imagenes.js"></script>
         <img class="header-image" src="img/img-cel.png" alt="">
+        <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
         <div class = "container-second-page">
+        
           <div class = "container_left">
-            <img class="header-image-desktop" src="img/img-desk.png" alt="">
+          
             <h1 class = "logo-second-page" id="artSpace" >Art Space</h1>
             <input  type="search" id="input_search"  placeholder="Buscar en Art Space" >
             <div class = "lupa">
@@ -53,7 +55,7 @@ export const routeHome = () => {
          <form id="form-imagenes">
            <label class="btn-file"> 
            <div class="prueba">
-              <input type="file" name="fichero" value="" id="fichero" class="hidden" >
+              <input type="file" name="fichero" value="" id="fichero" class="hidden">
               <img src="img/img1.png" id="output" class="img-responsive" alt="descargar">
               </div>
            </label>
@@ -99,7 +101,6 @@ export const routeHome = () => {
         };
         createPost(post);
     });
-
     valueFichero.addEventListener('change', () => {
         const output = document.getElementById('output');
         output.src = URL.createObjectURL(valueFichero.files[0]);
