@@ -1,7 +1,9 @@
- ![Arte Space](./img/arte-space-logo.png)
+ 
+  ![Arte Space](./img/img-cel.png)
+ # **![Arte Space](./img/arte-space-logo.png)**
 
 
-## **[Link para pagina web]()** 
+## [Link para pagina web *Art Space*](https://fabianesantos.github.io/SCL014-social-network/src/index.html#/inicio-sesion)
 
 
 
@@ -14,7 +16,7 @@
 * [4. Proceso UX/ UI](#4-proceso-de-ux)
 * [5. Feedback](#5-feedback)
 * [6. Pagina web Finalizada](#7-checklist)
-* [7. Testing](#7-testing)
+
 ### **1. Resumen del proyecto**
 
 En este proyecto construirás una Red Social sobre lo que decidan tú y tu equipo. Tu Red Social tendrá que permitir a cualquier usuario crear una cuenta de acceso y loguearse con ella; crear, editar, borrar y "likear" publicacciones.
@@ -24,22 +26,22 @@ En este proyecto construirás una Red Social sobre lo que decidan tú y tu equip
 
 ### **3. Planificación**
 
-Empezamos a planificar todo lo que seria necesario para el desarrollo de la página web utilizando el Trello, donde nos permitió una mejor visualización de todas las etapas necesarias, y dividimos las tareas por sprint.
+Empezamos a planificar todo lo que seria necesario para el desarrollo de la página web utilizando el **Trello**, donde nos permitió una mejor visualización de todas las etapas necesarias, y dividimos las tareas por sprint.
 
 ![imagen-Trello](./img/imagen-trello.png)
 
 ### **4. Proceso UX/ UI**
 
- Basado en ideas de las colaboradoras, creamos nuestros sketchs, hechos en papel y lapis.
+ Basado en ideas de las colaboradoras, creamos nuestro sketch, hecho en papel y lapis.
 
-[imagen-sketch]()
+![imagen-sketch](./img/sketch.png)
 
-[imagen-sketch]()
+![imagen-planificación](./img/planificacion.png)
 
 
  ##### Definición de usuario
 
- Desarrollar una red social para los amantes y personas interesadas en conocer más de artes manuales
+ Desarrollar una red social para los amantes y personas interesadas en conocer más de las artes manuales
 
 
 
@@ -47,40 +49,53 @@ Empezamos a planificar todo lo que seria necesario para el desarrollo de la pág
 
 Fue realizada una encuesta on line con 51 usuarios, donde los usuarios contestaron algunas preguntas sobre Pokémon, y las seguientes imagenes muestran el resultado:
  
- [Link encuesta]()
+ [Link encuesta](https://forms.gle/Jvd9dt2jZp2uJVbT7)
 
-[encuesta]()
-[encuesta]()
-[encuesta]()
+![encuesta](./img/encuesta1.png)
+![encuesta](./img/encuesta2.png)
+![encuesta](./img/encuesta3.png)
+![encuesta](./img/encuesta4.png)
+![encuesta](./img/encuesta5.png)
+
+
+
 
 ##### Historias de Usuarios
 
-Historia de Usuario 1: Yo como usuario, quiero 
+Historia de Usuario 1: Yo como usuario de la red social Space Art me gustaría que en la primera pantalla tuviese colores pasteles.
 
-Historia de Usuario 2: Yo como usuario, quiero
+Historia de Usuario 2: Yo como usuario, quiero acceder la pagina con mi cuenta google o registro, para entrar con más facilidad en la red social .
 
-Historia de Usuario 3: Yo como usuario, quiero
+Historia de Usuario 3: Yo como usuario, quiero un chat , para escribir mensajes, con mi nombre y fecha para estar en contacto con la comunidad.
+
+Historia de Usuario 4: Yo como usuario, quiero mirar los eventos en un calendario y mirar artículos sobre artesania, para actualizarme.
+
+Historia de Usuario 5: Yo como usuario, quiero un chat , dónde pueda subir fotos, y poner me gusta en trabajos ajenos, para estar en contacto con la comunidad.
+
+
 
 ##### Prototipos
 
-Fue hecho un prototipo de media fidelidad, con la App **Invision**
+Prototipo de baja fidelidad, con la App **Invision**
 
-[prototipo-Invision]()
+![prototipo-Invision](./img/free-hand-invision.png)
 
-Prototipo de alta fidelidad hecho con **Figma** 
+Prototipo de alta fidelidad, hechos con **Figma** 
 
-[prototipo]() 
-[prototipo]()
-[prototipo]()
-[prototipo]()
-[prototipo]()
-[link prototipo]()
+[Link para prototipo alta fidelidad Mobile](https://www.figma.com/proto/glEilOzjC5zxt7sToRUXQ7/Untitled?node-id=43%3A1&scaling=min-zoom) 
+
+![prototipo](./img/figma-mobile.png)
+
+[Link para prototipo alta fidelidad Desktop](https://www.figma.com/proto/glEilOzjC5zxt7sToRUXQ7/Untitled?node-id=21%3A4&scaling=min-zoom)
+
+![prototipo](./img/figma-desktop.png)
+
 
 
 
 ##### Teste de Usuario
 
-El prototipo de alta fidelidad fue testado por n personas, donde constatamos que:
+El prototipo de alta fidelidad fue testado por 5 personas, donde constatamos que:
 
 
 
@@ -105,12 +120,6 @@ En nuestro segundo feedback, hecho con los coaches, percibimos la necesidad de c
 [pagina finalizada]()
 
 
-### **7. Testing**
-
-
-- Test unitarios
-
-[test]()
 
 
 

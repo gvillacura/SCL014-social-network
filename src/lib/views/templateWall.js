@@ -101,8 +101,5 @@ export const routeHome = () => {
         uploadFile(archivoImg);
     });
 };
-<<<<<<< HEAD
 
 
-=======
->>>>>>> fa4900cc53d6311a707156d400311e04ca491cd6
