@@ -17,7 +17,7 @@ export const routeHome = () => {
    <header>
     <script src="js/imagenes.js"></script>
         <img class="header-image" src="img/img-cel.png" alt="">
-        <img class="header-image-desktop" src="img/test2.jpeg" alt="">
+        <img class="header-image-desktop2" src="img/test2.jpeg" alt="">
         <div class = "container-second-page">
         
           <div class = "container_left">
@@ -96,10 +96,10 @@ export const routeHome = () => {
         createPost(post);
     });
 
-    const valueFichero = document.getElementById('fichero');
+     const valueFichero = document.getElementById('fichero');
     valueFichero.addEventListener('change', () => {
         console.log('archivo cargado');
         const archivoImg = valueFichero.files[0];
         uploadFile(archivoImg);
-    });
+    }); 
 };
