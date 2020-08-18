@@ -47,7 +47,7 @@ h4 {
 }
 
 .header-image-desktop {
-   filter: opacity(0.4);
+   filter: opacity(0.7);
   height: 100%;
   left: -41px;
   top: 0px;
@@ -58,15 +58,13 @@ h4 {
 }
 
 .header-image-desktop2 {
- filter: opacity(0.4);
-  height: 100%;
+  filter: opacity(0.7);
+  height: 8em;
   left: -41px;
   top: 0px;
-  visibility: visible;
-  min-height: 100%;
-  position: fixed; 
-  display:none;
+  width: 100%;
 }
+
 
 
 .icons-General {
@@ -175,7 +173,7 @@ input#input_email.imput {
   height: 6vh;
   outline: none;
   cursor: pointer;
-  margin-left: 25em;
+  margin-left: 31vw;
 }
 .btnRegistro:hover {
   filter: opacity(0.5);
@@ -641,7 +639,7 @@ h5 {
 }
 
 .containerEvent {
-  width: 35%;
+  width: 25%;
   height: 20em;
   display: flex;
   border: solid 1px #f2f3b2;
@@ -649,6 +647,7 @@ h5 {
   border-radius: 4px;
   background-color: white;
   flex-direction: column;
+
 }
 
 .subtitulos {
@@ -664,7 +663,7 @@ h5 {
   border-radius: 17px;
   border: 2px #f7e22d;
   font-family: "Open Sans", sans-serif;
-  width: 24vw;
+  width: 20vw;
   font-size: 15px;
   height: 6vh;
   outline: none;
@@ -729,11 +728,12 @@ h5 {
 
 .article {
   display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
 
 }
 

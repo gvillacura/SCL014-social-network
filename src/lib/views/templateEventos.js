@@ -3,9 +3,9 @@ export const routeEvents = () => {
     <div>
     <header>
         <img class="header-image" src="img/img-cel.png" alt="">
+        <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
         <div class = "container-second-page">
           <div class = "container_left">
-            <img class="header-image-desktop2" src="img/img-desk.png" alt="">
             <h1 class = "logo-second-page" id="artSpace2" >Art Space</h1>
             <input type="search" id="input_search" placeholder="Buscar en Art Space">
             <div class = "lupa">
@@ -41,7 +41,7 @@ export const routeEvents = () => {
     <h4 class='subtitulos'> Tejido </h4>
    
    <a href="https://www.creativaatelier.com/cuello-de-lana-gris/" target="_blank">
-   <button class="btnArt2" id="registration-btn">Ver Articulo</button></a> 
+   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
 </section>
 
 <section class= 'containerEvent'>
@@ -49,12 +49,12 @@ export const routeEvents = () => {
     <img src="./img/paint.jpg" class="img-events" alt="pomaire"></a> 
     
     
-    <h1 class='titulos'>10 obras de arte que tienes que ver al menos una vez en tu vida</h1>
+    <h1 class='titulos'>10 obras de arte para ver al menos una vez en tu vida</h1>
     <h4 class='subtitulos'> Pintura</h4>
     
    
    <a href="https://www.admagazine.com/cultura/10-de-las-mejores-obras-de-arte-en-el-mundo-que-tienes-que-ver-20190808-5750-articulos.html" target="_blank">
-   <button class="btnArt3" id="registration-btn">Ver Articulo</button></a> 
+   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
  
 </section>
 
@@ -66,7 +66,7 @@ export const routeEvents = () => {
     <h4 class='subtitulos'> Esculturas</h4>
     
     <a href="https://www.taringa.net/+arte/aprende-a-ser-escultor_gn6jl" target="_blank">
-  <button class="btnArt4" id="registration-btn">Ver Articulo</button></a> 
+  <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
 
@@ -78,7 +78,7 @@ export const routeEvents = () => {
     <h4 class='subtitulos'> Dibujo</h4>
     
     <a href="https://practicarte.com/blog/como-aprender-dibujar-anime-manga-pasos/" target="_blank">
-  <button class="btnArt4" id="registration-btn">Ver Articulo</button></a> 
+  <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
 
@@ -90,7 +90,7 @@ export const routeEvents = () => {
     <h4 class='subtitulos'> manualidades</h4>
     
     <a href="https://trap-art.com/blog/blog-de-manualidades/" target="_blank">
-  <button class="btnArt4" id="registration-btn">Ver Articulo</button></a> 
+  <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
 
@@ -102,7 +102,7 @@ export const routeEvents = () => {
     <h4 class='subtitulos'> Manualidades</h4>
     
     <a href="https://timecorona.com/manualidades-diy/especial-origami-personajes-star-wars/" target="_blank">
-  <button class="btnArt4" id="registration-btn">Ver Articulo</button></a> 
+  <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 
 
@@ -115,7 +115,7 @@ export const routeEvents = () => {
     <h4 class='subtitulos'>Manualidades</h4>
     
     <a href="https://saposyprincesas.elmundo.es/consejos/tendencias-compras/materiales-manualidades/" target="_blank">
-  <button class="btnArt4" id="registration-btn">Ver Articulo</button></a> 
+  <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
 
@@ -128,7 +128,7 @@ export const routeEvents = () => {
     <h4 class='subtitulos'>Musica</h4>
     
     <a href="https://ecodiario.eleconomista.es/viralplus/noticias/9343485/08/18/Cinco-instrumentos-musicales-para-aprender-a-tocar-rapidamente.html" target="_blank">
-  <button class="btnArt4" id="registration-btn">Ver Articulo</button></a> 
+  <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
 
@@ -140,7 +140,7 @@ export const routeEvents = () => {
     <h4 class='subtitulos'>Manualidades</h4>
     
     <a href="https://maderame.com/maderas-para-tallar/" target="_blank">
-  <button class="btnArt4" id="registration-btn">Ver Articulo</button></a> 
+  <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
 

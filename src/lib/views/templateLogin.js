@@ -41,7 +41,7 @@ export const routeLogin = () => {
     const viewLogin = `
 <header>
  <img class="header-image" src="img/img-cel.png">
- <img class="header-image-desktop" src="./img/apertura.gif">
+ <img class="header-image-desktop" src="./img/gif2.gif">
  <h1>Art Space</h1>
 </header>
 

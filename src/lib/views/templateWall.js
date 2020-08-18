@@ -17,7 +17,7 @@ export const routeHome = () => {
    <header>
     <script src="js/imagenes.js"></script>
         <img class="header-image" src="img/img-cel.png" alt="">
-        <img class="header-image-desktop2" src="img/test2.jpeg" alt="">
+        <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
         <div class = "container-second-page">
         
           <div class = "container_left">
