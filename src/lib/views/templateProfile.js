@@ -11,9 +11,10 @@ export const routeProfile = () => {
     <div>
     <header>
         <img class="header-image" src="img/img-cel.png" alt="">
+        <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
         <div class = "container-second-page">
           <div class = "container_left">
-            <img class="header-image-desktop" src="img/img-desk.png" alt="">
+            
             <h1 class = "logo-second-page" id="artSpace2" >Art Space</h1>
             <input type="search" id="input_search" placeholder="Buscar en Art Space" >
             <div class = "lupa">
