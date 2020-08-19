@@ -47,7 +47,7 @@ Empezamos a planificar todo lo que seria necesario para el desarrollo de la pág
 
 ##### Encuesta On line
 
-Fue realizada una encuesta on line con 51 usuarios, donde los usuarios contestaron algunas preguntas sobre Pokémon, y las seguientes imagenes muestran el resultado:
+Fue realizada una encuesta on line con 51 usuarios, donde los usuarios contestaron algunas preguntas sobre artes, y las seguientes imagenes muestran el resultado:
  
  [Link encuesta](https://forms.gle/Jvd9dt2jZp2uJVbT7)
 
