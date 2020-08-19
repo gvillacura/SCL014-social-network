@@ -97,6 +97,7 @@ h1 {
   width: 22vw;
   outline: none;
   background: transparent !important;
+  cursor: pointer;
 }
 
 input:-webkit-autofill {
@@ -113,6 +114,7 @@ input:-webkit-autofill {
   background: transparent !important;
   margin-left: 45em;
   margin-top: -4em;
+  cursor: pointer;
 
 }
 
@@ -196,7 +198,7 @@ input#input_email.imput {
   margin-left: 308px;
 }
 
-.btnRegistro:hover {
+.btnResgitro:hover {
   filter: opacity(0.5);
 }
 
@@ -342,6 +344,9 @@ h4 {
   font-size: 2em;
   margin-left: 44px;
   margin-top: -4px;
+}
+.logo-second-page:hover{
+filter: opacity(0.5);
 }
 
 #input_search {
@@ -932,6 +937,10 @@ h5 {
     font-family: "Dancing Script", cursive;
     margin-left: 0em;
   }
+  h1:hover{
+    filter: opacity(0.5);
+    }
+    
 
   .btn {
     width: 37vw;
@@ -991,6 +1000,7 @@ h5 {
     border-bottom: solid 1px;
     font-family: "Open Sans", sans-serif;
     font-size: x-large;
+    cursor: pointer;
 
   }
 
@@ -1315,7 +1325,7 @@ h5 {
     height: 5vh;
     outline: none;
     cursor: pointer;
-    margin-left: -4vw;
+    margin-left: -5vw;
   }
 
   .btnRegistro:hover:hover {
@@ -1386,6 +1396,7 @@ h5 {
     cursor: pointer;
     margin-left: 8em;
     margin-top: -4em;
+    cursor: pointer;
   }
 
   .par2 {
