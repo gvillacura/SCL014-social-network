@@ -364,13 +364,16 @@ input#input_email.imput {
 }
 
 .formulario-post {
-  margin-top: 2em;
-  margin-right: 10em;
-  margin-left: 12em;
-  border-radius: 10px;
-  border: solid 1px #f2f3b2;
+  margin-left: 30em;
+  margin-top: -20em;
+  border: solid 1px #edefb0;
   background-color: white;
-  height: 15em;
+  height: 14em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50em;
 }
 
 .textarea {
@@ -384,8 +387,8 @@ input#input_email.imput {
   border-color: #00000029;
   width: 30em;
   height: 31px;
-  margin-top: 3em;
-  margin-left: 1em;
+  margin-top: 2em;
+  margin-left: 3em;
   padding-right: 1em;
   padding-left: 35px;
   font-family: "Open Sans", sans-serif;
@@ -395,16 +398,37 @@ input#input_email.imput {
   cursor: pointer;
 }
 
+.textarea2 {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 1em;
+  outline: none;
+  background: #fdfdf2 !important;
+  border-radius: 2em;
+  font-size: 15px;
+  text-align: center;
+  border-color: #00000029;
+  width: 27em;
+  height: 21px;
+  margin-top: 1em;
+  margin-left: 1em;
+  padding-right: 0em;
+  padding-left: 35px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  padding-block-end: 11px;
+  padding-block-start: 25px;
+  cursor: pointer;
+
+}
+
 .hr {
   border: 0 none #eeeaea;
   border-top: 1px solid #e4e1e1;
   height: 1px;
-  margin: 5px 0;
-  display: block;
-  clear: both;
-  margin-left: 15em;
-  margin-right: 12em;
+  display: flex;
   margin-top: -53px;
+  margin-left: 32em;
+  width: 46em;
 }
 
 .hr2 {
@@ -421,22 +445,23 @@ input#input_email.imput {
 
 .post-actual {
   margin-top: 2em;
-  margin-right: 10em;
-  margin-left: 12em;
-  padding-block-end: 13px;
-  border-radius: 10px;
+  margin-right: 4em;
+  margin-left: 30em;
+  border-radius: 9px;
   padding-block-start: 13px;
   border: solid 1px #edefb0;
   background-color: white;
   display: flex;
   flex-direction: column;
+  height: min-content;
+  width: -webkit-fill-available;
 
 }
 
 .img-responsive {
   width: 5em;
-  margin-left: -29em;
-  margin-top: -2em;
+  margin-left: -69em;
+  margin-top: 5em;
   cursor: pointer;
 }
 
@@ -454,14 +479,53 @@ input#input_email.imput {
   font-size: 15px;
   height: 5vh;
   outline: none;
-  margin-block-end: 1em;
-  margin-left: 3em;
+  margin-left: 25em;
   cursor: pointer;
 }
 
 .botones-post:hover {
   filter: opacity(0.5);
 }
+
+.botones-post2 {
+  margin-top: 12px;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 8vw;
+  font-size: 13px;
+  height: 4vh;
+  outline: none;
+  margin-left: 14em;
+  cursor: pointer;
+
+}
+
+.botones-post2:hover {
+  filter: opacity(0.5);
+}
+
+.btnProfile2 {
+  margin-top: 4px;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 9vw;
+  font-size: 15px;
+  height: 5vh;
+  outline: none;
+  margin-left: -61em;
+  cursor: pointer;
+
+}
+
+
+.btnProfile2:hover {
+  filter: opacity(0.5);
+}
+
 
 .imagen-post {
   margin-top: -3em;
@@ -491,12 +555,17 @@ input#input_email.imput {
 }
 
 .icoReac {
-  width: 21px;
+  width: 25px;
+  margin-right: 9px;
+}
+
+.icoReac2 {
+  width: 25px;
   margin-right: 9px;
 }
 
 .icoReacall {
-  margin-right: 55em;
+  margin-right: 41em;
 }
 
 .name1 {
@@ -529,12 +598,61 @@ input#input_email.imput {
   text-align: initial;
   margin-left: 3.5vw;
   margin-right: 3vw;
-  font-size: 15px;
+  font-size: medium;
+}
+
+
+
+#contenedor-perfil2 {
+  margin-right: 63em;
+  margin-left: 4em;
+  margin-top: 11em;
+  border: solid 1px #edefb0;
+  background-color: white;
+  height: 11em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 17em;
+
+}
+
+#imgProfile2 {
+
+  width: 7em;
+
+  border-radius: 50%;
+  border: none;
+  background-color: #edefb0;
+  outline: none;
+  border: 1px solid #747373;
+}
+
+#imgProfile2:focus {
+  outline: none;
+}
+
+
+.imgProfileimg2 {
+  margin-top: -7em;
+  font-family: "Open Sans", sans-serif;
+}
+
+.nameProfile2 {
+  font-size: 19px;
+  font-family: "Open Sans", sans-serif;
+  display: contents;
+}
+
+.emailProfile2 {
+  font-size: 17px;
+  font-family: "Open Sans", sans-serif;
 }
 
 
 /* Estilos para sección de perfil*/
-#contenedor-perfil {
+.contenedor-perfil {
   margin-right: 15em;
   margin-left: 17em;
   margin-top: 7em;
@@ -548,7 +666,7 @@ input#input_email.imput {
 .imgProfile {
 
   width: 10em;
-  height: 9em;
+
   border-radius: 50%;
   border: none;
   background-color: #edefb0;
@@ -744,7 +862,6 @@ h5 {
 }
 
 #comments {
-  margin-top: 2em;
   margin-right: 10em;
   margin-left: 12em;
   padding-block-end: 13px;
@@ -754,15 +871,21 @@ h5 {
   background-color: white;
   display: flex;
   flex-direction: column;
-
+  font-size: 14px;
+  margin-block-end: 1em;
+  font-family: "Open Sans", sans-serif;
 }
 
 .imgPost {
-  max-height: 40em;
-  display: flex;
-  flex-direction: column;
   align-self: center;
-  max-width: 40em;
+  max-width: -webkit-fill-available;
+  display: flex;
+  max-height: fit-content;
+}
+
+#lista-publicaciones {
+  width: 100%;
+  height: 100%;
 }
 
 

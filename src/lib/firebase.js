@@ -2,8 +2,6 @@ const db = firebase.firestore();
 const storage = firebase.storage();
 const storageRef = storage.ref();
 
-// const imagesRef = storageRef.child('images/');
-
 export const uploadFile = async (archivoImg) => {
     console.log('se ha recibido el archivo');
     const file = archivoImg;
@@ -122,6 +120,31 @@ export const pass = () => {
         });
 };
 
+
+export const profile2 = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            // User is signed in.
+            console.log(user);
+            const showData = document.getElementById('contenedor-perfil2');
+            showData.innerHTML = '';
+            showData.innerHTML += `
+    
+    <div>
+     <br>
+     <br>
+       
+      <p class = 'imgProfileimg2'> <img class = 'imgProfile' src='${user.photoURL ? user.photoURL : 'img/artista2.png'}'></p>
+      <h1 class = 'nameProfile2' >${user.displayName ? user.displayName : 'Art Space Lover\'s'}</h1>
+        <p class = 'emailProfile2'>${user.email}</p>
+        </div>
+             
+         `;
+        }
+    });
+};
+
+
 export const profile = () => {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
@@ -134,9 +157,9 @@ export const profile = () => {
     <div>
      <br>
      <br>
-       
+     
       <p class = 'imgProfileimg'> <img class = 'imgProfile' src='${user.photoURL ? user.photoURL : 'img/artista2.png'}'></p>
-      <h1 class = 'nameProfile'>${user.displayName ? user.displayName : 'Art Space Lover\'s'}</h1>
+      <h1 class = 'nameProfile' >${user.displayName ? user.displayName : 'Art Space Lover\'s'}</h1>
         <p class = 'emailProfile'>${user.email}</p>
         </div>
              
@@ -259,8 +282,9 @@ export const containerPost = () => {
             <hr class= "hr2">
             
              <div class = icoReacall>
-            <img id = "icoReac" class = "icoReac btnLike" src="img/reac6.png" alt=""> 
-            <img class = "icoReac btnComment" src="img/reac3.png" alt="">
+
+            <img id = "icoReac" class = "icoReac2 btnLike" src="img/reac3.png" alt=""> 
+            <img class = "icoReac btnComment" src="img/char3.png" alt="">
             <p class="likes"> <span class="likes-counter"> </span> Me Gusta </p>
            
             </div>
@@ -299,9 +323,9 @@ export const containerPost = () => {
         btnComments.forEach((btnComment) => {
             btnComment.addEventListener('click', (e) => {
                 const newComment = e.target.parentElement.nextElementSibling;
-                newComment.innerHTML = `<textarea  type="search"class="textarea" name="post" id="post"
+                newComment.innerHTML = `<textarea  type="search"class="textarea2" name="post" id="post"
                 placeholder="Escribe un comentario!"></textarea>
-                <button class="botones-post" type = "button" id="publicar">Comentar</button>`;
+                <button class="botones-post2" type = "button" id="publicar">Comentar</button>`;
                 const btnSaveComment = newComment.lastElementChild;
                 btnSaveComment.addEventListener('click', (event) => {
                     const data = {
