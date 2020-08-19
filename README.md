@@ -1,6 +1,6 @@
  
-  ![Arte Space](./img/geri1.jpg)
- # **![Arte Space](./img/arte-space-logo.png)**
+  ![Arte Space](./src/img/geri1.jpg)
+ # **![Arte Space](./src/img/arte-space-logo.png)**
 
 
 ## [Link para pagina web *Art Space*](https://fabianesantos.github.io/SCL014-social-network/src/index.html#/inicio-sesion)
@@ -28,15 +28,15 @@ En este proyecto construirás una Red Social sobre lo que decidan tú y tu equip
 
 Empezamos a planificar todo lo que seria necesario para el desarrollo de la página web utilizando el **Trello**, donde nos permitió una mejor visualización de todas las etapas necesarias, y dividimos las tareas por sprint.
 
-![imagen-Trello](./img/imagen-trello.png)
+![imagen-Trello](./src/img/imagen-trello.png)
 
 ### **4. Proceso UX/ UI**
 
  Basado en ideas de las colaboradoras, creamos nuestro sketch, hecho en papel y lapis.
 
-![imagen-sketch](./img/sketch.png)
+![imagen-sketch](./src/img/sketch.png)
 
-![imagen-planificación](./img/planificacion.png)
+![imagen-planificación](./src/img/planificacion.png)
 
 
  ##### Definición de usuario
@@ -51,11 +51,11 @@ Fue realizada una encuesta on line con 51 usuarios, donde los usuarios contestar
  
  [Link encuesta](https://forms.gle/Jvd9dt2jZp2uJVbT7)
 
-![encuesta](./img/encuesta1.png)
-![encuesta](./img/encuesta2.png)
-![encuesta](./img/encuesta3.png)
-![encuesta](./img/encuesta4.png)
-![encuesta](./img/encuesta5.png)
+![encuesta](./src/img/encuesta1.png)
+![encuesta](./src/img/encuesta2.png)
+![encuesta](./src/img/encuesta3.png)
+![encuesta](./src/img/encuesta4.png)
+![encuesta](./src/img/encuesta5.png)
 
 
 
@@ -78,17 +78,17 @@ Historia de Usuario 5: Yo como usuario, quiero un chat , dónde pueda subir foto
 
 Prototipo de baja fidelidad, con la App **Invision**
 
-![prototipo-Invision](./img/free-hand-invision.png)
+![prototipo-Invision](./src/img/free-hand-invision.png)
 
 Prototipo de alta fidelidad, hechos con **Figma** 
 
 [Link para prototipo alta fidelidad Mobile](https://www.figma.com/proto/glEilOzjC5zxt7sToRUXQ7/Untitled?node-id=43%3A1&scaling=min-zoom) 
 
-![prototipo](./img/figma-mobile.png)
+![prototipo](./src/img/figma-mobile.png)
 
 [Link para prototipo alta fidelidad Desktop](https://www.figma.com/proto/glEilOzjC5zxt7sToRUXQ7/Untitled?node-id=21%3A4&scaling=min-zoom)
 
-![prototipo](./img/figma-desktop.png)
+![prototipo](./src/img/figma-desktop.png)
 
 
 
