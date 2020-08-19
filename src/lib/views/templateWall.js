@@ -1,7 +1,9 @@
 import {
     createPost,
     containerPost,
+    profile2,
 } from '../firebase.js';
+
 
 
 const loadHomeFunctions = () => {
@@ -37,6 +39,8 @@ export const routeHome = () => {
     </header>
     <main>
     <div id="ingreso-post">
+    <main id ="contenedor-perfil2" class = "contenedor-perfil2" ></main>
+    <button class="btnProfile2" id= "closeProfile">Cerrar Sesión</button>
      <form class="formulario-post">
     
     
@@ -82,6 +86,7 @@ export const routeHome = () => {
     window.location.hash = '#/muro';
     document.getElementById('root').innerHTML = viewHomePage;
     loadHomeFunctions();
+    profile2();
     document.getElementById('icoArt').addEventListener('click', () => { window.location.hash = '#/conozca'; });
     document.getElementById('profile').addEventListener('click', () => {
         window.location.hash = '#/perfil';
