@@ -30,9 +30,10 @@ export const routeProfile = () => {
        
     </header>
     <main id = "contenedor-perfil" ></main>
-    <button class="btn" id= "closeProfile">Cerrar Sesión</button>
+    
     </div>
   
+    <button class="btn" id= "closeProfile">Cerrar Sesión</button>
     </div>
     <footer>
     <h5>Contacto: artspacechile@gmail.com</h5>

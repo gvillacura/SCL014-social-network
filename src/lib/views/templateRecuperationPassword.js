@@ -24,7 +24,7 @@ export const routeError = () => {
       <header>
           <img class="header-image" src="img/img-cel.png">
           <img class="header-image-desktop" src="./img/apertura1.gif">
-          <h1 class = 'artSecond'>Art Space</h1>
+          <h1>Art Space</h1>
         </header>
     
       <h4 class = 'hsecond'> Ingrese su correo para enviar su nueva contraseña </h4>
@@ -44,7 +44,7 @@ export const routeError = () => {
          
         </div>
       </section>
-      <footer class= 'f2'>
+      <footer class ='f2'>
       <h5>Contactenos: artspacechile@gmail.com</h5>
       &copy;2020 by Fabiane, Geraldine & Lady
      </footer>
