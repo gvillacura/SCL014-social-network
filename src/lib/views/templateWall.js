@@ -5,7 +5,6 @@ import {
 } from '../firebase.js';
 
 
-
 const loadHomeFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
     const artSpace = document.getElementById('artSpace');
@@ -50,7 +49,6 @@ export const routeHome = () => {
            placeholder="¡Realiza una publicación!"></textarea>
         
        </div>
-
        
        <div class="container">
        <div class="row">
@@ -98,6 +96,7 @@ export const routeHome = () => {
     const btnPublicar = document.querySelector('#publicar');
     btnPublicar.addEventListener('click', () => {
         const archivoImg = valueFichero.files[0];
+        valueFichero.value = null;
         const textPost = document.querySelector('#post').value;
         const post = {
             text: textPost,
@@ -105,10 +104,11 @@ export const routeHome = () => {
         };
         createPost(post);
     });
+
     valueFichero.addEventListener('change', () => {
-      const output = document.getElementById('output');
-      output.src = URL.createObjectURL(valueFichero.files[0]);
-  });
+        const output = document.getElementById('output');
+        output.src = URL.createObjectURL(valueFichero.files[0]);
+    });
 };
 
 
