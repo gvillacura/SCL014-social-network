@@ -101,6 +101,7 @@ h1 {
   width: 22vw;
   outline: none;
   background: transparent !important;
+  cursor: pointer;
 }
 
 input:-webkit-autofill {
@@ -117,6 +118,7 @@ input:-webkit-autofill {
   background: transparent !important;
   margin-left: 53%;
   margin-top: -4em;
+  cursor: pointer;
 
 }
 
@@ -200,7 +202,7 @@ input#input_email.imput {
   margin-left: 308px;
 }
 
-.btnRegistro:hover {
+.btnResgitro:hover {
   filter: opacity(0.5);
 }
 
@@ -347,6 +349,9 @@ h4 {
   margin-left: 44px;
   margin-top: -4px;
 }
+.logo-second-page:hover{
+filter: opacity(0.5);
+}
 
 #input_search {
   background: rgba(255, 154, 2, 0.81);
@@ -403,24 +408,24 @@ input#input_email.imput {
 
 .textarea {
   font-family: "Open Sans", sans-serif;
-  padding-top: 1em;
-  outline: none;
-  background: #fdfdf2 !important;
-  border-radius: 2em;
-  font-size: 15px;
-  text-align: center;
-  border-color: #00000029;
-  width: 30em;
-  height: 31px;
-  margin-top: 2em;
-  margin-left: 4em;
-  padding-right: 1em;
-  padding-left: 35px;
-  font-family: "Open Sans", sans-serif;
-  text-align: center;
-  padding-block-end: 11px;
-  padding-block-start: 25px;
-  cursor: pointer;
+    padding-top: 1em;
+    outline: none;
+    background: #fdfdf2 !important;
+    border-radius: 2em;
+    font-size: 13px;
+    text-align: center;
+    border-color: #00000029;
+    width: 30em;
+    height: 31px;
+    margin-top: 2em;
+    margin-left: 4em;
+    padding-right: 1em;
+    padding-left: 35px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    padding-block-end: 11px;
+    padding-block-start: 25px;
+    cursor: pointer;
 }
 
 .textarea2 {
@@ -476,9 +481,10 @@ input#input_email.imput {
 
 .img-responsive {
   width: 5em;
-  margin-left: -63em;
+  margin-left: -59em;
   margin-top: 5em;
   cursor: pointer;
+
 }
 
 .img-responsive:hover {
@@ -495,8 +501,9 @@ input#input_email.imput {
   font-size: 15px;
   height: 5vh;
   outline: none;
-  margin-left: 31em;
+  margin-left: 19em;
   cursor: pointer;
+
 }
 
 .botones-post:hover {
@@ -522,7 +529,7 @@ input#input_email.imput {
 }
 
 .btnProfile2 {
-  margin-top: 15px;
+  margin-top: 241px;
   background: #ff9a02ad;
   border-radius: 17px;
   border: 2px #f7e22d;
@@ -531,6 +538,7 @@ input#input_email.imput {
   font-size: 15px;
   height: 5vh;
   outline: none;
+  margin-left: -103em;
   cursor: pointer;
 
 
@@ -613,11 +621,13 @@ input#input_email.imput {
   font-size: 14px;
 }
 
-.likes {
+p.likes {
   font-family: "Open Sans", sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 0em;
+  margin-left: 0em;
 }
+
 
 .contenedor-perfil2 {
   margin-right: 15em;
@@ -625,7 +635,7 @@ input#input_email.imput {
   margin-top: 7em;
   border: solid 1px #edefb0;
   background-color: white;
-  height: 10em;
+  height: 12em;
   border-radius: 10px;
   width: 15em;
 }
@@ -933,6 +943,10 @@ h5 {
     margin-top: -4px;
     font-family: "Dancing Script", cursive;
   }
+  h1:hover{
+    filter: opacity(0.5);
+    }
+    
 
   .btn {
     width: 37vw;
@@ -992,6 +1006,7 @@ h5 {
     border-bottom: solid 1px;
     font-family: "Open Sans", sans-serif;
     font-size: x-large;
+    cursor: pointer;
 
   }
 
@@ -1032,6 +1047,9 @@ h5 {
 
   .icons-General {
     float: right;
+    margin-top: -3em;
+    margin-inline-end: 3em;
+}
   }
 
   .logo-second-page {
@@ -1095,7 +1113,9 @@ h5 {
     margin-left: 15em;
     height: 23px;
     display: inline-block;
-    margin-top: 13em;
+    margin-top: 14em;
+
+  
   }
 
   .hr {
@@ -1106,13 +1126,12 @@ h5 {
   }
 
   .botones-post {
-    width: 17vh;
+    width: 23vh;
     margin-left: 0em;
     cursor: pointer;
     margin-top: -3em;
     height: 2em;
     font-size: 20px;
-
   }
 
   .botones-post:hover {
@@ -1315,7 +1334,7 @@ h5 {
     height: 5vh;
     outline: none;
     cursor: pointer;
-    margin-left: -4vw;
+    margin-left: -5vw;
   }
 
   .btnRegistro:hover:hover {
@@ -1386,6 +1405,7 @@ h5 {
     cursor: pointer;
     margin-left: 8em;
     margin-top: -4em;
+    cursor: pointer;
   }
 
   .par2 {
@@ -1494,11 +1514,11 @@ h5 {
     border-radius: 17px;
     border: 2px #f7e22d;
     font-family: "Open Sans", sans-serif;
-    width: 22vw;
+    width: 20vw;
     font-size: 17px;
-    height: 4vh;
+    height: 6vh;
     outline: none;
-    margin-left: -894px;
+    margin-left: -808px;
     cursor: pointer;
   }
 
@@ -1533,4 +1553,3 @@ h5 {
     margin-top: 0em;
     margin-left: -1em;
   }
-}
