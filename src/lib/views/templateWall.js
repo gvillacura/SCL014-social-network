@@ -88,12 +88,8 @@ export const routeHome = () => {
     });
 
     containerPost();
-<<<<<<< HEAD
-   
-=======
 
     const valueFichero = document.querySelector('#fichero');
->>>>>>> d7134654ab0ea37449e5dfe84d3c0184b1325fb3
     const btnPublicar = document.querySelector('#publicar');
     btnPublicar.addEventListener('click', () => {
         const archivoImg = valueFichero.files[0];
