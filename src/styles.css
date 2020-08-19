@@ -14,7 +14,6 @@ body {
 .input_section2 {
   display: flex;
   flex-direction: column;
-
 }
 
 .loginSecons {
@@ -26,7 +25,6 @@ body {
 p {
   font-family: "Open Sans", sans-serif;
   cursor: default;
-
 }
 
 .par2 {
@@ -34,7 +32,6 @@ p {
   cursor: default;
   margin-left: 21em;
 }
-
 
 h4 {
   font-family: "Open Sans", sans-serif;
@@ -55,7 +52,6 @@ h4 {
   visibility: visible;
   min-height: 100%;
   position: fixed;
-
 }
 
 .header-image-desktop2 {
@@ -79,7 +75,6 @@ h1 {
   flex-direction: column;
   margin-left: 6em;
 }
-
 .artSecond {
   font-size: 4vw;
   font-family: "Dancing Script", cursive;
@@ -115,7 +110,6 @@ input:-webkit-autofill {
   margin-left: 52em;
   margin-top: -4em;
 }
-
 
 .input2:-webkit-autofill {
   transition: background-color 5000s ease-in-out 0s;
@@ -161,7 +155,6 @@ input#input_email.imput {
 .btn:hover {
   filter: opacity(0.5);
 }
-
 .btnResgitro {
   margin: 0em;
   margin-top: 2em;
@@ -193,13 +186,11 @@ input#input_email.imput {
   height: 6vh;
   outline: none;
   cursor: pointer;
-
 }
 
 .btnComenzar:hover {
   filter: opacity(0.5);
 }
-
 .btnR {
   margin: 0em;
   margin-top: 2em;
@@ -213,35 +204,29 @@ input#input_email.imput {
   outline: none;
   cursor: pointer;
   margin-left: 43em;
-
 }
 
 .btnR:hover {
   filter: opacity(0.5);
 }
-
 .logo {
   width: 3em;
   cursor: pointer;
-
 }
 
 .logo:hover {
   filter: opacity(0.5);
 }
 
-
 .logo2 {
   width: 3em;
   margin-left: 20em;
   cursor: pointer;
-
 }
 
 .logo2:hover {
   filter: opacity(0.5);
 }
-
 
 .img-events {
   width: 100%;
@@ -253,7 +238,6 @@ input#input_email.imput {
   margin-top: -4px;
   padding: 7px;
   height: 2em;
-
 }
 
 footer {
@@ -264,7 +248,6 @@ footer {
   flex-direction: column;
   margin-left: 16em;
 }
-
 .f2 {
   font-size: 20px;
   margin-top: 10vh;
@@ -272,7 +255,6 @@ footer {
   display: flex;
   flex-direction: column;
   margin-left: 18em;
-
 }
 
 .icono {
@@ -293,7 +275,6 @@ h4 {
   font-family: "Open Sans", sans-serif;
   color: #191818db;
 }
-
 .hsecond {
   font-family: "Open Sans", sans-serif;
   color: #191818db;
@@ -304,11 +285,9 @@ h4 {
   padding-inline-end: 1em;
 }
 
-
 .icoCalen {
   padding-inline-end: 1em;
 }
-
 
 .icoUsu {
   padding-inline-end: 2em;
@@ -353,7 +332,6 @@ h4 {
 #input_search:hover {
   filter: opacity(0.5);
 }
-
 
 input#input_email.imput {
   background: transparent;
@@ -540,7 +518,6 @@ input#input_email.imput {
   margin: 2em;
 }
 
-
 .icoperfil2 {
   width: 4em;
   border: solid 1px #0808087d;
@@ -569,7 +546,6 @@ input#input_email.imput {
 }
 
 .name1 {
-
   font-family: "Open Sans", sans-serif;
   cursor: default;
   text-align: initial;
@@ -577,7 +553,6 @@ input#input_email.imput {
   margin-top: -55px;
   font-size: 18.5px;
   color: #080808;
-
 }
 
 .post2 {
@@ -650,7 +625,6 @@ input#input_email.imput {
   font-family: "Open Sans", sans-serif;
 }
 
-
 /* Estilos para sección de perfil*/
 .contenedor-perfil {
   margin-right: 15em;
@@ -660,26 +634,19 @@ input#input_email.imput {
   background-color: white;
   height: 15em;
   border-radius: 1em;
-
 }
 
 .imgProfile {
-
   width: 10em;
 
   border-radius: 50%;
   border: none;
-  background-color: #edefb0;
   outline: none;
 }
-
-
-
 
 .imgProfile:focus {
   outline: none;
 }
-
 
 .imgProfileimg {
   margin-top: -7em;
@@ -708,6 +675,7 @@ input#input_email.imput {
   height: 4vh;
   outline: none;
   margin-block-end: 5em;
+  cursor: pointer;
 }
 
 .btn-file {
@@ -741,7 +709,6 @@ input#input_email.imput {
 h5 {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
-
 }
 
 .lupa {
@@ -771,7 +738,6 @@ h5 {
   border-radius: 4px;
   background-color: white;
   flex-direction: column;
-
 }
 
 .subtitulos {
@@ -812,10 +778,6 @@ h5 {
   cursor: pointer;
 }
 
-.btnArt:hover {
-  filter: opacity(0.5);
-}
-
 .btnArt3 {
   background: #ff9a02ad;
   border-radius: 17px;
@@ -846,10 +808,6 @@ h5 {
   cursor: pointer;
 }
 
-.btnArt:hover {
-  filter: opacity(0.5);
-}
-
 .article {
   display: flex;
   flex-direction: row;
@@ -857,8 +815,6 @@ h5 {
   width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
-
-
 }
 
 #comments {
@@ -887,7 +843,6 @@ h5 {
   width: 100%;
   height: 100%;
 }
-
 
 @media (max-width: 801px) {
   body {
@@ -973,7 +928,7 @@ h5 {
 
   footer {
     margin-top: 3em;
-    font-family: "Dancing Script"cursive;
+    font-family: "Dancing Script" cursive;
   }
 
   .container-second-page {
@@ -1041,7 +996,6 @@ h5 {
     height: 12px;
     display: inline-block;
     margin-top: 2em;
-
   }
 
   .hr {

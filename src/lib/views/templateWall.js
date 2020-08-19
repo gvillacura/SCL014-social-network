@@ -110,3 +110,5 @@ export const routeHome = () => {
         output.src = URL.createObjectURL(valueFichero.files[0]);
     });
 };
+
+
