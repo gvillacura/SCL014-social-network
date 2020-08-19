@@ -1,4 +1,4 @@
-import { profile } from '../firebase.js';
+// import { profile } from '../firebase.js';
 
 const loadProfileFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
@@ -46,6 +46,4 @@ export const routeProfile = () => {
     loadProfileFunctions();
     document.getElementById('icoArt').addEventListener('click', () => { window.location.hash = '#/conozca'; });
     document.getElementById('closeProfile').addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
-    
-   
-}
+};

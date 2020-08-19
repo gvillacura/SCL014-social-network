@@ -9,6 +9,8 @@ const loadHomeFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
     const artSpace = document.getElementById('artSpace');
     artSpace.addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
+    document.getElementById('closeProfile')
+        .addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
 };
 
 export const routeHome = () => {
@@ -87,9 +89,6 @@ export const routeHome = () => {
     loadHomeFunctions();
     profile2();
     document.getElementById('icoArt').addEventListener('click', () => { window.location.hash = '#/conozca'; });
-    document.getElementById('profile').addEventListener('click', () => {
-        window.location.hash = '#/perfil';
-    });
 
     containerPost();
 
@@ -111,5 +110,3 @@ export const routeHome = () => {
         output.src = URL.createObjectURL(valueFichero.files[0]);
     });
 };
-
-
