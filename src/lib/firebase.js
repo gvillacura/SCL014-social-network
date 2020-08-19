@@ -47,9 +47,9 @@ export const ingreso = () => {
             const errorCode = error.code;
 
             if (errorCode === 'auth/wrong-password') {
-                showErrorMessage.innerHTML = '<p>Contraseña incorrecta, intente nuevamente.</p>';
+                showErrorMessage.innerHTML = '<p class = "error2" >Contraseña incorrecta, intente nuevamente.</p>';
             } else {
-                showErrorMessage.innerHTML = '<p>Correo inválido.</p>';
+                showErrorMessage.innerHTML = '<p class = "error2" >Correo inválido.</p>';
             }
         });
 };
