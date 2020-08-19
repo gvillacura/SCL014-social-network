@@ -121,6 +121,31 @@ export const pass = () => {
         });
 };
 
+
+export const profile2 = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            // User is signed in.
+            console.log(user);
+            const showData = document.getElementById('contenedor-perfil2');
+            showData.innerHTML = '';
+            showData.innerHTML += `
+    
+    <div>
+     <br>
+     <br>
+       
+      <p class = 'imgProfileimg2'> <img class = 'imgProfile' src='${user.photoURL ? user.photoURL : 'img/artista2.png'}'></p>
+      <h1 class = 'nameProfile2' >${user.displayName ? user.displayName : 'Art Space Lover\'s'}</h1>
+        <p class = 'emailProfile2'>${user.email}</p>
+        </div>
+             
+         `;
+        }
+    });
+};
+
+
 export const profile = () => {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
@@ -133,9 +158,9 @@ export const profile = () => {
     <div>
      <br>
      <br>
-       
+     
       <p class = 'imgProfileimg'> <img class = 'imgProfile' src='${user.photoURL ? user.photoURL : 'img/artista2.png'}'></p>
-      <h1 class = 'nameProfile'>${user.displayName ? user.displayName : 'Art Space Lover\'s'}</h1>
+      <h1 class = 'nameProfile' >${user.displayName ? user.displayName : 'Art Space Lover\'s'}</h1>
         <p class = 'emailProfile'>${user.email}</p>
         </div>
              
@@ -206,8 +231,8 @@ export const containerPost = () => {
             <hr class= "hr2">
             
              <div class = icoReacall>
-            <img id = "icoReac" class = "icoReac" src="img/reac6.png" alt=""> 
-            <img class = "icoReac btnComment" src="img/reac3.png" alt="">
+            <img id = "icoReac" class = "icoReac2" src="img/reac3.png" alt=""> 
+            <img class = "icoReac btnComment" src="img/char3.png" alt="">
             <p id=result> </p>
            
             </div>
@@ -238,15 +263,15 @@ export const containerPost = () => {
         btnComments.forEach((btnComment) => {
             btnComment.addEventListener('click', (e) => {
                 const newComment = e.target.parentElement.nextElementSibling;
-                newComment.innerHTML = `<textarea  type="search"class="textarea" name="post" id="post"
+                newComment.innerHTML = `<textarea  type="search"class="textarea2" name="post" id="post"
                 placeholder="Escribe un comentario!"></textarea>
-                <button class="botones-post" type = "button" id="publicar">Comentar</button>`;
+                <button class="botones-post2" type = "button" id="publicar">Comentar</button>`;
                 const btnSaveComment = newComment.lastElementChild;
                 btnSaveComment.addEventListener('click', (event) => {
                     const data = {
                         postId: event.target.parentElement.parentElement.dataset.id,
                         comment: {
-                            texto: e.target.previousElementSibling.value,
+                            texto: event.target.previousElementSibling.value,
                             autor: '',
                             fecha: currentTime(),
                         },
