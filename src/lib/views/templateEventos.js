@@ -7,9 +7,6 @@ export const routeEvents = () => {
         <div class = "container-second-page">
           <div class = "container_left">
             <h1 class = "logo-second-page" id="artSpace2" >Art Space</h1>
-            <input type="search" id="input_search" placeholder="Buscar en Art Space">
-            <div class = "lupa">
-            <img class = "icoLupa" id= "icoLupa"  src="img/buscar_icono.png" alt="">
           </div>
           </div>
           <div class = "icons-General">
