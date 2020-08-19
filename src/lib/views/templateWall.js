@@ -9,8 +9,6 @@ const loadHomeFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
     const artSpace = document.getElementById('artSpace');
     artSpace.addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
-    document.getElementById('closeProfile')
-        .addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
 };
 
 export const routeHome = () => {
@@ -41,17 +39,13 @@ export const routeHome = () => {
     <main id ="contenedor-perfil2" class = "contenedor-perfil2" ></main>
   
      <form class="formulario-post">
-    
-    
+  
        <div>
         
          <textarea  type="search"class="textarea" name="post" id="post"
            placeholder="¡Realiza una publicación!"></textarea>
         
        </div>
-       <div class = "btnPor">
-    <button class="btnProfile2" id= "closeProfile">Cerrar Sesión</button>
-    </div>
        
        <div class="container">
        <div class="row">

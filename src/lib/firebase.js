@@ -135,10 +135,15 @@ export const profile2 = () => {
       <p class = 'imgProfileimg2'> <img class = 'imgProfile2' src='${user.photoURL ? user.photoURL : 'img/artista2.png'}'></p>
       <h1 class = 'nameProfile2' >${user.displayName ? user.displayName : 'Art Space Lover\'s'}</h1>
         <p class = 'emailProfile2'>${user.email}</p>
+        <div class = "btnPor">
+        <button class="btnProfile2" id= "closeProfile">Cerrar Sesión</button>
+        </div>
         </div>
              
          `;
         }
+        document.getElementById('closeProfile')
+            .addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
     });
 };
 

@@ -58,8 +58,8 @@ export const routeLogin = () => {
 </section>
 
 <section class = 'loginSecons'>
- <p>Ingresa con </p>
- <div>
+ <p  class = "cont_logo">Ingresa con </p>
+ <div class = "cont_logo">
    <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
  </div>
 <button class="btnResgitro" id="registration-btn">Registrarse</button> 
