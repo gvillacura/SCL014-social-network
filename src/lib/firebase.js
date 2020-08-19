@@ -323,7 +323,8 @@ export const containerPost = () => {
             btnComment.addEventListener('click', (e) => {
                 const newComment = e.target.parentElement.nextElementSibling;
                 newComment.innerHTML = ` 
-                    <button type = "button" class ="close-btn" id="close-post">X</button>
+                    <button type = "button" class ="close-btn" id="close-post"> 
+                    <img src="./img/icons8-close-window-48.png"> </button>
                     <textarea  type="search"class="textarea2" name="post" id="post"
                     placeholder="Escribe un comentario!">
                     </textarea>
