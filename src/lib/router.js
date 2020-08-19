@@ -2,7 +2,7 @@ import { routeLogin } from './views/templateLogin.js';
 import { routeRegistry } from './views/templateRegistration.js';
 import { routeError } from './views/templateRecuperationPassword.js';
 import { routeHome } from './views/templateWall.js';
-import { routeProfile } from './views/templateProfile.js';
+// import { routeProfile } from './views/templateProfile.js';
 import { routeEvents } from './views/templateEventos.js';
 
 export const changeRoute = (hash) => {
@@ -19,10 +19,7 @@ export const changeRoute = (hash) => {
     case '#/muro':
         routeHome();
         break;
-    case '#/perfil':
-        routeProfile();
-        break;
-        case '#/conozca':
+    case '#/conozca':
         routeEvents();
         break;
     default:

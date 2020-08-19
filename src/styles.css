@@ -75,6 +75,7 @@ h1 {
   flex-direction: column;
   margin-left: 6em;
 }
+
 .artSecond {
   font-size: 4vw;
   font-family: "Dancing Script", cursive;
@@ -155,6 +156,7 @@ input#input_email.imput {
 .btn:hover {
   filter: opacity(0.5);
 }
+
 .btnResgitro {
   margin: 0em;
   margin-top: 2em;
@@ -191,6 +193,7 @@ input#input_email.imput {
 .btnComenzar:hover {
   filter: opacity(0.5);
 }
+
 .btnR {
   margin: 0em;
   margin-top: 2em;
@@ -209,6 +212,7 @@ input#input_email.imput {
 .btnR:hover {
   filter: opacity(0.5);
 }
+
 .logo {
   width: 3em;
   cursor: pointer;
@@ -248,6 +252,7 @@ footer {
   flex-direction: column;
   margin-left: 16em;
 }
+
 .f2 {
   font-size: 20px;
   margin-top: 10vh;
@@ -275,6 +280,7 @@ h4 {
   font-family: "Open Sans", sans-serif;
   color: #191818db;
 }
+
 .hsecond {
   font-family: "Open Sans", sans-serif;
   color: #191818db;
@@ -817,7 +823,7 @@ h5 {
   flex-wrap: wrap;
 }
 
-#comments {
+.comments {
   margin-right: 10em;
   margin-left: 12em;
   padding-block-end: 13px;
@@ -830,6 +836,16 @@ h5 {
   font-size: 14px;
   margin-block-end: 1em;
   font-family: "Open Sans", sans-serif;
+}
+
+.close-btn {
+  background-color: #ffba53;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #1b1919;
+  font-weight: 700;
 }
 
 .imgPost {
@@ -928,7 +944,7 @@ h5 {
 
   footer {
     margin-top: 3em;
-    font-family: "Dancing Script" cursive;
+    font-family: "Dancing Script"cursive;
   }
 
   .container-second-page {
