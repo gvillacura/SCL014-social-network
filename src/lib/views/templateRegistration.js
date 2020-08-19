@@ -26,7 +26,7 @@ const loadRegistryFunctions = () => {
 
         if (user.name === '' || user.region === '' || user.email === '' || user.password === ''
       || user.passwordConfirm === '') {
-            showErrorMessage.innerHTML = '<p>Debe rellenar todos los campos.</p>';
+            showErrorMessage.innerHTML = '<p class = "parr3" >Debe rellenar todos los campos.</p>';
         }
         if (user.password !== user.passwordConfirm) {
             showErrorMessage.innerHTML = '<p>Las contraseñas no coinciden.</p>';
@@ -45,7 +45,7 @@ export const routeRegistry = () => {
       <div id='login' class='login'>
         <header>
           <img class="header-image" src="img/img-cel.png">
-          <img class="header-image-desktop" src="img/img-desk.png">
+          <img class="header-image-desktop" src="./img/apertura1.gif">
           <h1>Art Space</h1>
         </header>
 
@@ -74,8 +74,8 @@ export const routeRegistry = () => {
         </div>
     
         <div>
-          <button class="btn" id="save-registration-btn">Registrar</button> <br>
-          <button class="btn" id="loginBtn">Inicio</button>
+          <button class="btnx" id="save-registration-btn">Registrar</button> <br>
+          <button class="btnx" id="loginBtn">Inicio</button>
         </div>
         <footer>
         <h5>Contacto: artspacechile@gmail.com</h5>

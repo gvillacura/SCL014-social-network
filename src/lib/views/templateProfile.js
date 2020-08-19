@@ -1,4 +1,4 @@
-import { profile } from '../firebase.js';
+// import { profile } from '../firebase.js';
 
 const loadProfileFunctions = () => {
     // Función que lleva desde logo segunda pagina a primera página
@@ -11,9 +11,10 @@ export const routeProfile = () => {
     <div>
     <header>
         <img class="header-image" src="img/img-cel.png" alt="">
+        <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
         <div class = "container-second-page">
           <div class = "container_left">
-            <img class="header-image-desktop" src="img/img-desk.png" alt="">
+            
             <h1 class = "logo-second-page" id="artSpace2" >Art Space</h1>
             <input type="search" id="input_search" placeholder="Buscar en Art Space" >
             <div class = "lupa">
@@ -29,9 +30,10 @@ export const routeProfile = () => {
        
     </header>
     <main id = "contenedor-perfil" ></main>
-    <button class="btn" id= "closeProfile">Cerrar Sesión</button>
+    
     </div>
   
+    <button class="btn" id= "closeProfile">Cerrar Sesión</button>
     </div>
     <footer>
     <h5>Contacto: artspacechile@gmail.com</h5>
@@ -44,6 +46,4 @@ export const routeProfile = () => {
     loadProfileFunctions();
     document.getElementById('icoArt').addEventListener('click', () => { window.location.hash = '#/conozca'; });
     document.getElementById('closeProfile').addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
-    
-   
-}
+};
