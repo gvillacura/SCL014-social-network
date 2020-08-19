@@ -1,7 +1,8 @@
 const db = firebase.firestore();
 const storage = firebase.storage();
 const storageRef = storage.ref();
-const imagesRef = storageRef.child('images/');
+
+// const imagesRef = storageRef.child('images/');
 
 export const uploadFile = async (archivoImg) => {
     console.log('se ha recibido el archivo');
@@ -163,7 +164,8 @@ export const createPost = async (post) => {
         foto: user().photoURL,
     })
         .then(() => {
-            console.log('Document successfully written!');
+            document.querySelector('#post').value = '';
+            document.querySelector('#output').src = 'img/img1.png';
         })
         .catch((error) => {
             console.error('Error writing document: ', error);
@@ -173,6 +175,7 @@ export const createPost = async (post) => {
 export const createComment = data => db.collection('publicaciones').doc(data.postId)
     .collection('comentarios').add(data.comment);
 
+// Obtiene comentarios desde firestore
 const getComments = (data, callback) => {
     db.collection('publicaciones')
         .doc(data.postId)
@@ -187,6 +190,56 @@ const getComments = (data, callback) => {
         });
 };
 
+// Obtiene likes desde firestore
+const getLikes = (data, callback) => {
+    db.collection('publicaciones')
+        .doc(data.postId)
+        .collection('likes')
+        .onSnapshot((snapshot) => {
+            callback(snapshot.size, data.postId);
+        });
+};
+
+// Verifica si un usuario hizo like en un post
+const getIsUserLikePost = data => db.collection('publicaciones').doc(data.postId)
+    .collection('likes').where('userId', '==', data.userId)
+    .get();
+
+const deleteUserLikeInPost = data => db.collection('publicaciones').doc(data.postId)
+    .collection('likes').doc(data.likeId)
+    .delete();
+
+// Guarda o elimina un like segun corresponda
+const likePost = async (data) => {
+    const userActual = firebase.auth().currentUser;
+
+    const dataIsUserLike = {
+        postId: data.postId,
+        userId: userActual.uid,
+    };
+
+    const isUserLikePost = await getIsUserLikePost(dataIsUserLike);
+
+    if (isUserLikePost.size === 0) {
+        // Dar like
+        await db.collection('publicaciones').doc(data.postId)
+            .collection('likes').add({
+                userId: userActual.uid,
+            });
+    } else {
+        const dataLikeToDelete = {
+            postId: data.postId,
+            likeId: isUserLikePost.docs[0].id,
+        };
+        deleteUserLikeInPost(dataLikeToDelete)
+            .then(() => {
+                console.log('Eliminado correctamente');
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
+    }
+};
 
 export const containerPost = () => {
     db.collection('publicaciones').orderBy('fecha', 'desc').onSnapshot((querySnapshot) => {
@@ -206,31 +259,39 @@ export const containerPost = () => {
             <hr class= "hr2">
             
              <div class = icoReacall>
-            <img id = "icoReac" class = "icoReac" src="img/reac6.png" alt=""> 
+            <img id = "icoReac" class = "icoReac btnLike" src="img/reac6.png" alt=""> 
             <img class = "icoReac btnComment" src="img/reac3.png" alt="">
-            <p id=result> </p>
+            <p class="likes"> <span class="likes-counter"> </span> Me Gusta </p>
            
             </div>
             <div id="comments">
             </div>
             `;
 
-            const dataComments = {
+            const dataPost = {
                 postId: post.id,
             };
 
             const showComments = (comment, postId) => {
-                // document.querySelector('#comments').innerHTML = '';
                 const commentsInPostElement = document.querySelector(`.post-actual[data-id="${postId}"] #comments`);
                 const commentElement = document.createElement('div');
                 commentElement.innerText = comment.texto;
                 commentsInPostElement.appendChild(commentElement);
             };
 
-            getComments(dataComments, showComments);
+            getComments(dataPost, showComments);
+
+            // Funcion callback para actualizar contador de likes
+            const updateLikeCounter = (likeQuantity, postId) => {
+                const likeCounterElement = document.querySelector(`.post-actual[data-id="${postId}"] .likes-counter`);
+                likeCounterElement.innerText = likeQuantity;
+            };
+
+            // Obtiene la cantidad de likes desde firestore y usa el callback
+            // para mostrarlo en la vista
+            getLikes(dataPost, updateLikeCounter);
 
             postPart.setAttribute('data-id', post.id);
-
             postContainer.appendChild(postPart);
         });
 
@@ -246,13 +307,23 @@ export const containerPost = () => {
                     const data = {
                         postId: event.target.parentElement.parentElement.dataset.id,
                         comment: {
-                            texto: e.target.previousElementSibling.value,
+                            texto: event.target.previousElementSibling.value,
                             autor: '',
                             fecha: currentTime(),
                         },
                     };
                     createComment(data);
                 });
+            });
+        });
+
+        const btnLikes = document.querySelectorAll('.btnLike');
+        btnLikes.forEach((btnLike) => {
+            btnLike.addEventListener('click', (event) => {
+                const data = {
+                    postId: event.target.parentElement.parentElement.dataset.id,
+                };
+                likePost(data);
             });
         });
     });

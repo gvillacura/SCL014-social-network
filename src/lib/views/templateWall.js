@@ -94,6 +94,7 @@ export const routeHome = () => {
     const btnPublicar = document.querySelector('#publicar');
     btnPublicar.addEventListener('click', () => {
         const archivoImg = valueFichero.files[0];
+        valueFichero.value = null;
         const textPost = document.querySelector('#post').value;
         const post = {
             text: textPost,
@@ -101,6 +102,7 @@ export const routeHome = () => {
         };
         createPost(post);
     });
+
     valueFichero.addEventListener('change', () => {
         const output = document.getElementById('output');
         output.src = URL.createObjectURL(valueFichero.files[0]);
