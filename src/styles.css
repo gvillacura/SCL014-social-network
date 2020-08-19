@@ -7,8 +7,9 @@ body {
 
 .input_section {
   display: flex;
-  flex-direction: column;
-  margin-left: 20em;
+    flex-direction: column;
+    margin-left: 20em;
+    margin-top: -1em;
 }
 
 .input_section2 {
@@ -25,7 +26,9 @@ body {
 p {
   font-family: "Open Sans", sans-serif;
   cursor: default;
+  
 }
+
 
 .par2 {
   font-family: "Open Sans", sans-serif;
@@ -47,7 +50,7 @@ h4 {
 .header-image-desktop {
   filter: opacity(0.7);
   height: 100%;
-  left: -41px;
+  left: -55px;
   top: 0px;
   visibility: visible;
   min-height: 100%;
@@ -57,7 +60,7 @@ h4 {
 .header-image-desktop2 {
   filter: opacity(0.7);
   height: 8em;
-  left: -41px;
+  left: -55px;
   top: 0px;
   width: 100%;
 }
@@ -73,7 +76,7 @@ h1 {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  margin-left: 6em;
+  margin-left: 7em;
 }
 .artSecond {
   font-size: 4vw;
@@ -101,14 +104,15 @@ input:-webkit-autofill {
 
 .input2 {
   border: none;
-  border-bottom: solid 1px;
-  font-family: "Open Sans", sans-serif;
-  padding-top: 3em;
-  width: 22vw;
-  outline: none;
-  background: transparent !important;
-  margin-left: 52em;
-  margin-top: -4em;
+    border-bottom: solid 1px;
+    font-family: "Open Sans", sans-serif;
+    padding-top: 3em;
+    width: 22vw;
+    outline: none;
+    background: transparent !important;
+    margin-left: 45em;
+    margin-top: -4em;
+
 }
 
 .input2:-webkit-autofill {
@@ -149,10 +153,31 @@ input#input_email.imput {
   height: 6vh;
   outline: none;
   cursor: pointer;
-  margin-left: 18em;
+  margin-left: 5em;
+
 }
 
 .btn:hover {
+  filter: opacity(0.5);
+}
+
+.btnx {
+  margin: 0em;
+  margin-top: 2em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 13vw;
+  font-size: 3vh;
+  height: 6vh;
+  outline: none;
+  cursor: pointer;
+  margin-left: 22em;
+
+}
+
+.btnx:hover {
   filter: opacity(0.5);
 }
 .btnResgitro {
@@ -167,7 +192,7 @@ input#input_email.imput {
   height: 6vh;
   outline: none;
   cursor: pointer;
-  margin-left: 31vw;
+  margin-left: 308px;
 }
 
 .btnRegistro:hover {
@@ -176,7 +201,7 @@ input#input_email.imput {
 
 .btnComenzar {
   margin: 0em;
-  margin-top: 2em;
+  margin-top: 1em;
   background: #ff9a02ad;
   border-radius: 17px;
   border: 2px #f7e22d;
@@ -185,6 +210,7 @@ input#input_email.imput {
   font-size: 3vh;
   height: 6vh;
   outline: none;
+  cursor: pointer;
   cursor: pointer;
 }
 
@@ -203,7 +229,8 @@ input#input_email.imput {
   height: 6vh;
   outline: none;
   cursor: pointer;
-  margin-left: 43em;
+  margin-left: 42em;
+
 }
 
 .btnR:hover {
@@ -220,8 +247,8 @@ input#input_email.imput {
 
 .logo2 {
   width: 3em;
-  margin-left: 20em;
-  cursor: pointer;
+    margin-left: 21em;
+    cursor: pointer;
 }
 
 .logo2:hover {
@@ -229,8 +256,8 @@ input#input_email.imput {
 }
 
 .img-events {
-  width: 100%;
-  height: 150px;
+  width: -webkit-fill-available;
+  height: 120px;
 }
 
 .container-second-page {
@@ -242,7 +269,7 @@ input#input_email.imput {
 
 footer {
   font-size: 20px;
-  margin-top: 10vh;
+  margin-top: 4vh;
   font-family: "Dancing Script", cursive;
   display: flex;
   flex-direction: column;
@@ -263,8 +290,9 @@ footer {
 
 .icono2 {
   width: 1.3em;
-  margin-left: 41em;
+  margin-left: 35em;
   margin-top: 2em;
+
 }
 
 .errorMensaje:hover {
@@ -342,16 +370,24 @@ input#input_email.imput {
 }
 
 .formulario-post {
-  margin-left: 30em;
-  margin-top: -20em;
+  margin-left: 23em;
+  margin-top: -16em;
   border: solid 1px #edefb0;
   background-color: white;
   height: 14em;
-  border-radius: 1em;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 50em;
+  width: 42em;
+}
+.error2 {
+  font-family: "Open Sans", sans-serif;;
+  color: salmon;
+  margin-left: -17em;
+  font-size: 17px;
+  cursor:point;
+
 }
 
 .textarea {
@@ -366,7 +402,7 @@ input#input_email.imput {
   width: 30em;
   height: 31px;
   margin-top: 2em;
-  margin-left: 3em;
+  margin-left: 4em;
   padding-right: 1em;
   padding-left: 35px;
   font-family: "Open Sans", sans-serif;
@@ -389,14 +425,13 @@ input#input_email.imput {
   height: 21px;
   margin-top: 1em;
   margin-left: 1em;
-  padding-right: 0em;
-  padding-left: 35px;
   font-family: "Open Sans", sans-serif;
   text-align: center;
   padding-block-end: 11px;
   padding-block-start: 25px;
   cursor: pointer;
-
+  padding-inline-end: 2em;
+  padding-inline-start: 2em;
 }
 
 .hr {
@@ -405,8 +440,8 @@ input#input_email.imput {
   height: 1px;
   display: flex;
   margin-top: -53px;
-  margin-left: 32em;
-  width: 46em;
+  margin-left: 26em;
+  width: 37em;
 }
 
 .hr2 {
@@ -423,8 +458,8 @@ input#input_email.imput {
 
 .post-actual {
   margin-top: 2em;
-  margin-right: 4em;
-  margin-left: 30em;
+  margin-right: 2em;
+  margin-left: 23em;
   border-radius: 9px;
   padding-block-start: 13px;
   border: solid 1px #edefb0;
@@ -433,12 +468,11 @@ input#input_email.imput {
   flex-direction: column;
   height: min-content;
   width: -webkit-fill-available;
-
 }
 
 .img-responsive {
   width: 5em;
-  margin-left: -69em;
+  margin-left: -63em;
   margin-top: 5em;
   cursor: pointer;
 }
@@ -457,7 +491,7 @@ input#input_email.imput {
   font-size: 15px;
   height: 5vh;
   outline: none;
-  margin-left: 25em;
+  margin-left: 20em;
   cursor: pointer;
 }
 
@@ -490,12 +524,13 @@ input#input_email.imput {
   border-radius: 17px;
   border: 2px #f7e22d;
   font-family: "Open Sans", sans-serif;
-  width: 9vw;
+  width: 11vw;
   font-size: 15px;
   height: 5vh;
   outline: none;
-  margin-left: -61em;
+  margin-left: -48em;
   cursor: pointer;
+
 
 }
 
@@ -542,16 +577,16 @@ input#input_email.imput {
 }
 
 .icoReacall {
-  margin-right: 41em;
+  margin-right: 32em;
 }
 
 .name1 {
   font-family: "Open Sans", sans-serif;
   cursor: default;
   text-align: initial;
-  margin-left: 8vw;
+  margin-left: 10vw;
   margin-top: -55px;
-  font-size: 18.5px;
+  font-size: 16px;
   color: #080808;
 }
 
@@ -560,9 +595,9 @@ input#input_email.imput {
   cursor: default;
   margin-top: -52px;
   text-align: initial;
-  margin-left: 8vw;
+  margin-left: 10vw;
   margin-right: 2em;
-  font-size: 14px;
+  font-size: 13px;
   color: #747373;
 }
 
@@ -573,75 +608,74 @@ input#input_email.imput {
   text-align: initial;
   margin-left: 3.5vw;
   margin-right: 3vw;
-  font-size: medium;
+  font-size: 14px;
 }
-
-
-
-#contenedor-perfil2 {
-  margin-right: 63em;
-  margin-left: 4em;
-  margin-top: 11em;
-  border: solid 1px #edefb0;
-  background-color: white;
-  height: 11em;
-  border-radius: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 17em;
-
-}
-
-#imgProfile2 {
-
-  width: 7em;
-
-  border-radius: 50%;
-  border: none;
-  background-color: #edefb0;
-  outline: none;
-  border: 1px solid #747373;
-}
-
-#imgProfile2:focus {
-  outline: none;
-}
-
-
-.imgProfileimg2 {
-  margin-top: -7em;
+.likes{
   font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  margin-top:0em;
 }
-
-.nameProfile2 {
-  font-size: 19px;
-  font-family: "Open Sans", sans-serif;
-  display: contents;
-}
-
-.emailProfile2 {
-  font-size: 17px;
-  font-family: "Open Sans", sans-serif;
-}
-
-/* Estilos para sección de perfil*/
-.contenedor-perfil {
+.contenedor-perfil2 {
   margin-right: 15em;
-  margin-left: 17em;
+  margin-left: 4em;
   margin-top: 7em;
   border: solid 1px #edefb0;
   background-color: white;
-  height: 15em;
-  border-radius: 1em;
+  height: 10em;
+  border-radius: 10px;
+  width: 15em;
+}
+
+
+.imgProfile2 {
+  width: 7em;
+  border-radius: 50%;
+  border: 1px solid yellow;
+  background-color: #edefb0;
+  outline: none;
+  border: 3px solid rgb(255 154 2 / 57%);
+  margin-top: -6em;
+  }
+
+
+.nameProfile2 {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-left: 0em;
+
+}
+
+.emailProfile2 {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  display: contents;
+
+}
+
+/* Estilos para sección de perfil*/
+#contenedor-perfil {
+  margin-right: 15em;
+  margin-left: 31em;
+  margin-top: 7em;
+  border: solid 1px #edefb0;
+  background-color: white;
+  height: 18em;
+  border-radius: 10px;
+  width: 28em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .imgProfile {
   width: 10em;
-
   border-radius: 50%;
   border: none;
+  background-color: #edefb0;
   outline: none;
+  border: 3px solid rgb(255 154 2 / 57%);
+  margin-top: -7em;
 }
 
 .imgProfile:focus {
@@ -654,8 +688,11 @@ input#input_email.imput {
 }
 
 .nameProfile {
-  font-size: 20px;
-  font-family: "Open Sans", sans-serif;
+     font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin-left: 0em;
+
 }
 
 .emailProfile {
@@ -699,6 +736,9 @@ input#input_email.imput {
 
 /*Estilos para mensajes de alerta*/
 .error-format {
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+  margin-left: 20em;
   color: salmon;
 }
 
@@ -723,15 +763,14 @@ h5 {
 
 .titulos {
   font-family: "Open Sans", sans-serif;
-  font-size: 22px;
+  font-size: 15px;
   text-align: initial;
   margin-left: 15px;
   margin-top: 15px;
 }
-
 .containerEvent {
   width: 25%;
-  height: 20em;
+  height: 16em;
   display: flex;
   border: solid 1px #f2f3b2;
   margin-top: 2em;
@@ -745,8 +784,10 @@ h5 {
   text-align: initial;
   margin-left: 16px;
   color: #747373c2;
-  margin-top: -16px;
+  margin-top: -9px;
+  font-size: 10px;
 }
+
 
 .btnArt {
   background: #ff9a02ad;
@@ -759,6 +800,7 @@ h5 {
   outline: none;
   display: inline-block;
   cursor: pointer;
+  margin-top:1em;
 }
 
 .btnArt:hover {
@@ -817,26 +859,32 @@ h5 {
   flex-wrap: wrap;
 }
 
-#comments {
-  margin-right: 10em;
-  margin-left: 12em;
-  padding-block-end: 13px;
+.comments {
   border-radius: 10px;
-  padding-block-start: 13px;
   border: solid 1px #edefb0;
   background-color: white;
   display: flex;
   flex-direction: column;
-  font-size: 14px;
+  font-size: 11px;
   margin-block-end: 1em;
   font-family: "Open Sans", sans-serif;
+  text-align: left;
+  padding-inline-start: 1em;
+  padding-inline-end: 1em;
+  width: fit-content;
+  justify-content: center;
+  margin-left: 3em;
+  margin-right: 2em;
+  background: #fdfdf2;
+
 }
 
 .imgPost {
   align-self: center;
-  max-width: -webkit-fill-available;
   display: flex;
-  max-height: fit-content;
+  height: 20em;
+  object-fit: scale-down;
+  width: -webkit-fill-available;
 }
 
 #lista-publicaciones {
@@ -860,7 +908,8 @@ h5 {
     background: #f4f683;
     margin-top: -4px;
     font-family: "Dancing Script", cursive;
-  }
+    margin-left: 0em;
+}
 
   .btn {
     width: 37vw;
@@ -882,8 +931,15 @@ h5 {
   .icono {
     width: 1.3em;
     cursor: pointer;
+    margin-left: -21em;
   }
+  .icono2{
+    width: 1.9em;
+    margin-left: 9em;
+    margin-top: 2em;
+}
 
+  
   .icoArt {
     padding-inline-end: 0.5em;
     cursor: pointer;
@@ -911,6 +967,8 @@ h5 {
     padding-top: 2.5em;
     border-bottom: solid 1px;
     font-family: "Open Sans", sans-serif;
+    font-size: x-large;
+
   }
 
   .input_password {
@@ -918,24 +976,35 @@ h5 {
   }
 
   .logo {
-    width: 3em;
+    width: 4em;
     margin: 0 1em;
+    margin-left: -19em;
+
   }
 
   p {
     font-family: "Open Sans", sans-serif;
+    margin-left: -13em;
+    font-size: 25px;
   }
+  p:hover {
+    filter: red;
+  }
+  
 
   footer {
     margin-top: 3em;
     font-family: "Dancing Script" cursive;
+    margin-left: 1em;
+    font-size: 23px;
+
   }
 
   .container-second-page {
     background-color: #f4f683;
     margin-top: -4px;
     padding: 7px;
-    height: 2em;
+    height: 3em;
   }
 
   .icons-General {
@@ -944,9 +1013,10 @@ h5 {
 
   .logo-second-page {
     display: inline-block;
-    margin: 0;
-    font-size: 22px;
+    font-size: 50px;
+
   }
+
 
   #input_search {
     background: rgba(255, 154, 2, 0.81);
@@ -973,40 +1043,52 @@ h5 {
 
   /*Estilos para post*/
   .img-responsive {
-    width: 3em;
-    margin-left: -7em;
+    width: 7em;
+    margin-left: -49em;
+    margin-top: 9em;
+  
   }
-
   .img-responsive:hover {
     filter: opacity(0.5);
   }
 
   .formulario-post {
-    margin-top: 3em;
-    margin-right: 1.5em;
-    margin-left: 1.5em;
-    padding-block-end: 13px;
-    padding-block-start: 5px;
+    margin-left: 2em;
+    margin-top: -16em;
+    border: solid 1px #edefb0;
+    background-color: white;
+    height: 22em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 44em;
+
   }
 
   .textarea {
-
-    width: 13em;
-    margin-left: 0;
-    height: 12px;
+    width: 27em;
+    margin-left: 15em;
+    height: 23px;
     display: inline-block;
-    margin-top: 2em;
+    margin-top: 13em;
   }
 
   .hr {
     margin-left: 3em;
-    width: 15em;
+    width: 41em;
+    margin-top: -4em;
+    margin-block-end: 2em
   }
 
   .botones-post {
-    width: 18vh;
-    margin-left: 1em;
+    width: 17vh;
+    margin-left: 0em;
     cursor: pointer;
+    margin-top: -3em;
+    height: 2em;
+    font-size: 20px;
+
   }
 
   .botones-post:hover {
@@ -1016,18 +1098,19 @@ h5 {
   .post-actual {
     margin-top: 1em;
     margin-right: 1.5em;
-    margin-left: 1.5em;
+    margin-left: 2.5em;
     display: flex;
     flex-direction: column;
+    width: 43em;
+    
   }
 
   .icoperfil2 {
-    width: 3em;
+    width: 5em;
     margin-left: 12px;
     margin-top: 0em;
     display: flex;
   }
-
   .icoperfil {
     width: 4em;
     margin-left: 154px;
@@ -1037,172 +1120,393 @@ h5 {
 
 
   .post2 {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: -46px;
-    margin-left: 66px;
+    margin-left: 106px;
     display: flex;
   }
 
   .post3 {
     font-family: "Open Sans", sans-serif;
     cursor: default;
-    margin-top: -21px;
+    margin-top: -27px;
     text-align: initial;
     margin-left: 3.5vw;
     margin-right: 3vw;
-    font-size: 15px;
-  }
-
-  .name1 {
-    font-size: 14px;
-    margin-top: -45px;
-    margin-left: 66px;
-
-  }
-
-  .icoReacall {
-    display: flex;
-    margin-left: 15px;
-  }
-
-  .hr2 {
-    border: 0 none #eeeaea;
-    border-top: 1px solid #e4e1e1;
-    height: 1px;
-    margin: 5px 0;
-    display: block;
-    clear: both;
-    margin-left: 3em;
-    margin-right: 3em;
-    margin-top: 23px;
-  }
-
-
-  .nameProfile {
-    font-size: 20px;
-    font-family: "Open Sans", sans-serif;
-    background: none;
-  }
-
-  #contenedor-perfil {
-    margin-top: 7em;
-    border: solid 1px #edefb0;
-    background-color: white;
-    height: 15em;
-    border-radius: 1em;
-    width: 20em;
-    display: flex;
-    margin-left: 56px;
-    justify-content: center;
-
-  }
-
-  .icoLupa {
-    width: 1em;
-    margin-inline-start: -133px;
-  }
-
-  .subtitulos {
-    font-family: "Open Sans", sans-serif;
-    text-align: initial;
-    margin-left: 16px;
-    color: #747373c2;
-    margin-top: -11px;
-    font-size: 11px;
-  }
-
-
-  .containerEvent {
-    width: 44%;
-    height: 12em;
-    display: flex;
-    border: solid 1px #f2f3b2;
-    margin-top: 2em;
-    border-radius: 4px;
-    background-color: white;
-    flex-direction: column;
-  }
-
-  .titulos {
-    background: none;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    text-align: initial;
-    margin-left: 8px;
-    margin-top: 2px;
-
-  }
-
-  .img-events {
-    width: -webkit-fill-available;
-    height: 73px;
-  }
-
-  .btnArt {
-    background: #ff9a02ad;
-    border-radius: 17px;
-    border: 2px #f7e22d;
-    font-family: "Open Sans", sans-serif;
-    width: 24vw;
-    font-size: 15px;
-    height: 5vh;
-    display: inline-block;
-    margin-top: 14px;
-    cursor: pointer;
-  }
-
-  .botArt:hover {
-    filter: opacity(0.5);
-  }
-
-  .btnArt2 {
-    background: #ff9a02ad;
-    border-radius: 17px;
-    border: 2px #f7e22d;
-    font-family: "Open Sans", sans-serif;
-    width: 24vw;
-    font-size: 15px;
-    height: 5vh;
-    display: inline-block;
-    margin-top: 13px;
-    cursor: pointer;
-  }
-
-  .botArt2:hover {
-    filter: opacity(0.5);
-  }
-
-  .btnArt3 {
-    background: #ff9a02ad;
-    border-radius: 17px;
-    border: 2px #f7e22d;
-    font-family: "Open Sans", sans-serif;
-    width: 24vw;
-    font-size: 15px;
-    height: 5vh;
-    display: inline-block;
-    margin-top: -6px;
-    cursor: pointer;
-  }
-
-  .botArt3:hover {
-    filter: opacity(0.5);
-  }
-
-  .btnArt4 {
-    background: #ff9a02ad;
-    border-radius: 17px;
-    border: 2px #f7e22d;
-    font-family: "Open Sans", sans-serif;
-    width: 24vw;
-    font-size: 15px;
-    height: 5vh;
-    display: inline-block;
-    margin-top: 12px;
-    cursor: pointer;
-  }
-
-  .botArt4:hover {
-    filter: opacity(0.5);
-  }
+    font-size: 23px;
 }
+
+
+.name1 {
+  font-size: 22px;
+  margin-top: -70px;
+  margin-left: 108px;
+}
+
+.icoReacall {
+  display: flex;
+    margin-left: 43px;
+}
+
+.hr2 {
+  border: 0 none #eeeaea;
+  border-top: 1px solid #e4e1e1;
+  height: 1px;
+  margin: 5px 0;
+  display: block;
+  clear: both;
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-top: 23px;
+}
+
+
+.nameProfile {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  background: none;
+}
+
+
+.icoLupa {
+  width: 1em;
+  margin-inline-start: -133px;
+}
+
+.subtitulos {
+  background: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  text-align: initial;
+  margin-left: 8px;
+  margin-top: -17px;
+
+}
+
+
+.containerEvent {
+  width: 42%;
+  height: 16em;
+  display: flex;
+  border: solid 1px #f2f3b2;
+  margin-top: 2em;
+  border-radius: 4px;
+  background-color: white;
+  flex-direction: column
+}
+
+.titulos {
+  background: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  text-align: initial;
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.img-events {
+  width: -webkit-fill-available;
+  height: 120px;
+}
+
+.btnArt {
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 27vw;
+  font-size: 17px;
+  height: 3vh;
+  display: inline-block;
+  margin-top: 0em;
+  cursor: pointer;;
+}
+
+.botArt:hover {
+  filter: opacity(0.5);
+}
+
+.btnArt2 {
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 24vw;
+  font-size: 15px;
+  height: 5vh;
+  display: inline-block;
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+.botArt2:hover {
+  filter: opacity(0.5);
+}
+
+.btnArt3 {
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 24vw;
+  font-size: 15px;
+  height: 5vh;
+  display: inline-block;
+  margin-top: -6px;
+  cursor: pointer;
+}
+
+.botArt3:hover {
+  filter: opacity(0.5);
+}
+
+.btnArt4 {
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 24vw;
+  font-size: 15px;
+  height: 5vh;
+  display: inline-block;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.botArt4:hover {
+  filter: opacity(0.5);
+}
+
+.btnResgitro {
+  margin: 0em;
+  margin-top: 2em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 8em;
+  font-size: 27px;
+  height: 5vh;
+  outline: none;
+  cursor: pointer;
+  margin-left: -4vw;
+
+
+}
+
+.btnRegistro:hover:hover {
+  filter: opacity(0.5);
+}
+
+.btnComenzar {
+margin: 0em;
+margin-top: 1em;
+background: #ff9a02ad;
+border-radius: 17px;
+border: 2px #f7e22d;
+font-family: "Open Sans", sans-serif;
+width: 8em;
+font-size: 26px;
+height: 5vh;
+outline: none;
+cursor: pointer;
+cursor: pointer;
+margin-left: -13em;
+
+}
+.btnComenzar:hover {
+filter: opacity(0.5);
+}
+
+.btnx{
+margin: 0em;
+  margin-top: 2em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 8em;
+  font-size: 26px;
+  height: 5vh;
+  outline: none;
+  cursor: pointer;
+  margin-left: -1em;
+
+}
+.btnx:hover {
+filter: opacity(0.5);
+}
+
+.hsecond {
+font-family: "Open Sans", sans-serif;
+color: #191818db;
+margin-left: 1em;
+width: 2;
+font-size: 26px;
+margin-top: 4em;
+}
+
+.logo2 {
+width: 4em;
+margin-left: -1em;
+margin-top: 3em;
+
+}
+
+.input2 {
+width: 57vw;
+border: none;
+padding-top: 2.5em;
+border-bottom: solid 1px;
+font-family: "Open Sans", sans-serif;
+font-size: x-large;
+cursor: pointer;
+margin-left: 8em;
+margin-top: -4em;
+
+}
+
+.par2 {
+font-family: "Open Sans", sans-serif;
+margin-left: -1em;
+font-size: 25px;
+margin-top: 2em;
+
+}
+.btnR {
+margin: 0em;
+margin-top: 2em;
+background: #ff9a02ad;
+border-radius: 17px;
+border: 2px #f7e22d;
+font-family: "Open Sans", sans-serif;
+width: 8em;
+font-size: 3vh;
+height: 5vh;
+outline: none;
+cursor: pointer;
+margin-left: 11em;
+font-size: 26px;
+}
+
+.btnR:hover {
+filter: opacity(0.5);
+}
+
+.f2{
+font-size: 20px;
+margin-top: 2vh;
+font-family: "Dancing Script", cursive;
+display: flex;
+flex-direction: column;
+margin-left: 0em;
+font-size: 23px;
+
+}
+
+.error-format {
+font-family: "Open Sans", sans-serif;;
+color: salmon;
+margin-left: 13em;
+font-size: 25px;
+}
+
+.error2 {
+font-family: "Open Sans", sans-serif;;
+color: salmon;
+margin-left: -26em;
+font-size: 25px;
+}
+.header-image-desktop2 {
+display: none;
+}
+
+
+.imgProfile2 {
+  width: 6em;
+  border-radius: 50%;
+  background-color: #edefb0;
+  outline: none;
+  border: 3px solid rgb(255 154 2 / 57%);
+  margin-top: -4em;
+  margin-left: 12em;
+}
+
+.nameProfile2 {
+margin-top: -1em;
+font-size: 20px;
+font-family: "Open Sans", sans-serif;
+margin-left: -1em;
+background: none;
+}
+
+.contenedor-perfil2{
+  margin-top: 3em;
+  width: 25em;
+  height: 17em;
+  margin-left: 11em;
+  background-color: #fdfdf2;
+  border: none;;
+}
+
+.emailProfile2 {
+font-size: 17px;
+font-family: "Open Sans", sans-serif;
+padding-inline-start: -44em;
+margin-left: 4em;
+}
+.imgPost{
+align-self: center;
+  display: flex;
+  height: 23em;
+  width: -webkit-fill-available;
+}
+
+.btnProfile2 {
+
+  margin-top: 1em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 22vw;
+  font-size: 17px;
+  height: 4vh;
+  outline: none;
+  margin-left: -894px;
+  cursor: pointer;
+}
+
+.btnPor{
+  margin-top: 22em;
+  margin-left: 18em;
+}
+
+
+.comments {
+  border-radius: 10px;
+  border: solid 1px #edefb0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-block-end: 1em;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  padding-inline-start: 1em;
+  padding-inline-end: 1em;
+  width: fit-content;
+  justify-content: center;
+  margin-left: 3em;
+  margin-right: 2em;
+  background: #fdfdf2;
+
+  margin-top: 1em;
+}
+.likes {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  margin-top: 0em;
+  margin-left: -1em;
+}
+  }

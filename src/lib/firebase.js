@@ -47,9 +47,9 @@ export const ingreso = () => {
             const errorCode = error.code;
 
             if (errorCode === 'auth/wrong-password') {
-                showErrorMessage.innerHTML = '<p>Contraseña incorrecta, intente nuevamente.</p>';
+                showErrorMessage.innerHTML = '<p class = "error2" >Contraseña incorrecta, intente nuevamente.</p>';
             } else {
-                showErrorMessage.innerHTML = '<p>Correo inválido.</p>';
+                showErrorMessage.innerHTML = '<p class = "error2" >Correo inválido.</p>';
             }
         });
 };
@@ -134,7 +134,7 @@ export const profile2 = () => {
      <br>
      <br>
        
-      <p class = 'imgProfileimg2'> <img class = 'imgProfile' src='${user.photoURL ? user.photoURL : 'img/artista2.png'}'></p>
+      <p class = 'imgProfileimg2'> <img class = 'imgProfile2' src='${user.photoURL ? user.photoURL : 'img/artista2.png'}'></p>
       <h1 class = 'nameProfile2' >${user.displayName ? user.displayName : 'Art Space Lover\'s'}</h1>
         <p class = 'emailProfile2'>${user.email}</p>
         </div>
@@ -299,6 +299,7 @@ export const containerPost = () => {
             const showComments = (comment, postId) => {
                 const commentsInPostElement = document.querySelector(`.post-actual[data-id="${postId}"] #comments`);
                 const commentElement = document.createElement('div');
+                commentElement.classList.add('comments');
                 commentElement.innerText = comment.texto;
                 commentsInPostElement.appendChild(commentElement);
             };

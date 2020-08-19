@@ -23,10 +23,6 @@ export const routeHome = () => {
           <div class = "container_left">
           
             <h1 class = "logo-second-page" id="artSpace" >Art Space</h1>
-            <input  type="search" id="input_search"  placeholder="Buscar en Art Space" >
-            <div class = "lupa">
-              <img class = "icoLupa" id= "icoLupa"  src="img/buscar_icono.png" alt="">
-            </div>
           </div>
           <div class = "icons-General">
             <img class = "icoArt" id= "icoArt"  src="img/articulo_icono.png" alt="">
@@ -37,9 +33,11 @@ export const routeHome = () => {
         </div>
     </header>
     <main>
+    
     <div id="ingreso-post">
+
     <main id ="contenedor-perfil2" class = "contenedor-perfil2" ></main>
-    <button class="btnProfile2" id= "closeProfile">Cerrar Sesión</button>
+  
      <form class="formulario-post">
     
     
@@ -49,6 +47,9 @@ export const routeHome = () => {
            placeholder="¡Realiza una publicación!"></textarea>
         
        </div>
+       <div class = "btnPor">
+    <button class="btnProfile2" id= "closeProfile">Cerrar Sesión</button>
+    </div>
        
        <div class="container">
        <div class="row">
