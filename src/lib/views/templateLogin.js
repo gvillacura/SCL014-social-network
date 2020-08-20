@@ -39,35 +39,44 @@ const loadLoginFunctions = () => {
 
 export const routeLogin = () => {
     const viewLogin = `
-<header>
- <img class="header-image" src="img/img-cel.png">
- <img class="header-image-desktop" src="./img/apertura1.gif">
- <h1>Art Space</h1>
-</header>
 
-<section class="input_section">
-<div id = "error-message" class = "error-format"></div>
-  <form>
-      <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
-      <input class="input" type="email" autocomplete="email" placeholder="Correo electrónico" id="input_email"> <br>
-      <img class="icono" src="img/contraseña_icono.png" alt="">
-      <input class="input" type="password" autocomplete="current-password" placeholder="Contraseña" id="input_password" class="input_password">
-      <p id="errorMensaje" class="errorMensaje">¿Olvidó su contraseña?</p>
-      <button class="btnComenzar" id="home_btn" type = "button"> Comenzar</button>
-  </form>
-</section>
+    <header>
+        <img class="header-image" src="img/img-cel.png">
+        <img class="header-image-desktop" src="./img/apertura1.gif">
+    </header>
+<div class = "login">
+    <section class="input_section">
+        <h1>Art Space</h1>
+        <div id="error-message" class="error-format"></div>
+        <form>
+            <div>
+                <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
+                <input class="input" type="email" autocomplete="email" placeholder="Correo electrónico"
+                    id="input_email">
+            </div>
+            <div>
+                <img class="icono" src="img/contraseña_icono.png" alt="">
+                <input class="input" type="password" autocomplete="current-password" placeholder="Contraseña"
+                    id="input_password" class="input_password">
+            </div>
+            <p id="errorMensaje" class="errorMensaje">¿Olvidó su contraseña?</p>
+            <button class="btnComenzar" id="home_btn" type="button"> Comenzar</button>
+        </form>
 
-<section class = 'loginSecons'>
- <p  class = "cont_logo">Ingresa con </p>
- <div class = "cont_logo">
-   <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
- </div>
-<button class="btnResgitro" id="registration-btn">Registrarse</button> 
-</section>
-<footer>
-<h5>Contacto: artspacechile@gmail.com</h5>
-&copy;2020 by Fabiane, Geraldine & Lady
+        <section class='loginSecons'>
+            <p class="cont_logo">Ingresa con </p>
+            <div class="cont_logo">
+                <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
+            </div>
+            <button class="btnResgitro" id="registration-btn">Registrarse</button>
+        </section>
+    </section>
+    <footer>
+    <h5>Contacto: artspacechile@gmail.com</h5>
+    &copy;2020 by Fabiane, Geraldine & Lady
+    </footer>
 </div>
+
  `;
     window.location.hash = '#/inicio-sesion';
     document.getElementById('root').innerHTML = viewLogin;

@@ -1,15 +1,95 @@
 /* Estilos generales para versión desktop*/
 body {
   margin: 0;
-  text-align: center;
-  background-color: #f2f5821a;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+
+#root {
+  display: flex;
+}
+
+header {
+  flex: 0 0 25%;
+  height: 100vh;
+}
+
+.login {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .input_section {
   display: flex;
   flex-direction: column;
-  margin-left: 20em;
-  margin-top: -1em;
+  align-items: center;
+}
+
+/*Estilos logo Art Space*/
+.input_section h1 {
+  font-size: 3.5rem;
+  font-family: "Dancing Script", cursive;
+}
+
+/*Estilos para mensajes de alerta*/
+.error-format {
+  color: salmon;
+}
+
+.input_section>form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_section>form>div {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/*Estilos para inputs*/
+.input {
+  border: none;
+  border-bottom: solid 1px;
+  font-family: "Open Sans", sans-serif;
+  width: 22vw;
+  outline: none;
+  background: transparent !important;
+  margin-left: 10px;
+}
+
+input:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.errorMensaje {
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.errorMensaje:hover {
+  color: salmon;
+}
+
+.btnComenzar {
+  margin-top: 1em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  width: 13vw;
+  font-size: 3vh;
+  height: 6vh;
+  outline: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+.btnComenzar:hover {
+  filter: opacity(0.5);
 }
 
 .input_section2 {
@@ -23,15 +103,17 @@ body {
   align-items: center;
 }
 
-p {
-  font-family: "Open Sans", sans-serif;
-  cursor: default;
-
-}
-
-.cont_logo {
-  display: inline-block;
-  margin-left: 19em;
+.btnResgitro {
+  margin: 0em;
+  margin-top: 1em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  width: 13vw;
+  font-size: 3vh;
+  height: 2.5rem;
+  outline: none;
+  cursor: pointer;
 }
 
 .par2 {
@@ -53,12 +135,6 @@ h4 {
 
 .header-image-desktop {
   filter: opacity(0.7);
-  height: 100%;
-  left: -55px;
-  top: 0px;
-  visibility: visible;
-  min-height: 100%;
-  position: fixed;
 }
 
 .header-image-desktop2 {
@@ -73,15 +149,7 @@ h4 {
   float: right;
 }
 
-/*Estilos logo Art Space*/
-h1 {
-  font-size: 4vw;
-  font-family: "Dancing Script", cursive;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 7em;
-}
+
 
 .artSecond {
   font-size: 4vw;
@@ -92,20 +160,7 @@ h1 {
   margin-left: 6em;
 }
 
-/*Estilos para inputs*/
-.input {
-  border: none;
-  border-bottom: solid 1px;
-  font-family: "Open Sans", sans-serif;
-  padding-top: 3em;
-  width: 22vw;
-  outline: none;
-  background: transparent !important;
-}
 
-input:-webkit-autofill {
-  transition: background-color 5000s ease-in-out 0s;
-}
 
 .input2 {
   border: none;
@@ -185,43 +240,10 @@ input#input_email.imput {
   filter: opacity(0.5);
 }
 
-.btnResgitro {
-  margin: 0em;
-  margin-top: 2em;
-  background: #ff9a02ad;
-  border-radius: 17px;
-  border: 2px #f7e22d;
-  font-family: "Open Sans", sans-serif;
-  width: 13vw;
-  font-size: 3vh;
-  height: 6vh;
-  outline: none;
-  cursor: pointer;
-  margin-left: 308px;
-}
-
 .btnRegistro:hover {
   filter: opacity(0.5);
 }
 
-.btnComenzar {
-  margin: 0em;
-  margin-top: 1em;
-  background: #ff9a02ad;
-  border-radius: 17px;
-  border: 2px #f7e22d;
-  font-family: "Open Sans", sans-serif;
-  width: 13vw;
-  font-size: 3vh;
-  height: 6vh;
-  outline: none;
-  cursor: pointer;
-  cursor: pointer;
-}
-
-.btnComenzar:hover {
-  filter: opacity(0.5);
-}
 
 .btnR {
   margin: 0em;
@@ -276,11 +298,12 @@ input#input_email.imput {
 
 footer {
   font-size: 20px;
-  margin-top: 4vh;
   font-family: "Dancing Script", cursive;
   display: flex;
   flex-direction: column;
-  margin-left: 16em;
+  align-items: center;
+  height: 6rem;
+  margin-top: auto;
 }
 
 .f2 {
@@ -293,7 +316,7 @@ footer {
 }
 
 .icono {
-  width: 1.3em;
+  width: 1.5rem;
 }
 
 .icono2 {
@@ -303,9 +326,6 @@ footer {
 
 }
 
-.errorMensaje:hover {
-  color: salmon;
-}
 
 h4 {
   font-family: "Open Sans", sans-serif;
@@ -389,16 +409,6 @@ input#input_email.imput {
   flex-direction: row;
   justify-content: center;
   width: 65em;
-}
-
-.error2 {
-  font-family: "Open Sans", sans-serif;
-  ;
-  color: salmon;
-  margin-left: -17em;
-  font-size: 17px;
-  cursor: point;
-
 }
 
 .textarea {
@@ -738,14 +748,6 @@ input#input_email.imput {
   visibility: hidden;
 }
 
-/*Estilos para mensajes de alerta*/
-.error-format {
-  font-family: "Open Sans", sans-serif;
-  cursor: default;
-  margin-left: 20em;
-  color: salmon;
-}
-
 .recover-password {
   color: #1f5873;
 }
@@ -916,7 +918,7 @@ h5 {
   height: 100%;
 }
 
-@media (max-width: 801px) {
+@media (max-width: 768px) {
   body {
     margin-left: 0;
   }
