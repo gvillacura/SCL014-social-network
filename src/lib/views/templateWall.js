@@ -13,70 +13,49 @@ const loadHomeFunctions = () => {
 
 export const routeHome = () => {
     const viewHomePage = ` 
-   <div>
-   <header>
-    <script src="js/imagenes.js"></script>
+    <div class = "wall-container">
+    <header class = "header-wall">
+        <script src="js/imagenes.js"></script>
         <img class="header-image" src="img/img-cel.png" alt="">
         <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
-        <div class = "container-second-page">
-        
-          <div class = "container_left">
-          
-            <h1 class = "logo-second-page" id="artSpace" >Art Space</h1>
-          </div>
-          <div class = "icons-General">
-            <img class = "icoArt" id= "icoArt"  src="img/articulo_icono.png" alt="">
-            <a href="https://calendar.google.com/calendar/b/4/r?tab=mc" target="_blank">
-            <img src="img/calendario_icono.png" class = "icoCalen"></a>
-            <img class = "icoUsu" src="img/usuario_icono.png" alt=""  id='profile'>
-          </div> 
+        <div class="container-second-page">
+
+            <div class="container_left">
+                <h1 class="logo-second-page" id="artSpace">Art Space</h1>
+            </div>
+            <div class="icons-General">
+                <img class="icoArt" id="icoArt" src="img/articulo_icono.png" alt="">
+                <a href="https://calendar.google.com/calendar/b/4/r?tab=mc" target="_blank">
+                    <img src="img/calendario_icono.png" class="icoCalen"></a>
+                <img class="icoUsu" src="img/usuario_icono.png" alt="" id='profile'>
+            </div>
         </div>
     </header>
     <main>
-    
-    <div id="ingreso-post">
-
-    <main id ="contenedor-perfil2" class = "contenedor-perfil2" ></main>
-  
-     <form class="formulario-post">
-  
-       <div>
-        
-         <textarea  type="search"class="textarea" name="post" id="post"
-           placeholder="¡Realiza una publicación!"></textarea>
-        
-       </div>
-       
-       <div class="container">
-       <div class="row">
-       <div class="col-sm-8">
-       </div>
-       <div class="col-sm-4">
-         <form id="form-imagenes">
-           <label class="btn-file"> 
-           <div class="prueba">
-              <input type="file" name="fichero" value="" id="fichero" class="hidden">
-              <img src="img/img1.png" id="output" class="img-responsive" alt="descargar">
-              </div>
-           </label>
-         </form>
-       </div>
-       </div>
-       </div>
-       <hr class='hr'>
-       
-         <button class="botones-post" type = "button" id="publicar">Publicar</button>
-        
-    </form>
-    </div>
-    
-    <div id="lista-publicaciones"></div>
-  </main>
-    </div> 
+        <div id="contenedor-perfil2" class="contenedor-perfil2"></div>
+        <div id="ingreso-post">
+            <form class="formulario-post">
+                <div>
+                    <textarea type="search" class="textarea" name="post" id="post"
+                        placeholder="¡Realiza una publicación!"></textarea>
+                        <div class="container">
+                        <label for = "file-input">
+                            <img src="img/img1.png" id="fichero" class="img-responsive" alt="descargar">
+                        </label>
+                        <input type="file" name="fichero" id="file-input" class="hidden">
+                    </div>
+                </div>
+                <hr class='hr'>
+                <button class="botones-post" type="button" id="publicar">Publicar</button>
+            </form>
+        <div id="lista-publicaciones"></div>
+        </div>
+    </main>
     <footer>
-    <h5> Contacto: artspacechile@gmail.com</h5>
-    &copy;2020 by Fabiane, Geraldine & Lady
-   </footer>
+        <h5> Contacto: artspacechile@gmail.com</h5>
+        &copy;2020 by Fabiane, Geraldine & Lady
+    </footer>
+</div>
     `;
     window.location.hash = '#/muro';
     document.getElementById('root').innerHTML = viewHomePage;
@@ -86,7 +65,7 @@ export const routeHome = () => {
 
     containerPost();
 
-    const valueFichero = document.querySelector('#fichero');
+    const valueFichero = document.querySelector('#file-input');
     const btnPublicar = document.querySelector('#publicar');
     btnPublicar.addEventListener('click', () => {
         const archivoImg = valueFichero.files[0];
@@ -99,8 +78,8 @@ export const routeHome = () => {
         createPost(post);
     });
 
+    const output = document.querySelector('#fichero');
     valueFichero.addEventListener('change', () => {
-        const output = document.getElementById('output');
         output.src = URL.createObjectURL(valueFichero.files[0]);
     });
 };

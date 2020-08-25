@@ -68,7 +68,7 @@ export const routeLogin = () => {
             <div class="cont_logo">
                 <img src="img/google_logo.png" id="google" class="logo" alt="Logo google">
             </div>
-            <button class="btnResgitro" id="registration-btn">Registrarse</button>
+            <button class="btnRegistro" id="registration-btn">Registrarse</button>
         </section>
     </section>
     <footer>

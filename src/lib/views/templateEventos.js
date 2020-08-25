@@ -1,25 +1,23 @@
 export const routeEvents = () => {
     const viewEventsPage = ` 
     <div>
-    <header>
-        <img class="header-image" src="img/img-cel.png" alt="">
-        <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
-        <div class = "container-second-page">
-          <div class = "container_left">
-            <h1 class = "logo-second-page" id="artSpace2" >Art Space</h1>
-            <input type="search" id="input_search" placeholder="Buscar en Art Space">
-            <div class = "lupa">
-            <img class = "icoLupa" id= "icoLupa"  src="img/buscar_icono.png" alt="">
-          </div>
-          </div>
-          <div class = "icons-General">
-            <img class = "icoArt" src="img/articulo_icono.png" alt="">
-            <a href="https://calendar.google.com/calendar/b/4/r?tab=mc" target="_blank"><img
-            src="img/calendario_icono.png" class = "icoCalen"></a>
-            <img class = "icoUsu" src="img/usuario_icono.png" alt="" id="profile">
-          </div> 
-       
-    </header>
+    <header class = "header-wall">
+    <script src="js/imagenes.js"></script>
+    <img class="header-image" src="img/img-cel.png" alt="">
+    <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
+    <div class="container-second-page">
+
+        <div class="container_left">
+            <h1 class="logo-second-page" id="artSpace">Art Space</h1>
+        </div>
+        <div class="icons-General">
+            <img class="icoArt" id="icoArt" src="img/articulo_icono.png" alt="">
+            <a href="https://calendar.google.com/calendar/b/4/r?tab=mc" target="_blank">
+                <img src="img/calendario_icono.png" class="icoCalen"></a>
+            <img class="icoUsu" src="img/usuario_icono.png" alt="" id='profile'>
+        </div>
+    </div>
+</header>
     <div class= 'article'>
     <section class= 'containerEvent'>
     
@@ -156,10 +154,8 @@ export const routeEvents = () => {
     document.getElementById('root').innerHTML = viewEventsPage;
     document.getElementById('artSpace2').addEventListener('click', () => {
         window.location.hash = '#/muro';
-    })
+    });
     document.getElementById('profile').addEventListener('click', () => {
         window.location.hash = '#/perfil';
     });
-       
-   
 };

@@ -42,46 +42,49 @@ const loadRegistryFunctions = () => {
 
 export const routeRegistry = () => {
     const viewRegistration = ` 
-      <div id='login' class='login'>
-        <header>
-          <img class="header-image" src="img/img-cel.png">
-          <img class="header-image-desktop" src="./img/apertura1.gif">
-          <h1>Art Space</h1>
-        </header>
-
-        <div id = "error-message" class = "error-format"></div>
-        <div class="input_section">
-          <div>
+    <header>
+    <img class="header-image" src="img/img-cel.png">
+    <img class="header-image-desktop" src="./img/apertura1.gif">
+</header>
+<div id='login' class='login'>
+    <h1>Art Space</h1>
+    <div id="error-message" class="error-format"></div>
+    <div class="input_section input_section_registry">
+    <form>
+        <div>
             <img src="img/usuario_icono.png" class="icono" alt="Icono usuario">
             <input class="input" type="text" placeholder="Nombre" id="input_name"> <br>
-          </div>
-          <div>
+        </div>
+        <div>
             <img src="img/direccion_icono.png" class="icono" alt="Icono dirección">
             <input class="input" type="text" placeholder="Región" id="input_address"> <br>
-          </div>
-          <div>
+        </div>
+        <div>
             <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
             <input class="input" type="email" placeholder="Correo electrónico" id="input_email2"> <br>
-          </div>
-          <div>
-            <img class="icono" src="img/contraseña_icono.png" alt="">
-            <input class="input" type="password" placeholder="Contraseña" id="input_password2" class="input_password"><br>
-          </div>
-          <div>
-            <img src="img/confirmar_icono.png" class="icono" alt="Icono confirmar"></img>
-            <input class="input" type="password" placeholder="Confirmar contraseña" id="password_confirm" class="input_password">
-          </div>
         </div>
-    
         <div>
-          <button class="btnx" id="save-registration-btn">Registrar</button> <br>
-          <button class="btnx" id="loginBtn">Inicio</button>
+            <img class="icono" src="img/contraseña_icono.png" alt="">
+            <input class="input" type="password" placeholder="Contraseña" id="input_password2"
+                class="input_password"><br>
         </div>
-        <footer>
+        <div>
+            <img src="img/confirmar_icono.png" class="icono" alt="Icono confirmar"></img>
+            <input class="input" type="password" placeholder="Confirmar contraseña" id="password_confirm"
+                class="input_password">
+        </div>
+    <form>
+    </div>
+
+    <div>
+        <button class="btnx" id="save-registration-btn">Registrar</button> <br>
+        <button class="btnx" id="loginBtn">Inicio</button>
+    </div>
+    <footer>
         <h5>Contacto: artspacechile@gmail.com</h5>
         &copy;2020 by Fabiane, Geraldine & Lady
-       </footer>
-      </div>`;
+    </footer>
+</div>`;
 
     // Función que lleva desde pagina de registrarse a primera pagina
     window.location.hash = '#/registro';

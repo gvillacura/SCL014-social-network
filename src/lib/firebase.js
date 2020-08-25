@@ -128,17 +128,14 @@ export const profile2 = () => {
             showData.innerHTML = '';
             showData.innerHTML += `
     
-    <div>
-     <br>
-     <br>
-       
-      <p class = 'imgProfileimg2'> <img class = 'imgProfile2' src='${user.photoURL ? user.photoURL : 'img/artista2.png'}'></p>
+      
+      <div class = 'imgProfileimg2'> <img class = 'imgProfile2' src='${user.photoURL ? user.photoURL : 'img/artista2.png'}'></div>
       <h1 class = 'nameProfile2' >${user.displayName ? user.displayName : 'Art Space Lover\'s'}</h1>
         <p class = 'emailProfile2'>${user.email}</p>
         <div class = "btnPor">
         <button class="btnProfile2" id= "closeProfile">Cerrar Sesión</button>
         </div>
-        </div>
+        
              
          `;
         }
@@ -191,7 +188,7 @@ export const createPost = async (post) => {
     })
         .then(() => {
             document.querySelector('#post').value = '';
-            document.querySelector('#output').src = 'img/img1.png';
+            document.querySelector('#fichero').src = 'img/img1.png';
         })
         .catch((error) => {
             console.error('Error writing document: ', error);
@@ -276,24 +273,31 @@ export const containerPost = () => {
             const postPart = document.createElement('div');
             postPart.classList.add('post-actual');
             postPart.innerHTML = `  
-           
-          <img class = "icoperfil2" src='${data.foto ? data.foto : 'img/artista2.png'}'>
-            <p class= "name1" > ${data.nombre ? data.nombre : data.email}</p><br><br>
-            <p class= "post2"> ${data.fecha} </p><br><br>
+          <div class="user-post-data"> 
+            <img class = "icoperfil2" src='${data.foto ? data.foto : 'img/artista2.png'}'>
+            <div>
+                <p class= "name1" > ${data.nombre ? data.nombre : data.email}</p>
+                <p class= "post2"> ${data.fecha} </p>
+            </div>
+          </div>
+          <div>
             <p class= "post3"> ${data.publicacion} </p>
             <img class = "imgPost" src='${data.imagenPublicacion}'>
             <hr class= "hr2">
-            
-             <div class = icoReacall>
-
-            <img id = "icoReac" class = "icoReac2 btnLike" src="img/reac3.png" alt=""> 
-            <img class = "icoReac btnComment" src="img/char3.png" alt="">
-            <p class="likes"> <span class="likes-counter"> </span> Me Gusta </p>
+          </div>
+          <div class = icoReacall>
+            <div>
+                <img id = "icoReac" class = "icoReac2 btnLike" src="img/reac3.png" alt=""> 
+                <img class = "icoReac btnComment" src="img/char3.png" alt="">
             </div>
-            <div id="make_comments">
-            </div>
-            <div id="comments">
-            </div>
+             <div>
+                <p class="likes"> <span class="likes-counter"> </span> Me Gusta </p>
+             </div>
+          </div>
+          <div id="make_comments">
+          </div>
+          <div id="comments">
+          </div>
             `;
             const dataPost = {
                 postId: post.id,
@@ -326,7 +330,7 @@ export const containerPost = () => {
         const btnComments = document.querySelectorAll('.btnComment');
         btnComments.forEach((btnComment) => {
             btnComment.addEventListener('click', (e) => {
-                const newComment = e.target.parentElement.nextElementSibling;
+                const newComment = e.target.parentElement.parentElement.nextElementSibling;
                 newComment.innerHTML = ` 
                     <button type = "button" class ="close-btn" id="close-post"> 
                     <img src="./img/icons8-close-window-48.png"> </button>
@@ -360,7 +364,7 @@ export const containerPost = () => {
         btnLikes.forEach((btnLike) => {
             btnLike.addEventListener('click', (event) => {
                 const data = {
-                    postId: event.target.parentElement.parentElement.dataset.id,
+                    postId: event.target.parentElement.parentElement.parentElement.dataset.id,
                 };
                 likePost(data);
             });
