@@ -1,55 +1,59 @@
-import {
-    inscription,
-} from '../firebase.js';
+import { inscription } from "../firebase.js";
 
 const loadRegistryFunctions = () => {
-    const btnLogin = document.querySelector('#loginBtn');
-    btnLogin.addEventListener('click', () => {
-        window.location.hash = '#/';
-    });
+  const btnLogin = document.querySelector("#loginBtn");
+  btnLogin.addEventListener("click", () => {
+    window.location.hash = "#/";
+  });
 
-    function preinscription() {
-        const name = document.getElementById('input_name').value;
-        const region = document.getElementById('input_address').value;
-        const email = document.getElementById('input_email2').value;
-        const password = document.getElementById('input_password2').value;
-        const passwordConfirm = document.getElementById('password_confirm').value;
-        const showErrorMessage = document.querySelector('#error-message');
+  function preinscription() {
+    const name = document.getElementById("input_name").value;
+    const region = document.getElementById("input_address").value;
+    const email = document.getElementById("input_email2").value;
+    const password = document.getElementById("input_password2").value;
+    const passwordConfirm = document.getElementById("password_confirm").value;
+    const showErrorMessage = document.querySelector("#error-message");
 
-        const user = {
-            name,
-            region,
-            email,
-            password,
-            passwordConfirm,
-        };
+    const user = {
+      name,
+      region,
+      email,
+      password,
+      passwordConfirm,
+    };
 
-        if (user.name === '' || user.region === '' || user.email === '' || user.password === ''
-      || user.passwordConfirm === '') {
-            showErrorMessage.innerHTML = '<p class = "parr3" >Debe rellenar todos los campos.</p>';
-        }
-        if (user.password !== user.passwordConfirm) {
-            showErrorMessage.innerHTML = '<p>Las contraseñas no coinciden.</p>';
-        } else {
-            inscription(user);
-        }
+    if (
+      user.name === "" ||
+      user.region === "" ||
+      user.email === "" ||
+      user.password === "" ||
+      user.passwordConfirm === ""
+    ) {
+      showErrorMessage.innerHTML =
+        '<p class = "parr3" >Debe rellenar todos los campos.</p>';
     }
+    if (user.password !== user.passwordConfirm) {
+      showErrorMessage.innerHTML = "<p>Las contraseñas no coinciden.</p>";
+    } else {
+      inscription(user);
+    }
+  }
 
-    const saveRegistration = document.querySelector('#save-registration-btn');
-    saveRegistration.addEventListener('click', preinscription);
+  const saveRegistration = document.querySelector("#save-registration-btn");
+  saveRegistration.addEventListener("click", preinscription);
 };
 
-
 export const routeRegistry = () => {
-    const viewRegistration = ` 
+  const viewRegistration = ` 
+    <div class= "login-container">
     <header>
     <img class="header-image" src="img/img-cel.png">
     <img class="header-image-desktop" src="./img/apertura1.gif">
 </header>
 <div id='login' class='login'>
     <h1>Art Space</h1>
-    <div id="error-message" class="error-format"></div>
     <div class="input_section input_section_registry">
+    <div id="error-message" class="error-format"></div>
     <form>
         <div>
             <img src="img/usuario_icono.png" class="icono" alt="Icono usuario">
@@ -84,10 +88,11 @@ export const routeRegistry = () => {
         <h5>Contacto: artspacechile@gmail.com</h5>
         &copy;2020 by Fabiane, Geraldine & Lady
     </footer>
+</div>
 </div>`;
 
-    // Función que lleva desde pagina de registrarse a primera pagina
-    window.location.hash = '#/registro';
-    document.getElementById('root').innerHTML = viewRegistration;
-    loadRegistryFunctions();
+  // Función que lleva desde pagina de registrarse a primera pagina
+  window.location.hash = "#/registro";
+  document.getElementById("root").innerHTML = viewRegistration;
+  loadRegistryFunctions();
 };

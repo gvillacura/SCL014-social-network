@@ -1,6 +1,6 @@
 export const routeEvents = () => {
-    const viewEventsPage = ` 
-    <div>
+  const viewEventsPage = ` 
+    <div class= "events-container">
     <header class = "header-wall">
     <script src="js/imagenes.js"></script>
     <img class="header-image" src="img/img-cel.png" alt="">
@@ -150,12 +150,12 @@ export const routeEvents = () => {
      &copy;2020 by Fabiane, Geraldine & Lady
     </footer>
 `;
-    window.location.hash = '#/conozca';
-    document.getElementById('root').innerHTML = viewEventsPage;
-    document.getElementById('artSpace2').addEventListener('click', () => {
-        window.location.hash = '#/muro';
-    });
-    document.getElementById('profile').addEventListener('click', () => {
-        window.location.hash = '#/perfil';
-    });
+  window.location.hash = "#/conozca";
+  document.getElementById("root").innerHTML = viewEventsPage;
+  document.getElementById("artSpace2").addEventListener("click", () => {
+    window.location.hash = "#/muro";
+  });
+  document.getElementById("profile").addEventListener("click", () => {
+    window.location.hash = "#/perfil";
+  });
 };
