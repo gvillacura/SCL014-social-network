@@ -228,7 +228,7 @@ h4 {
 .wall-container {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 }
 
 .logo-second-page {
@@ -407,7 +407,7 @@ h4 {
   font-size: 12px;
   width: 50vw;
   background: #fdfdf2;
-  margin: 8px 65px;
+  margin: 1% 2%;
   padding: 5px 21px;
 }
 
@@ -568,12 +568,16 @@ h5 {
   flex-direction: column;
 }
 
+#ingreso-post>div{
+  width: 90%;
+  margin: auto;
+}
+
 .subtitulos {
   font-family: "Open Sans", sans-serif;
   text-align: initial;
-  margin-left: 16px;
+  margin: 0px 0px 37px 14px;
   color: #747373c2;
-  margin-top: -9px;
   font-size: 10px;
 }
 
@@ -606,6 +610,10 @@ h5 {
   outline: none;
   display: inline-block;
   cursor: pointer;
+}
+
+.icoReacall {
+  margin-left: 10%
 }
 
 .btnArt3 {
@@ -707,6 +715,16 @@ width: 100%;
     cursor: pointer;
   }
 
+  .comments{
+    width: auto;
+    box-sizing: border-box;
+  }
+
+  .post-actual{
+    margin: 15px 0;
+    width: 100%;
+  }
+
   .input_section{
     width: 100%;
   }
@@ -785,17 +803,15 @@ width: 100%;
   .subtitulos {
     background: none;
     font-family: "Open Sans", sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     text-align: initial;
-    margin-left: 8px;
-    margin-top: -17px;
 
   }
 
 
   .containerEvent {
     width: 42%;
-    height: 16em;
+    height: 20em;
     display: flex;
     border: solid 1px #f2f3b2;
     margin-top: 2em;
@@ -807,7 +823,7 @@ width: 100%;
   .titulos {
     background: none;
     font-family: "Open Sans", sans-serif;
-    font-size: 19px;
+    font-size: 16px;
     text-align: initial;
     margin-left: 8px;
     margin-top: 2px;
@@ -825,11 +841,11 @@ width: 100%;
     font-family: "Open Sans", sans-serif;
     width: 27vw;
     font-size: 17px;
-    height: 3vh;
+    height: auto;
     display: inline-block;
     margin-top: 0em;
     cursor: pointer;
-    ;
+    margin-left: 7%;
   }
 
   .botArt:hover {
@@ -941,12 +957,12 @@ width: 100%;
     display: flex;
     height: 23em;
     width: -webkit-fill-available;
+    padding: 0px 3%;
   }
 
   .likes {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     margin-top: 0em;
-    margin-left: -1em;
   }
 }

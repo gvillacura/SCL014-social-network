@@ -93,17 +93,16 @@ export const routeEvents = () => {
 </section>
 
 <section class= 'containerEvent'>
-    
+
     <img src="./img/start.jpg" class="img-events" alt="pomaire"></a> 
     
     <h1 class='titulos'>Especial origami personajes Star Wars! - Time Corona</h1>
     <h4 class='subtitulos'> Manualidades</h4>
+ 
     
     <a href="https://timecorona.com/manualidades-diy/especial-origami-personajes-star-wars/" target="_blank">
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
-
-
 </section>
 <section class= 'containerEvent'>
 
