@@ -1,26 +1,26 @@
-import {
-    pass,
-    loginGoogle,
-} from '../firebase.js';
+import { pass, loginGoogle } from "../firebase.js";
 
 const LoadErrorFunctions = () => {
-    // Función que lleva desde recuperar contraseña a primera pagina
-    const btnLogin = document.querySelector('#loginBtn');
-    btnLogin.addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
+  // Función que lleva desde recuperar contraseña a primera pagina
+  const btnLogin = document.querySelector("#loginBtn");
+  btnLogin.addEventListener("click", () => {
+    window.location.hash = "#/inicio-sesion";
+  });
 
-    const enviar = document.querySelector('#start_btn');
-    enviar.addEventListener('click', () => {
-        pass();
-    });
+  const enviar = document.querySelector("#start_btn");
+  enviar.addEventListener("click", () => {
+    pass();
+  });
 
-    const googlee = document.querySelector('#google');
-    googlee.addEventListener('click', () => {
-        loginGoogle();
-    });
+  const googlee = document.querySelector("#google");
+  googlee.addEventListener("click", () => {
+    loginGoogle();
+  });
 };
 
 export const routeError = () => {
-    const viewErrorPage = `
+  const viewErrorPage = `
+    <div class= "login-container">
     <header>
     <img class="header-image" src="img/img-cel.png">
     <img class="header-image-desktop" src="./img/apertura1.gif">
@@ -51,9 +51,10 @@ export const routeError = () => {
         &copy;2020 by Fabiane, Geraldine & Lady
     </footer>
 </div>
+</div>
     
       `;
-    window.location.hash = '#/recuperar-contrasena';
-    document.querySelector('#root').innerHTML = viewErrorPage;
-    LoadErrorFunctions();
+  window.location.hash = "#/recuperar-contrasena";
+  document.querySelector("#root").innerHTML = viewErrorPage;
+  LoadErrorFunctions();
 };
