@@ -309,7 +309,7 @@ h4 {
 .post-actual {
   border-radius: 9px;
   border: solid 1px #edefb0;
-  margin: 15px 0 15px 15px;
+  margin: 15px 0 15px 0;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -553,7 +553,7 @@ h5 {
 }
 
 .formulario-post {
-  margin: auto;
+  margin: 30px auto 0 auto;
   width: 90%; 
 }
 
