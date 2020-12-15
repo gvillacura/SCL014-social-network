@@ -1,4 +1,5 @@
 export const routeEvents = () => {
+
   const viewEventsPage = ` 
     <div class= "events-container">
     <header class = "header-wall">
@@ -18,6 +19,7 @@ export const routeEvents = () => {
         </div>
     </div>
 </header>
+
     <div class= 'article'>
     <section class= 'containerEvent'>
     

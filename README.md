@@ -47,7 +47,7 @@ Empezamos a planificar todo lo que seria necesario para el desarrollo de la pág
 
 ##### Encuesta On line
 
-Fue realizada una encuesta on line con 51 usuarios, donde los usuarios contestaron algunas preguntas sobre Pokémon, y las seguientes imagenes muestran el resultado:
+Fue realizada una encuesta on line con 51 usuarios, donde los usuarios contestaron algunas preguntas sobre artes, y las seguientes imagenes muestran el resultado:
  
  [Link encuesta](https://forms.gle/Jvd9dt2jZp2uJVbT7)
 
@@ -109,16 +109,19 @@ Con el sketcher en manos, nos reunimos con otros compañeros y recibimos un prim
 
 ##### Feedback de coaches:
 
-En nuestro segundo feedback, hecho con los coaches, percibimos la necesidad de cambiar algunos puntos de nuestra página web, mejorando así los colores, logotipo, etc.
+En nuestro  feedback, hecho con los coaches, percibimos la necesidad de cambiar algunos puntos de nuestra página web, mejorando así los colores, letras. Nos ayudaron a mejorar nuestro codigo, dejandolo más dinamico.
 
 
 
 ### **6. Pagina web Finalizada**
 
-[pagina finalizada inicio]()
+![pagina finalizada inicio](./src/img/img-uno.png)
 
 
-[pagina finalizada]()
+![pagina finalizada inicio](./src/img/img-dos.png)
+
+
+![pagina finalizada inicio](./src/img/img-tres.png)
 
 
 
